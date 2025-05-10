@@ -31,18 +31,28 @@ const server = http.createServer((req, res) => {
     switch (req.url) {
         case "/me": {
             res.write("Me");
+            res.end();
             break;
         }
         case "/about": {
             res.write("About");
+            res.end();
             break;
         }
         case "/": {
-            res.write("Main page");
+            const start = new Date();
+            while (new Date() - start < 2000) {
+                console.log(new Date() - start);
+            }
+            setTimeout(() => {
+                res.write("Main page");
+                res.end();
+            }, 2000);
             break;
         }
         default:
             res.write("404 not found");
+            res.end();
     }
 
     // Fix the counter from being updated twice
@@ -50,9 +60,7 @@ const server = http.createServer((req, res) => {
         requestCount++;
     }
 
-    res.write("Node js server " + requestCount);
-
-    res.end();
+    // res.write(" Node js server " + requestCount);
 });
 
 server.listen(3003);
