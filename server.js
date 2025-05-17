@@ -3,12 +3,23 @@ const path = require("path");
 const fs = require("fs");
 const url = require("url");
 
+const delay = (ms) => new Promise((resolve, reject) => setTimeout(resolve, ms));
+
+const readFile = (path) => {
+    return new Promise((resolve, reject) => {
+        fs.readFile(__dirname + path, (err, data) => {
+            if (err) reject(err);
+            else resolve(data);
+        });
+    });
+};
+
 let requestCount = 0;
 
 // Location of my favicon in the filesystem.
 const FAVICON = path.join(__dirname, "public", "favicon.ico");
 
-const server = http.createServer((req, res) => {
+const server = http.createServer(async (req, res) => {
     const pathname = url.parse(req.url).pathname;
 
     if (req.method === "GET" && pathname === "/favicon.ico") {
@@ -30,34 +41,31 @@ const server = http.createServer((req, res) => {
 
     switch (req.url) {
         case "/me": {
-            fs.readFile(__dirname + "/pages/me.html", (err, data) => {
-                if (err) {
-                    res.write("some error occured during me-page request");
-                    res.end();
-                    return;
-                }
+            try {
+                const data = await readFile("/pages/me.html");
                 res.write(data);
                 res.end();
-            });
+            } catch (error) {
+                res.write("some error occured during me-page request");
+                res.end();
+            }
             break;
         }
         case "/about": {
-            fs.readFile(__dirname + "/pages/about.html", (err, data) => {
-                if (err) {
-                    res.write("some error occured during about-page request");
-                    res.end();
-                    return;
-                }
+            try {
+                const data = await readFile("/pages/about.html");
                 res.write(data);
                 res.end();
-            });
+            } catch (error) {
+                res.write("some error occured during about-page request");
+                res.end();
+            }
             break;
         }
         case "/": {
-            setTimeout(() => {
-                res.write("Main page");
-                res.end();
-            }, 5000);
+            await delay(3000);
+            res.write("Main page");
+            res.end();
             break;
         }
         default:
