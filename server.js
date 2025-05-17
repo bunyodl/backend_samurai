@@ -30,12 +30,14 @@ const server = http.createServer((req, res) => {
 
     switch (req.url) {
         case "/me": {
-            res.write("Me");
+            const profilePageHtml = fs.readFileSync(__dirname + "/pages/me.html");
+            res.write(profilePageHtml);
             res.end();
             break;
         }
         case "/about": {
-            res.write("About");
+            const aboutPageHtml = fs.readFileSync(__dirname + "/pages/about.html");
+            res.write(aboutPageHtml);
             res.end();
             break;
         }
