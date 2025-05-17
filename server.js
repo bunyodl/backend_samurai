@@ -40,14 +40,10 @@ const server = http.createServer((req, res) => {
             break;
         }
         case "/": {
-            const start = new Date();
-            while (new Date() - start < 2000) {
-                console.log(new Date() - start);
-            }
             setTimeout(() => {
                 res.write("Main page");
                 res.end();
-            }, 2000);
+            }, 5000);
             break;
         }
         default:
