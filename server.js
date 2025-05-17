@@ -30,15 +30,27 @@ const server = http.createServer((req, res) => {
 
     switch (req.url) {
         case "/me": {
-            const profilePageHtml = fs.readFileSync(__dirname + "/pages/me.html");
-            res.write(profilePageHtml);
-            res.end();
+            fs.readFile(__dirname + "/pages/me.html", (err, data) => {
+                if (err) {
+                    res.write("some error occured during me-page request");
+                    res.end();
+                    return;
+                }
+                res.write(data);
+                res.end();
+            });
             break;
         }
         case "/about": {
-            const aboutPageHtml = fs.readFileSync(__dirname + "/pages/about.html");
-            res.write(aboutPageHtml);
-            res.end();
+            fs.readFile(__dirname + "/pages/about.html", (err, data) => {
+                if (err) {
+                    res.write("some error occured during about-page request");
+                    res.end();
+                    return;
+                }
+                res.write(data);
+                res.end();
+            });
             break;
         }
         case "/": {
