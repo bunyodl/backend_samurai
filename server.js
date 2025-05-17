@@ -31,6 +31,9 @@ const server = http.createServer(async (req, res) => {
         // .jpeg = 'image/jpeg'
         res.setHeader("Content-Type", "image/x-icon");
 
+        // Cache favicon for 1 year
+        res.setHeader("Cache-Control", "public, max-age=31536000");
+
         // Serve your favicon and finish response.
         //
         // You don't need to call `.end()` yourself because
