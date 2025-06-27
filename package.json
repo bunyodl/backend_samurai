@@ -1,0 +1,22 @@
+{
+    "name": "backend_samurai",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/BunyodL/backend_samurai.git",
+    "author": "BunyodL <blutfulloyev@bk.ru>",
+    "license": "MIT",
+    "type": "module",
+    "scripts": {
+        "watch": "tsc -w",
+        "dev": "nodemon .//dist//index.js"
+    },
+    "dependencies": {
+        "express": "^5.1.0"
+    },
+    "devDependencies": {
+        "@types/express": "^5.0.3",
+        "@types/node": "^24.0.3",
+        "nodemon": "^3.1.10",
+        "typescript": "^5.8.3"
+    }
+}
