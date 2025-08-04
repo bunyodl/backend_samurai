@@ -1,0 +1,123 @@
+[
+  {
+    "id": "usr_001",
+    "name": "Alice",
+    "email": "alice@example.com",
+    "role": "organizer"
+  },
+  {
+    "id": "usr_002",
+    "name": "Bob",
+    "email": "bob@example.com",
+    "role": "organizer"
+  },
+  {
+    "id": "usr_003",
+    "name": "Carlos",
+    "email": "carlos@example.com",
+    "role": "organizer"
+  },
+  {
+    "id": "usr_004",
+    "name": "Diana",
+    "email": "diana@example.com",
+    "role": "organizer"
+  },
+  {
+    "id": "usr_005",
+    "name": "Ethan",
+    "email": "ethan@example.com",
+    "role": "organizer"
+  },
+  {
+    "id": "usr_006",
+    "name": "Fatima",
+    "email": "fatima@example.com",
+    "role": "organizer"
+  },
+  {
+    "id": "usr_007",
+    "name": "George",
+    "email": "george@example.com",
+    "role": "organizer"
+  },
+  {
+    "id": "usr_008",
+    "name": "Hiro",
+    "email": "hiro@example.com",
+    "role": "organizer"
+  },
+  {
+    "id": "usr_009",
+    "name": "Isabella",
+    "email": "isabella@example.com",
+    "role": "organizer"
+  },
+  {
+    "id": "usr_010",
+    "name": "Jack",
+    "email": "jack@example.com",
+    "role": "organizer"
+  },
+
+  {
+    "id": "usr_011",
+    "name": "Liam",
+    "email": "liam@example.com",
+    "role": "attendee"
+  },
+  {
+    "id": "usr_012",
+    "name": "Mia",
+    "email": "mia@example.com",
+    "role": "attendee"
+  },
+  {
+    "id": "usr_013",
+    "name": "Noah",
+    "email": "noah@example.com",
+    "role": "attendee"
+  },
+  {
+    "id": "usr_014",
+    "name": "Olivia",
+    "email": "olivia@example.com",
+    "role": "attendee"
+  },
+  {
+    "id": "usr_015",
+    "name": "Paul",
+    "email": "paul@example.com",
+    "role": "attendee"
+  },
+  {
+    "id": "usr_016",
+    "name": "Quinn",
+    "email": "quinn@example.com",
+    "role": "attendee"
+  },
+  {
+    "id": "usr_017",
+    "name": "Rita",
+    "email": "rita@example.com",
+    "role": "attendee"
+  },
+  {
+    "id": "usr_018",
+    "name": "Sam",
+    "email": "sam@example.com",
+    "role": "attendee"
+  },
+  {
+    "id": "usr_019",
+    "name": "Tina",
+    "email": "tina@example.com",
+    "role": "attendee"
+  },
+  {
+    "id": "usr_020",
+    "name": "Uma",
+    "email": "uma@example.com",
+    "role": "attendee"
+  }
+]

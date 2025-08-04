@@ -1,0 +1,502 @@
+[
+  {
+    "id": "evt_001",
+    "title": "React Meetup 2025",
+    "description": "A session on react meetup with expert speakers.",
+    "venueId": "ven_002",
+    "organizerId": "usr_002",
+    "date": "2025-09-03T00:00:00Z",
+    "tags": ["react", "frontend"],
+    "price": 93.19
+  },
+  {
+    "id": "evt_002",
+    "title": "Vue.js Europe 2025",
+    "description": "A session on vue.js europe with expert speakers.",
+    "venueId": "ven_003",
+    "organizerId": "usr_003",
+    "date": "2025-09-05T00:00:00Z",
+    "tags": ["vue", "frontend"],
+    "price": 32.71
+  },
+  {
+    "id": "evt_003",
+    "title": "Docker Deep Dive 2025",
+    "description": "A session on docker deep dive with expert speakers.",
+    "venueId": "ven_004",
+    "organizerId": "usr_004",
+    "date": "2025-09-07T00:00:00Z",
+    "tags": ["docker", "devops"],
+    "price": 104.45
+  },
+  {
+    "id": "evt_004",
+    "title": "Python for Data Science 2025",
+    "description": "A session on python for data science with expert speakers.",
+    "venueId": "ven_005",
+    "organizerId": "usr_005",
+    "date": "2025-09-09T00:00:00Z",
+    "tags": ["python", "data"],
+    "price": 55.8
+  },
+  {
+    "id": "evt_005",
+    "title": "Next.js SEO Workshop 2025",
+    "description": "A session on next.js seo workshop with expert speakers.",
+    "venueId": "ven_006",
+    "organizerId": "usr_006",
+    "date": "2025-09-11T00:00:00Z",
+    "tags": ["nextjs", "seo"],
+    "price": 108.37
+  },
+  {
+    "id": "evt_006",
+    "title": "AI Startups Demo Day 2025",
+    "description": "A session on ai startups demo day with expert speakers.",
+    "venueId": "ven_007",
+    "organizerId": "usr_007",
+    "date": "2025-09-13T00:00:00Z",
+    "tags": ["ai", "startups"],
+    "price": 56.97
+  },
+  {
+    "id": "evt_007",
+    "title": "Security Best Practices 2025",
+    "description": "A session on security best practices with expert speakers.",
+    "venueId": "ven_008",
+    "organizerId": "usr_008",
+    "date": "2025-09-15T00:00:00Z",
+    "tags": ["security", "web"],
+    "price": 69.89
+  },
+  {
+    "id": "evt_008",
+    "title": "Cloudflare & Edge Computing 2025",
+    "description": "A session on cloudflare & edge computing with expert speakers.",
+    "venueId": "ven_009",
+    "organizerId": "usr_009",
+    "date": "2025-09-17T00:00:00Z",
+    "tags": ["cloudflare", "edge"],
+    "price": 113.44
+  },
+  {
+    "id": "evt_009",
+    "title": "GraphQL vs REST 2025",
+    "description": "A session on graphql vs rest with expert speakers.",
+    "venueId": "ven_010",
+    "organizerId": "usr_010",
+    "date": "2025-09-19T00:00:00Z",
+    "tags": ["graphql", "rest", "api"],
+    "price": 38.92
+  },
+  {
+    "id": "evt_010",
+    "title": "Kubernetes Crash Course 2025",
+    "description": "A session on kubernetes crash course with expert speakers.",
+    "venueId": "ven_001",
+    "organizerId": "usr_001",
+    "date": "2025-09-21T00:00:00Z",
+    "tags": ["kubernetes", "devops"],
+    "price": 117.5
+  },
+  {
+    "id": "evt_011",
+    "title": "Rust Game Dev 2025",
+    "description": "A session on rust game dev with expert speakers.",
+    "venueId": "ven_002",
+    "organizerId": "usr_002",
+    "date": "2025-09-23T00:00:00Z",
+    "tags": ["rust", "game"],
+    "price": 16.48
+  },
+  {
+    "id": "evt_012",
+    "title": "Firebase & Firestore 2025",
+    "description": "A session on firebase & firestore with expert speakers.",
+    "venueId": "ven_003",
+    "organizerId": "usr_003",
+    "date": "2025-09-25T00:00:00Z",
+    "tags": ["firebase", "backend"],
+    "price": 48.64
+  },
+  {
+    "id": "evt_013",
+    "title": "SvelteConf 2025",
+    "description": "A session on svelteconf with expert speakers.",
+    "venueId": "ven_004",
+    "organizerId": "usr_004",
+    "date": "2025-09-27T00:00:00Z",
+    "tags": ["svelte", "frontend"],
+    "price": 33.15
+  },
+  {
+    "id": "evt_014",
+    "title": "Web3 Summit 2025",
+    "description": "A session on web3 summit with expert speakers.",
+    "venueId": "ven_005",
+    "organizerId": "usr_005",
+    "date": "2025-09-29T00:00:00Z",
+    "tags": ["web3", "blockchain"],
+    "price": 64.35
+  },
+  {
+    "id": "evt_015",
+    "title": "PostgreSQL Performance 2025",
+    "description": "A session on postgresql performance with expert speakers.",
+    "venueId": "ven_006",
+    "organizerId": "usr_006",
+    "date": "2025-10-01T00:00:00Z",
+    "tags": ["postgresql", "database"],
+    "price": 113.51
+  },
+  {
+    "id": "evt_016",
+    "title": "Deno for Beginners 2025",
+    "description": "A session on deno for beginners with expert speakers.",
+    "venueId": "ven_007",
+    "organizerId": "usr_007",
+    "date": "2025-10-03T00:00:00Z",
+    "tags": ["deno", "javascript"],
+    "price": 92.97
+  },
+  {
+    "id": "evt_017",
+    "title": "Machine Learning Bootcamp 2025",
+    "description": "A session on machine learning bootcamp with expert speakers.",
+    "venueId": "ven_008",
+    "organizerId": "usr_008",
+    "date": "2025-10-05T00:00:00Z",
+    "tags": ["ml", "ai"],
+    "price": 82.62
+  },
+  {
+    "id": "evt_018",
+    "title": "Flutter Mobile Fest 2025",
+    "description": "A session on flutter mobile fest with expert speakers.",
+    "venueId": "ven_009",
+    "organizerId": "usr_009",
+    "date": "2025-10-07T00:00:00Z",
+    "tags": ["flutter", "mobile"],
+    "price": 89.12
+  },
+  {
+    "id": "evt_019",
+    "title": "TypeScript Advanced 2025",
+    "description": "A session on typescript advanced with expert speakers.",
+    "venueId": "ven_010",
+    "organizerId": "usr_010",
+    "date": "2025-10-09T00:00:00Z",
+    "tags": ["typescript", "advanced"],
+    "price": 45.59
+  },
+  {
+    "id": "evt_020",
+    "title": "CI/CD Pipelines Workshop 2026",
+    "description": "A session on ci/cd pipelines workshop with expert speakers.",
+    "venueId": "ven_001",
+    "organizerId": "usr_001",
+    "date": "2025-10-11T00:00:00Z",
+    "tags": ["ci", "cd", "devops"],
+    "price": 72.09
+  },
+  {
+    "id": "evt_021",
+    "title": "React Meetup 2026",
+    "description": "A session on react meetup with expert speakers.",
+    "venueId": "ven_002",
+    "organizerId": "usr_002",
+    "date": "2025-10-13T00:00:00Z",
+    "tags": ["react", "frontend"],
+    "price": 40.33
+  },
+  {
+    "id": "evt_022",
+    "title": "Vue.js Europe 2026",
+    "description": "A session on vue.js europe with expert speakers.",
+    "venueId": "ven_003",
+    "organizerId": "usr_003",
+    "date": "2025-10-15T00:00:00Z",
+    "tags": ["vue", "frontend"],
+    "price": 96.07
+  },
+  {
+    "id": "evt_023",
+    "title": "Docker Deep Dive 2026",
+    "description": "A session on docker deep dive with expert speakers.",
+    "venueId": "ven_004",
+    "organizerId": "usr_004",
+    "date": "2025-10-17T00:00:00Z",
+    "tags": ["docker", "devops"],
+    "price": 20.34
+  },
+  {
+    "id": "evt_024",
+    "title": "Python for Data Science 2026",
+    "description": "A session on python for data science with expert speakers.",
+    "venueId": "ven_005",
+    "organizerId": "usr_005",
+    "date": "2025-10-19T00:00:00Z",
+    "tags": ["python", "data"],
+    "price": 12.28
+  },
+  {
+    "id": "evt_025",
+    "title": "Next.js SEO Workshop 2026",
+    "description": "A session on next.js seo workshop with expert speakers.",
+    "venueId": "ven_006",
+    "organizerId": "usr_006",
+    "date": "2025-10-21T00:00:00Z",
+    "tags": ["nextjs", "seo"],
+    "price": 30.96
+  },
+  {
+    "id": "evt_026",
+    "title": "AI Startups Demo Day 2026",
+    "description": "A session on ai startups demo day with expert speakers.",
+    "venueId": "ven_007",
+    "organizerId": "usr_007",
+    "date": "2025-10-23T00:00:00Z",
+    "tags": ["ai", "startups"],
+    "price": 30.83
+  },
+  {
+    "id": "evt_027",
+    "title": "Security Best Practices 2026",
+    "description": "A session on security best practices with expert speakers.",
+    "venueId": "ven_008",
+    "organizerId": "usr_008",
+    "date": "2025-10-25T00:00:00Z",
+    "tags": ["security", "web"],
+    "price": 109.45
+  },
+  {
+    "id": "evt_028",
+    "title": "Cloudflare & Edge Computing 2026",
+    "description": "A session on cloudflare & edge computing with expert speakers.",
+    "venueId": "ven_009",
+    "organizerId": "usr_009",
+    "date": "2025-10-27T00:00:00Z",
+    "tags": ["cloudflare", "edge"],
+    "price": 12.04
+  },
+  {
+    "id": "evt_029",
+    "title": "GraphQL vs REST 2026",
+    "description": "A session on graphql vs rest with expert speakers.",
+    "venueId": "ven_010",
+    "organizerId": "usr_010",
+    "date": "2025-10-29T00:00:00Z",
+    "tags": ["graphql", "rest", "api"],
+    "price": 98.73
+  },
+  {
+    "id": "evt_030",
+    "title": "Kubernetes Crash Course 2026",
+    "description": "A session on kubernetes crash course with expert speakers.",
+    "venueId": "ven_001",
+    "organizerId": "usr_001",
+    "date": "2025-10-31T00:00:00Z",
+    "tags": ["kubernetes", "devops"],
+    "price": 12.03
+  },
+  {
+    "id": "evt_031",
+    "title": "Rust Game Dev 2026",
+    "description": "A session on rust game dev with expert speakers.",
+    "venueId": "ven_002",
+    "organizerId": "usr_002",
+    "date": "2025-11-02T00:00:00Z",
+    "tags": ["rust", "game"],
+    "price": 18.47
+  },
+  {
+    "id": "evt_032",
+    "title": "Firebase & Firestore 2026",
+    "description": "A session on firebase & firestore with expert speakers.",
+    "venueId": "ven_003",
+    "organizerId": "usr_003",
+    "date": "2025-11-04T00:00:00Z",
+    "tags": ["firebase", "backend"],
+    "price": 7.22
+  },
+  {
+    "id": "evt_033",
+    "title": "SvelteConf 2026",
+    "description": "A session on svelteconf with expert speakers.",
+    "venueId": "ven_004",
+    "organizerId": "usr_004",
+    "date": "2025-11-06T00:00:00Z",
+    "tags": ["svelte", "frontend"],
+    "price": 109.09
+  },
+  {
+    "id": "evt_034",
+    "title": "Web3 Summit 2026",
+    "description": "A session on web3 summit with expert speakers.",
+    "venueId": "ven_005",
+    "organizerId": "usr_005",
+    "date": "2025-11-08T00:00:00Z",
+    "tags": ["web3", "blockchain"],
+    "price": 112.75
+  },
+  {
+    "id": "evt_035",
+    "title": "PostgreSQL Performance 2026",
+    "description": "A session on postgresql performance with expert speakers.",
+    "venueId": "ven_006",
+    "organizerId": "usr_006",
+    "date": "2025-11-10T00:00:00Z",
+    "tags": ["postgresql", "database"],
+    "price": 93.04
+  },
+  {
+    "id": "evt_036",
+    "title": "Deno for Beginners 2026",
+    "description": "A session on deno for beginners with expert speakers.",
+    "venueId": "ven_007",
+    "organizerId": "usr_007",
+    "date": "2025-11-12T00:00:00Z",
+    "tags": ["deno", "javascript"],
+    "price": 32.53
+  },
+  {
+    "id": "evt_037",
+    "title": "Machine Learning Bootcamp 2026",
+    "description": "A session on machine learning bootcamp with expert speakers.",
+    "venueId": "ven_008",
+    "organizerId": "usr_008",
+    "date": "2025-11-14T00:00:00Z",
+    "tags": ["ml", "ai"],
+    "price": 58.09
+  },
+  {
+    "id": "evt_038",
+    "title": "Flutter Mobile Fest 2026",
+    "description": "A session on flutter mobile fest with expert speakers.",
+    "venueId": "ven_009",
+    "organizerId": "usr_009",
+    "date": "2025-11-16T00:00:00Z",
+    "tags": ["flutter", "mobile"],
+    "price": 110.99
+  },
+  {
+    "id": "evt_039",
+    "title": "TypeScript Advanced 2026",
+    "description": "A session on typescript advanced with expert speakers.",
+    "venueId": "ven_010",
+    "organizerId": "usr_010",
+    "date": "2025-11-18T00:00:00Z",
+    "tags": ["typescript", "advanced"],
+    "price": 115.34
+  },
+  {
+    "id": "evt_040",
+    "title": "CI/CD Pipelines Workshop 2027",
+    "description": "A session on ci/cd pipelines workshop with expert speakers.",
+    "venueId": "ven_001",
+    "organizerId": "usr_001",
+    "date": "2025-11-20T00:00:00Z",
+    "tags": ["ci", "cd", "devops"],
+    "price": 22.12
+  },
+  {
+    "id": "evt_041",
+    "title": "React Meetup 2027",
+    "description": "A session on react meetup with expert speakers.",
+    "venueId": "ven_002",
+    "organizerId": "usr_002",
+    "date": "2025-11-22T00:00:00Z",
+    "tags": ["react", "frontend"],
+    "price": 98.2
+  },
+  {
+    "id": "evt_042",
+    "title": "Vue.js Europe 2027",
+    "description": "A session on vue.js europe with expert speakers.",
+    "venueId": "ven_003",
+    "organizerId": "usr_003",
+    "date": "2025-11-24T00:00:00Z",
+    "tags": ["vue", "frontend"],
+    "price": 53.29
+  },
+  {
+    "id": "evt_043",
+    "title": "Docker Deep Dive 2027",
+    "description": "A session on docker deep dive with expert speakers.",
+    "venueId": "ven_004",
+    "organizerId": "usr_004",
+    "date": "2025-11-26T00:00:00Z",
+    "tags": ["docker", "devops"],
+    "price": 6.26
+  },
+  {
+    "id": "evt_044",
+    "title": "Python for Data Science 2027",
+    "description": "A session on python for data science with expert speakers.",
+    "venueId": "ven_005",
+    "organizerId": "usr_005",
+    "date": "2025-11-28T00:00:00Z",
+    "tags": ["python", "data"],
+    "price": 6.54
+  },
+  {
+    "id": "evt_045",
+    "title": "Next.js SEO Workshop 2027",
+    "description": "A session on next.js seo workshop with expert speakers.",
+    "venueId": "ven_006",
+    "organizerId": "usr_006",
+    "date": "2025-11-30T00:00:00Z",
+    "tags": ["nextjs", "seo"],
+    "price": 86.69
+  },
+  {
+    "id": "evt_046",
+    "title": "AI Startups Demo Day 2027",
+    "description": "A session on ai startups demo day with expert speakers.",
+    "venueId": "ven_007",
+    "organizerId": "usr_007",
+    "date": "2025-12-02T00:00:00Z",
+    "tags": ["ai", "startups"],
+    "price": 34.29
+  },
+  {
+    "id": "evt_047",
+    "title": "Security Best Practices 2027",
+    "description": "A session on security best practices with expert speakers.",
+    "venueId": "ven_008",
+    "organizerId": "usr_008",
+    "date": "2025-12-04T00:00:00Z",
+    "tags": ["security", "web"],
+    "price": 71.57
+  },
+  {
+    "id": "evt_048",
+    "title": "Cloudflare & Edge Computing 2027",
+    "description": "A session on cloudflare & edge computing with expert speakers.",
+    "venueId": "ven_009",
+    "organizerId": "usr_009",
+    "date": "2025-12-06T00:00:00Z",
+    "tags": ["cloudflare", "edge"],
+    "price": 41.47
+  },
+  {
+    "id": "evt_049",
+    "title": "GraphQL vs REST 2027",
+    "description": "A session on graphql vs rest with expert speakers.",
+    "venueId": "ven_010",
+    "organizerId": "usr_010",
+    "date": "2025-12-08T00:00:00Z",
+    "tags": ["graphql", "rest", "api"],
+    "price": 47.16
+  },
+  {
+    "id": "evt_050",
+    "title": "Kubernetes Crash Course 2027",
+    "description": "A session on kubernetes crash course with expert speakers.",
+    "venueId": "ven_001",
+    "organizerId": "usr_001",
+    "date": "2025-12-10T00:00:00Z",
+    "tags": ["kubernetes", "devops"],
+    "price": 76.93
+  }
+]
