@@ -1,60 +1,60 @@
 [
   {
-    "id": "ven_001",
+    "id": 1,
     "name": "Main Hall SF",
     "location": { "city": "San Francisco", "country": "USA" },
     "capacity": 300
   },
   {
-    "id": "ven_002",
+    "id": 2,
     "name": "Berlin Tech Arena",
     "location": { "city": "Berlin", "country": "Germany" },
     "capacity": 500
   },
   {
-    "id": "ven_003",
+    "id": 3,
     "name": "Online - Zoom",
     "location": { "city": "Virtual", "country": "Global" },
     "capacity": 1000
   },
   {
-    "id": "ven_004",
+    "id": 4,
     "name": "Tokyo Dev Hub",
     "location": { "city": "Tokyo", "country": "Japan" },
     "capacity": 250
   },
   {
-    "id": "ven_005",
+    "id": 5,
     "name": "Frunze Stadium",
     "location": { "city": "Dushanbe", "country": "Tajikistan" },
     "capacity": 400
   },
   {
-    "id": "ven_006",
+    "id": 6,
     "name": "Paris Startup Studio",
     "location": { "city": "Paris", "country": "France" },
     "capacity": 150
   },
   {
-    "id": "ven_007",
+    "id": 7,
     "name": "London CodeBase",
     "location": { "city": "London", "country": "UK" },
     "capacity": 350
   },
   {
-    "id": "ven_008",
+    "id": 8,
     "name": "Dubai Tech Center",
     "location": { "city": "Dubai", "country": "UAE" },
     "capacity": 200
   },
   {
-    "id": "ven_009",
+    "id": 9,
     "name": "São Paulo Campus",
     "location": { "city": "São Paulo", "country": "Brazil" },
     "capacity": 300
   },
   {
-    "id": "ven_010",
+    "id": 10,
     "name": "Melbourne Digital Arena",
     "location": { "city": "Melbourne", "country": "Australia" },
     "capacity": 250
