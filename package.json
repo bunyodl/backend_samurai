@@ -7,7 +7,7 @@
   "license": "UNLICENSED",
   "type": "module",
   "scripts": {
-    "dev": "npx tsx ./src/index.ts",
+    "dev": "tsx watch --inspect ./src/index.ts",
     "build": "tsc",
     "start": "node ./dist/index.js"
   },
@@ -18,6 +18,7 @@
     "@types/express": "^5.0.3",
     "@types/node": "^24.0.3",
     "nodemon": "^3.1.10",
+    "tsx": "^4.20.4",
     "typescript": "^5.8.3"
   }
 }

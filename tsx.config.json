@@ -1,0 +1,6 @@
+{
+  "esbuildOptions": {
+    "sourceRoot": "/",
+    "sourcesContent": true
+  }
+}

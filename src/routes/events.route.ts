@@ -1,11 +1,15 @@
-import express from "express";
+import express from 'express';
+import { mockFetch } from '@/shared/libs/mock-fetch';
 
 export const eventsRouter = express.Router();
 
-eventsRouter.get("/", (req, res) => {
-    res.send("Events page");
+eventsRouter.get('/', async (_req, res) => {
+  const data = await mockFetch('~/db/events.json').then((data) => {
+    return JSON.parse(data as string);
+  });
+  res.json(data.slice(0, 3));
 });
 
-eventsRouter.post("/", (req, res) => {
-    res.send("The event has been created");
+eventsRouter.post('/', (_req, res) => {
+  res.send('The event has been created');
 });

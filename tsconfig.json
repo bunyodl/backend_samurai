@@ -11,6 +11,8 @@
     "skipLibCheck": true,
     "noImplicitReturns": true,
     "sourceMap": true,
+    "inlineSources": true,
+    "sourceRoot": "/",
     "module": "ESNext",
     "target": "ES2020",
     "esModuleInterop": true,
@@ -29,7 +31,11 @@
     "noUncheckedSideEffectImports": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "strict": true
+    "strict": true,
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./src/*"]
+    }
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist"]
