@@ -11,3 +11,11 @@ node_modules/
 
 # TypeScript build info files
 *.tsbuildinfo
+
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/patches
+
+.pnp.*
