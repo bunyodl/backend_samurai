@@ -1,4 +1,4 @@
-import type { Event } from '../types/event.type';
+import type { Event } from '../types/event.type.js';
 
 const fieldSelectors = [
   (e: Event) => e.title,

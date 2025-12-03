@@ -1,18 +1,18 @@
-import { mockFetch } from '~/src/shared/libs/mock-fetch';
+import { mockFetch } from '../../shared/libs/mock-fetch.js';
 import type {
   GetVenuesQueryParams,
   GetVenuesResponse,
-} from './contracts/get-venues.contract';
-import { paginateVenues } from './helpers/paginate-venues';
-import { searchVenues } from './helpers/search-venues';
-import { sortVenues } from './helpers/sort-venues';
-import type { Venue } from './types/venue.type';
+} from './contracts/get-venues.contract.js';
+import { paginateVenues } from './helpers/paginate-venues.js';
+import { searchVenues } from './helpers/search-venues.js';
+import { sortVenues } from './helpers/sort-venues.js';
+import type { Venue } from './types/venue.type.js';
 
 class VenueService {
   async getVenues(params: GetVenuesQueryParams): Promise<GetVenuesResponse> {
     const { page, limit, sortBy, order, search } = params;
 
-    const result = await mockFetch('~/db/venues.json');
+    const result = await mockFetch('./db/venues.json');
     const venuesData = JSON.parse(result) as Array<Venue>;
 
     const filteredVenues = searchVenues(venuesData, search);

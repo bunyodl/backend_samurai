@@ -1,7 +1,7 @@
 import express from 'express';
-import { eventsRouter } from './entities/event/event.route';
-import { usersRouter } from './entities/user/user.route';
-import { venuesRouter } from './entities/venue/venue.route';
+import { eventsRouter } from './entities/event/event.route.js';
+import { usersRouter } from './entities/user/user.route.js';
+import { venuesRouter } from './entities/venue/venue.route.js';
 
 export const app = express();
 

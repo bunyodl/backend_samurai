@@ -1,5 +1,5 @@
-import type { SortOrder } from '~/src/shared/types/sort-order.type';
-import type { Venue } from '../types/venue.type';
+import type { SortOrder } from '../../../shared/types/sort-order.type.js';
+import type { Venue } from '../types/venue.type.js';
 
 export type SortVenuesBy = 'name' | 'capacity' | 'city' | 'country';
 

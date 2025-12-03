@@ -31,11 +31,11 @@
     "noUncheckedSideEffectImports": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "strict": true,
-    "paths": {
-      "~/*": ["./*"],
-      "@/*": ["./src/*"]
-    }
+    "strict": true
+    // "paths": {
+    //   "~/*": ["./*"],
+    //   "@/*": ["./src/*"]
+    // }
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist"]

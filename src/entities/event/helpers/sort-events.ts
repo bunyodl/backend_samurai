@@ -1,6 +1,6 @@
-import type { SortOrder } from '~/src/shared/types/sort-order.type';
-import type { SortEventsBy } from '../contracts/get-events.contract';
-import type { Event } from '../types/event.type';
+import type { SortOrder } from '../../../shared/types/sort-order.type.js';
+import type { SortEventsBy } from '../contracts/get-events.contract.js';
+import type { Event } from '../types/event.type.js';
 
 export function sortEvents(
   events: Array<Event>,

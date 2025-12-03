@@ -1,12 +1,12 @@
-import type { APIResponse } from '~/src/shared/types/api-response.type';
+import type { APIResponse } from '../../shared/types/api-response.type.js';
 import type {
   GetEventsQueryParams,
   GetEventsResponse,
-} from './contracts/get-events.contract';
+} from './contracts/get-events.contract.js';
 
 import type { Request, Response } from 'express-serve-static-core';
-import { HTTP_STATUS_CODES } from '~/src/shared/constants/http-codes';
-import { eventService } from './event.service';
+import { HTTP_STATUS_CODES } from '../../shared/constants/http-codes.js';
+import { eventService } from './event.service.js';
 
 export class EventController {
   async getEvents(

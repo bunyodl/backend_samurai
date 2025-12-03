@@ -1,4 +1,4 @@
-import type { User } from '../types/user.type';
+import type { User } from '../types/user.type.js';
 
 const fieldSelectors = [(u: User) => u.name, (u: User) => u.email];
 

@@ -1,5 +1,5 @@
-import type { SortOrder } from '~/src/shared/types/sort-order.type';
-import type { Event } from '../types/event.type';
+import type { SortOrder } from '../../../shared/types/sort-order.type.js';
+import type { Event } from '../types/event.type.js';
 
 export type SortEventsBy = 'title' | 'description' | 'date' | 'price';
 

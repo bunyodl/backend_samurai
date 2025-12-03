@@ -1,4 +1,4 @@
-import type { User } from '../types/user.type';
+import type { User } from '../types/user.type.js';
 
 export const DEFAULT_PAGE = 1;
 export const DEFAULT_LIMIT = 10;

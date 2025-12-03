@@ -1,6 +1,6 @@
-import type { SortOrder } from '~/src/shared/types/sort-order.type';
-import type { SortVenuesBy } from '../contracts/get-venues.contract';
-import type { Venue } from '../types/venue.type';
+import type { SortOrder } from '../../../shared/types/sort-order.type.js';
+import type { SortVenuesBy } from '../contracts/get-venues.contract.js';
+import type { Venue } from '../types/venue.type.js';
 
 export function sortVenues(
   venues: Array<Venue>,

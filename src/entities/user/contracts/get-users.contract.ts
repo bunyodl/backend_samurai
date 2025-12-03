@@ -1,5 +1,5 @@
-import type { SortOrder } from '~/src/shared/types/sort-order.type';
-import type { User } from '../types/user.type';
+import type { SortOrder } from '../../../shared/types/sort-order.type.js';
+import type { User } from '../types/user.type.js';
 
 export type SortUsersBy = 'name' | 'email';
 
