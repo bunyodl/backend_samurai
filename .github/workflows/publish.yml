@@ -1,3 +1,5 @@
+name: Upload API
+
 on:
   push:
     branches: [dev]
