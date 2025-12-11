@@ -15,19 +15,12 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version: 20
-          cache: 'yarn'
-
-      - name: Enable Corapack and activate Yarn
-        run: |
-          corepack enable
-          corepack prepare yarn@4.1.0 --activate
-          yarn --version # Verify Yarn is installed
 
       - name: Install dependencies
-        run: yarn install
+        run: npm install
 
-      - name: Build
-        run: yarn build
+      - name: Build the project
+        run: npm run build
 
   deploy:
     needs: build
