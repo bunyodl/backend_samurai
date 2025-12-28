@@ -5,7 +5,6 @@
     "types": ["node"],
     "moduleResolution": "node",
     "noEmitOnError": false,
-    "composite": true,
     "declaration": true,
     "allowJs": true,
     "skipLibCheck": true,
@@ -26,6 +25,8 @@
     "pretty": true,
     "noImplicitAny": false,
     "lib": ["es2022"],
+    // don't create tsconfig.tsbuildinfo file
+    "incremental": false,
 
     // Linting
     "noUncheckedSideEffectImports": true,
