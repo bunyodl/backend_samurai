@@ -5,9 +5,9 @@ on:
     branches: [dev]
 
 
-  # permissions:
-  #   pages: write
-  #   id-token: write
+permissions:
+  pages: write
+  id-token: write
 
 jobs:
   build:
