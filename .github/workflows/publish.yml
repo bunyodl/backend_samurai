@@ -43,4 +43,4 @@ jobs:
         uses: superfly/flyctl-actions/setup-flyctl@master
 
       - name: Deploy to Fly io
-        uses: flyctl deploy
+        run: flyctl deploy
