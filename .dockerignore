@@ -1,6 +1,34 @@
-/.git
-/node_modules
+# Dependency/Build Directories
+node_modules
+npm-debug.log
+.npm
+
+# Project Files
+.git
+.gitignore
 .dockerignore
-.env
 Dockerfile
-fly.toml
+fly.toml # Fly.io configuration file
+tslint.json
+.eslintrc*
+
+# Environment/Configuration Files
+.env
+.DS_Store
+*.log
+
+# Development/Testing files and directories
+test
+tests
+__tests__
+docs
+coverage
+.nyc_output
+tmp
+*~
+
+# IDE files
+.vscode
+.idea
+*.swp
+*.swo
