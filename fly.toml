@@ -1,10 +1,10 @@
-# fly.toml app configuration file generated for first-backend-app on 2025-12-28T20:15:29Z
+# fly.toml app configuration file generated for bunyod-backend-app on 2025-12-28T20:55:16Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'first-backend-app'
-primary_region = 'iad'
+app = 'bunyod-backend-app'
+primary_region = 'arn'
 
 [build]
 
