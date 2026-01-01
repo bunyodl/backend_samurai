@@ -10,4 +10,4 @@ module.exports = {
   jsxSingleQuote: true,
   trailingComma: 'all',
   endOfLine: 'lf',
-}
+};

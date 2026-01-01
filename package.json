@@ -9,16 +9,25 @@
   "scripts": {
     "dev": "tsx watch --inspect ./src/index.ts",
     "build": "tsc",
-    "start": "node ./dist/index.js"
+    "start": "node ./dist/index.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write \"**/*.(js,ts,html,css,md,json)\""
   },
   "dependencies": {
     "express": "^5.1.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.2",
     "@types/express": "^5.0.3",
     "@types/node": "^24.0.3",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^16.5.0",
     "nodemon": "^3.1.10",
+    "prettier": "^3.7.4",
     "tsx": "^4.20.4",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.51.0"
   }
 }
