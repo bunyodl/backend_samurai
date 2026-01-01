@@ -4,11 +4,13 @@ import type { Venue } from '../types/venue.type.js';
 
 export function sortVenues(
   venues: Array<Venue>,
-  sortBy: SortVenuesBy = 'name',
-  order: SortOrder = 'asc',
+  sortBy?: SortVenuesBy,
+  sort?: SortOrder,
 ): Array<Venue> {
+  if (!sortBy || !sort) return venues;
+
   return venues.sort((a, b) => {
-    if (order === 'asc') {
+    if (sort === 'asc') {
       return a[sortBy].localeCompare(b[sortBy]);
     }
     return b[sortBy].localeCompare(a[sortBy]);
