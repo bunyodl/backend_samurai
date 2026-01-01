@@ -1,4 +1,4 @@
-import type { SortOrder } from '../../../shared/types/sort-order.type.js';
+import type { SortOrder } from '../../../shared/types/sort.type.js';
 import type { SortVenuesBy } from '../contracts/get-venues.contract.js';
 import type { Venue } from '../types/venue.type.js';
 

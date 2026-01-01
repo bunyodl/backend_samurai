@@ -10,13 +10,13 @@ import type { User } from './types/user.type.js';
 
 class UserService {
   async getUsers(params: GetUsersQueryParams): Promise<GetUsersResponse> {
-    const { page, limit, sortBy, order, search } = params;
+    const { page, limit, sortBy, sort, search } = params;
 
     const result = await mockFetch('./db/users.json');
     const usersData = JSON.parse(result) as Array<User>;
 
     const filteredUsers = searchUsers(usersData, search);
-    const sortedUsers = sortUsers(filteredUsers, sortBy, order);
+    const sortedUsers = sortUsers(filteredUsers, sortBy, sort);
     const paginatedUsers = paginateUsers(sortedUsers, page, limit);
 
     return {

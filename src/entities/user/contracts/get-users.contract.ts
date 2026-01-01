@@ -1,13 +1,10 @@
-import type { SortOrder } from '../../../shared/types/sort-order.type.js';
+import type { Pagination } from '../../../shared/types/pagination.type.js';
+import type { SortBy, Sorting } from '../../../shared/types/sort.type.js';
 import type { User } from '../types/user.type.js';
 
-export type SortUsersBy = 'name' | 'email';
+export type SortUsersBy = SortBy<User, 'name' | 'email'>;
 
-export interface GetUsersQueryParams {
-  page?: number;
-  limit?: number;
-  sortBy?: SortUsersBy;
-  order?: SortOrder;
+export interface GetUsersQueryParams extends Pagination, Sorting<SortUsersBy> {
   search?: string;
 }
 

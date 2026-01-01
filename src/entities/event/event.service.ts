@@ -10,13 +10,13 @@ import type { Event } from './types/event.type.js';
 
 class EventService {
   async getEvents(params: GetEventsQueryParams): Promise<GetEventsResponse> {
-    const { page, limit, sortBy, order, search } = params;
+    const { page, limit, sortBy, sort, search } = params;
 
     const result = await mockFetch('./db/events.json');
     const eventsData = JSON.parse(result) as Array<Event>;
 
     const filteredEvents = searchEvents(eventsData, search);
-    const sortedEvents = sortEvents(filteredEvents, sortBy, order);
+    const sortedEvents = sortEvents(filteredEvents, sortBy, sort);
     const paginatedEvents = paginateEvents(sortedEvents, page, limit);
 
     return {
