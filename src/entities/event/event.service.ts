@@ -1,4 +1,5 @@
 import { mockFetch } from '../../shared/libs/mock-fetch.js';
+import type { GetEventResponse } from './contracts/get-event.contract.js';
 import type {
   GetEventsQueryParams,
   GetEventsResponse,
@@ -23,6 +24,15 @@ class EventService {
       events: paginatedEvents,
       eventsCount: filteredEvents.length,
     };
+  }
+
+  async getEvent(eventId: number): Promise<GetEventResponse> {
+    const result = await mockFetch('./db/events.json');
+    const eventsData = JSON.parse(result) as Array<Event>;
+
+    const desiredEvent = eventsData.find((event) => event.id === eventId);
+
+    return { event: desiredEvent ?? null };
   }
 }
 
