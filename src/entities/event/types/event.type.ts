@@ -1,4 +1,4 @@
-export interface Event {
+export interface EventApiModel {
   id: number;
   title: string;
   description: string;

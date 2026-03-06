@@ -7,14 +7,14 @@ import type {
 import { paginateEvents } from './helpers/paginate-events.js';
 import { searchEvents } from './helpers/search-events.js';
 import { sortEvents } from './helpers/sort-events.js';
-import type { Event } from './types/event.type.js';
+import type { EventApiModel } from './types/event.type.js';
 
 class EventService {
   async getEvents(params: GetEventsQueryParams): Promise<GetEventsResponse> {
     const { page, limit, sortBy, sort, search } = params;
 
     const result = await mockFetch('./db/events.json');
-    const eventsData = JSON.parse(result) as Array<Event>;
+    const eventsData = JSON.parse(result) as Array<EventApiModel>;
 
     const filteredEvents = searchEvents(eventsData, search);
     const sortedEvents = sortEvents(filteredEvents, sortBy, sort);
@@ -28,7 +28,7 @@ class EventService {
 
   async getEvent(eventId: number): Promise<GetEventResponse> {
     const result = await mockFetch('./db/events.json');
-    const eventsData = JSON.parse(result) as Array<Event>;
+    const eventsData = JSON.parse(result) as Array<EventApiModel>;
 
     const desiredEvent = eventsData.find((event) => event.id === eventId);
 

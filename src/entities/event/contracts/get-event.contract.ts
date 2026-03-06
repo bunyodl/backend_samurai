@@ -1,9 +1,9 @@
-import type { Event } from '../types/event.type';
+import type { EventApiModel } from '../types/event.type';
 
 export interface GetEventParams {
   eventId: string;
 }
 
 export interface GetEventResponse {
-  event: Event | null;
+  event: EventApiModel | null;
 }
