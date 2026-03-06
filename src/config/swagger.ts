@@ -1,6 +1,7 @@
 import swaggerJsDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
 import { type Express, type Request, type Response } from 'express';
+import { env } from './env.js';
 
 // Swagger setup
 const swaggerOptions: swaggerJsDoc.OAS3Options = {
@@ -22,7 +23,7 @@ const swaggerOptions: swaggerJsDoc.OAS3Options = {
     },
     externalDocs: {
       description: 'Swagger json file',
-      url: `${process.env.API_URL}/swagger.json`,
+      url: `${env.API_URL}/swagger.json`,
     },
 
     security: [

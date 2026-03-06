@@ -1,7 +1,11 @@
 import { app } from './app.js';
+import { env } from './config/env.js';
 import { swaggerDocs } from './config/swagger.js';
+import dotenv from 'dotenv';
 
-const PORT = process.env.PORT || 3000;
+dotenv.config();
+
+const PORT = env.PORT;
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port hahaha ${PORT}`);
