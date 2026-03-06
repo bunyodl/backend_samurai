@@ -1,7 +1,13 @@
+import path from 'path';
+import { fileURLToPath } from 'url';
 import swaggerJsDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
 import { type Express, type Request, type Response } from 'express';
 import { env } from './env.js';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const baseDir = path.join(__dirname, '..');
+const ext = path.basename(baseDir) === 'dist' ? 'js' : 'ts';
 
 // Swagger setup
 const swaggerOptions: swaggerJsDoc.OAS3Options = {
@@ -32,7 +38,10 @@ const swaggerOptions: swaggerJsDoc.OAS3Options = {
       },
     ],
   },
-  apis: ['./src/config/swagger-schemas.ts', './src/entities/**/*.ts'], // files containing annotations
+  apis: [
+    path.join(baseDir, 'config', `swagger-schemas.${ext}`),
+    path.join(baseDir, 'entities', '**', `*.${ext}`),
+  ], // files containing annotations
 };
 
 // Setup swagger
