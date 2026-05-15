@@ -1,5 +1,5 @@
 import express from 'express';
-import apiV1Router from './entities/api-v1.router.js';
+import apiV1Router from './modules/api-v1.router.js';
 import dotenv from 'dotenv';
 
 dotenv.config();
