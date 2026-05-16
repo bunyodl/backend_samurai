@@ -40,7 +40,7 @@ const swaggerOptions: swaggerJsDoc.OAS3Options = {
   },
   apis: [
     path.join(baseDir, 'config', `swagger-schemas.${ext}`),
-    path.join(baseDir, 'entities', '**', `*.${ext}`),
+    path.join(baseDir, 'modules', '**', `*.${ext}`),
   ], // files containing annotations
 };
 
