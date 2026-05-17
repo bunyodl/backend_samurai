@@ -1,8 +1,5 @@
 import express from 'express';
 import apiV1Router from './modules/api-v1.router.js';
-import dotenv from 'dotenv';
-
-dotenv.config();
 
 export const app = express();
 

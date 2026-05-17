@@ -4,7 +4,7 @@ import type {
   GetEventsResponse,
 } from './contracts/get-events.contract.js';
 
-import type { Request, Response } from 'express-serve-static-core';
+import type { Request, Response } from 'express';
 import { HTTP_STATUS_CODES } from '../../shared/constants/http-codes.js';
 import { eventService } from './event.service.js';
 import type {

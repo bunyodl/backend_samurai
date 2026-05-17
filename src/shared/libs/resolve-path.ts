@@ -6,13 +6,34 @@ const __dirname = path.dirname(__filename);
 
 export const rootPath = path.join(__dirname, '../../..');
 
-/**
- * Resolves the path with alias "~" or relative path
- */
-export const resolvePath = (...segments: string[]) => {
-  if (segments.length === 1 && segments[0].startsWith('~/')) {
-    // ~/db/events.json -> [rootPath, 'db/events.json']
-    return path.join(rootPath, segments[0].slice(2));
+const toBaseDir = (base: string | URL): string => {
+  if (base instanceof URL) {
+    return path.dirname(fileURLToPath(base));
   }
-  return path.join(rootPath, ...segments);
+  if (base.startsWith('file:')) {
+    return path.dirname(fileURLToPath(base));
+  }
+  return base;
+};
+
+/**
+ * Resolves paths:
+ * - `~/...` — from project root
+ * - absolute paths — returned as-is
+ * - other relative paths — from `base` (import.meta.url or directory), or project root if omitted
+ */
+export const resolvePath = (
+  relativePath: string,
+  base?: string | URL,
+): string => {
+  if (relativePath.startsWith('~/')) {
+    return path.join(rootPath, relativePath.slice(2));
+  }
+
+  if (path.isAbsolute(relativePath)) {
+    return relativePath;
+  }
+
+  const baseDir = base ? toBaseDir(base) : rootPath;
+  return path.resolve(baseDir, relativePath);
 };

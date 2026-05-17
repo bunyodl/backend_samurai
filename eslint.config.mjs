@@ -1,4 +1,5 @@
 import pluginJs from '@eslint/js';
+import eslintConfigPrettier from 'eslint-config-prettier';
 import { defineConfig } from 'eslint/config';
 import globals from 'globals';
 import TSEslint from 'typescript-eslint';
@@ -26,9 +27,6 @@ export default defineConfig([
   },
   {
     rules: {
-      semi: ['error', 'always'],
-      quotes: ['error', 'single'],
-      indent: ['error', 2],
       'prefer-const': ['error', { ignoreReadBeforeAssign: false }],
       'no-console': ['warn', { allow: ['warn', 'error'] }],
       'no-var': 'error',
@@ -36,4 +34,5 @@ export default defineConfig([
       'no-unreachable': 'error',
     },
   },
+  eslintConfigPrettier,
 ]);

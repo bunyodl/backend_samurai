@@ -4,7 +4,7 @@ import type { EventApiModel } from '../types/event.type.js';
 
 export type SortEventsBy = SortBy<
   EventApiModel,
-  'title' | 'description' | 'date' | 'price'
+  'title' | 'description' | 'date' | 'price' | 'id'
 >;
 
 export interface GetEventsQueryParams

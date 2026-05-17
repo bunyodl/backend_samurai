@@ -1,38 +1,23 @@
-import { mockFetch } from '../../shared/libs/mock-fetch.js';
 import type { GetEventResponse } from './contracts/get-event.contract.js';
 import type {
   GetEventsQueryParams,
   GetEventsResponse,
 } from './contracts/get-events.contract.js';
-import { paginateEvents } from './helpers/paginate-events.js';
-import { searchEvents } from './helpers/search-events.js';
-import { sortEvents } from './helpers/sort-events.js';
-import type { EventApiModel } from './types/event.type.js';
+import { eventsRepository } from './event.repository.js';
 
 class EventService {
   async getEvents(params: GetEventsQueryParams): Promise<GetEventsResponse> {
-    const { page, limit, sortBy, sort, search } = params;
+    const [events, eventsCount] = await Promise.all([
+      eventsRepository.getEvents(params),
+      eventsRepository.getEventsCount(params.search),
+    ]);
 
-    const result = await mockFetch('./db/events.json');
-    const eventsData = JSON.parse(result) as Array<EventApiModel>;
-
-    const filteredEvents = searchEvents(eventsData, search);
-    const sortedEvents = sortEvents(filteredEvents, sortBy, sort);
-    const paginatedEvents = paginateEvents(sortedEvents, page, limit);
-
-    return {
-      events: paginatedEvents,
-      eventsCount: filteredEvents.length,
-    };
+    return { events, eventsCount };
   }
 
   async getEvent(eventId: number): Promise<GetEventResponse> {
-    const result = await mockFetch('./db/events.json');
-    const eventsData = JSON.parse(result) as Array<EventApiModel>;
-
-    const desiredEvent = eventsData.find((event) => event.id === eventId);
-
-    return { event: desiredEvent ?? null };
+    const event = await eventsRepository.findEventById(eventId);
+    return { event };
   }
 }
 
