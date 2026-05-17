@@ -1,4 +1,4 @@
-import type { APIResponse } from '../../shared/types/api-response.type.js';
+import type { ApiResponse } from '../../shared/types/api-response.type.js';
 import type {
   GetEventsQueryParams,
   GetEventsResponse,
@@ -15,7 +15,7 @@ import type {
 export class EventController {
   async getEvents(
     req: Request<{}, {}, {}, GetEventsQueryParams>,
-    res: Response<APIResponse<GetEventsResponse>>,
+    res: Response<ApiResponse<GetEventsResponse>>,
   ) {
     const responseData = await eventService.getEvents(req.query);
 
@@ -28,7 +28,7 @@ export class EventController {
   }
   async getEvent(
     req: Request<GetEventParams>,
-    res: Response<APIResponse<GetEventResponse>>,
+    res: Response<ApiResponse<GetEventResponse>>,
   ) {
     const responseData = await eventService.getEvent(
       Number(req.params.eventId),

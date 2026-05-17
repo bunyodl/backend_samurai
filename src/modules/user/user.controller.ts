@@ -1,4 +1,4 @@
-import type { APIResponse } from '../../shared/types/api-response.type.js';
+import type { ApiResponse } from '../../shared/types/api-response.type.js';
 import type {
   GetUsersQueryParams,
   GetUsersResponse,
@@ -11,7 +11,7 @@ import { userService } from './user.service.js';
 export class UserController {
   async getUsers(
     req: Request<{}, {}, {}, GetUsersQueryParams>,
-    res: Response<APIResponse<GetUsersResponse>>,
+    res: Response<ApiResponse<GetUsersResponse>>,
   ) {
     const responseData = await userService.getUsers(req.query);
 

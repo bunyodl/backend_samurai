@@ -1,4 +1,4 @@
-import type { APIResponse } from '../../shared/types/api-response.type.js';
+import type { ApiResponse } from '../../shared/types/api-response.type.js';
 import type {
   GetVenuesQueryParams,
   GetVenuesResponse,
@@ -11,7 +11,7 @@ import { venueService } from './venue.service.js';
 export class VenueController {
   async getVenues(
     req: Request<{}, {}, {}, GetVenuesQueryParams>,
-    res: Response<APIResponse<GetVenuesResponse>>,
+    res: Response<ApiResponse<GetVenuesResponse>>,
   ) {
     const responseData = await venueService.getVenues(req.query);
 
