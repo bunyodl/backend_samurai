@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { eventsRouter } from './event/event.route.js';
-import { venuesRouter } from './venue/venue.route.js';
-import { usersRouter } from './user/user.route.js';
+import { eventsRouter } from '@/modules/event/event.route';
+import { venuesRouter } from '@/modules/venue/venue.route';
+import { usersRouter } from '@/modules/user/user.route';
 
 const apiRouter = Router();
 

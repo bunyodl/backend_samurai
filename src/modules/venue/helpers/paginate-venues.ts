@@ -1,4 +1,4 @@
-import type { Venue } from '../types/venue.type.js';
+import type { Venue } from '@/modules/venue/types/venue.type';
 
 export const DEFAULT_PAGE = 1;
 export const DEFAULT_LIMIT = 10;

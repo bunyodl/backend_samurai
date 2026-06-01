@@ -1,12 +1,12 @@
-import { registry } from '../registry-instance.js';
-import { apiResponseSchema } from '../schemas/shared.schema.js';
+import { registry } from '@/openapi/registry-instance';
+import { apiResponseSchema } from '@/openapi/schemas/shared.schema';
 import {
   CreateEventRequestSchema,
   GetEventResponseSchema,
   GetEventsResponseSchema,
   getEventsQuerySchema,
-} from '../schemas/event.schema.js';
-import { z } from '../zod-openapi.js';
+} from '@/openapi/schemas/event.schema';
+import { z } from '@/openapi/zod-openapi';
 
 const getEventsApiResponseSchema = apiResponseSchema(
   GetEventsResponseSchema,

@@ -1,12 +1,12 @@
-import { mockFetch } from '../../shared/libs/mock-fetch.js';
+import { mockFetch } from '@/shared/libs/mock-fetch';
 import type {
   GetUsersQueryParams,
   GetUsersResponse,
-} from './contracts/get-users.contract.js';
-import { paginateUsers } from './helpers/paginate-users.js';
-import { searchUsers } from './helpers/search-users.js';
-import { sortUsers } from './helpers/sort-users.js';
-import type { User } from './types/user.type.js';
+} from '@/modules/user/contracts/get-users.contract';
+import { paginateUsers } from '@/modules/user/helpers/paginate-users';
+import { searchUsers } from '@/modules/user/helpers/search-users';
+import { sortUsers } from '@/modules/user/helpers/sort-users';
+import type { User } from '@/modules/user/types/user.type';
 
 class UserService {
   async getUsers(params: GetUsersQueryParams): Promise<GetUsersResponse> {

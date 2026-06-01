@@ -1,12 +1,12 @@
-import { mockFetch } from '../../shared/libs/mock-fetch.js';
+import { mockFetch } from '@/shared/libs/mock-fetch';
 import type {
   GetVenuesQueryParams,
   GetVenuesResponse,
-} from './contracts/get-venues.contract.js';
-import { paginateVenues } from './helpers/paginate-venues.js';
-import { searchVenues } from './helpers/search-venues.js';
-import { sortVenues } from './helpers/sort-venues.js';
-import type { Venue } from './types/venue.type.js';
+} from '@/modules/venue/contracts/get-venues.contract';
+import { paginateVenues } from '@/modules/venue/helpers/paginate-venues';
+import { searchVenues } from '@/modules/venue/helpers/search-venues';
+import { sortVenues } from '@/modules/venue/helpers/sort-venues';
+import type { Venue } from '@/modules/venue/types/venue.type';
 
 class VenueService {
   async getVenues(params: GetVenuesQueryParams): Promise<GetVenuesResponse> {

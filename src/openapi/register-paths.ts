@@ -1,3 +1,3 @@
-import './paths/events.paths.js';
-import './paths/venues.paths.js';
-import './paths/users.paths.js';
+import '@/openapi/paths/events.paths';
+import '@/openapi/paths/venues.paths';
+import '@/openapi/paths/users.paths';

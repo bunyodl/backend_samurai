@@ -1,9 +1,9 @@
-import type { GetEventResponse } from './contracts/get-event.contract.js';
+import type { GetEventResponse } from '@/modules/event/contracts/get-event.contract';
 import type {
   GetEventsQueryParams,
   GetEventsResponse,
-} from './contracts/get-events.contract.js';
-import { eventsRepository } from './event.repository.js';
+} from '@/modules/event/contracts/get-events.contract';
+import { eventsRepository } from '@/modules/event/event.repository';
 
 class EventService {
   async getEvents(params: GetEventsQueryParams): Promise<GetEventsResponse> {

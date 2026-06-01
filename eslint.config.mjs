@@ -26,6 +26,26 @@ export default defineConfig([
     },
   },
   {
+    files: ['src/**/*.ts'],
+    rules: {
+      'no-restricted-imports': [
+        'warn',
+        {
+          patterns: [
+            {
+              group: ['../*', '../**'],
+              message: 'Use @/ path aliases instead of relative parent imports.',
+            },
+            {
+              group: ['./*', './**', '!@/**'],
+              message: 'Use @/ path aliases instead of relative sibling imports.',
+            },
+          ],
+        },
+      ],
+    },
+  },
+  {
     rules: {
       'prefer-const': ['error', { ignoreReadBeforeAssign: false }],
       'no-console': ['warn', { allow: ['warn', 'error'] }],

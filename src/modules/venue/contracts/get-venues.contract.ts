@@ -1,6 +1,6 @@
-import type { Pagination } from '../../../shared/types/pagination.type.js';
-import type { Sorting } from '../../../shared/types/sort.type.js';
-import type { Venue } from '../types/venue.type.js';
+import type { Pagination } from '@/shared/types/pagination.type';
+import type { Sorting } from '@/shared/types/sort.type';
+import type { Venue } from '@/modules/venue/types/venue.type';
 
 export type SortVenuesBy = 'name' | 'capacity' | 'city' | 'country';
 

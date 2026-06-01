@@ -1,4 +1,4 @@
-import type { Venue } from '../types/venue.type.js';
+import type { Venue } from '@/modules/venue/types/venue.type';
 
 const fieldSelectors = [
   (v: Venue) => v.location.city,

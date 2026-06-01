@@ -1,6 +1,6 @@
-import type { Pagination } from '../../../shared/types/pagination.type.js';
-import type { SortBy, Sorting } from '../../../shared/types/sort.type.js';
-import type { User } from '../types/user.type.js';
+import type { Pagination } from '@/shared/types/pagination.type';
+import type { SortBy, Sorting } from '@/shared/types/sort.type';
+import type { User } from '@/modules/user/types/user.type';
 
 export type SortUsersBy = SortBy<User, 'name' | 'email'>;
 

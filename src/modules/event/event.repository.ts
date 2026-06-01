@@ -1,7 +1,7 @@
-import { fetchFromDb } from '../../shared/libs/fetch-from-db.js';
-import { readSqlQuery } from '../../shared/libs/read-sql-query.js';
-import type { GetEventsQueryParams } from './contracts/get-events.contract.js';
-import type { EventApiModel } from './types/event.type.js';
+import { fetchFromDb } from '@/shared/libs/fetch-from-db';
+import { readSqlQuery } from '@/shared/libs/read-sql-query';
+import type { GetEventsQueryParams } from '@/modules/event/contracts/get-events.contract';
+import type { EventApiModel } from '@/modules/event/types/event.type';
 
 class EventsRepository {
   async getEvents(params: GetEventsQueryParams): Promise<Array<EventApiModel>> {

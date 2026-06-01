@@ -2,11 +2,11 @@ import 'dotenv/config';
 
 import { readFile } from 'node:fs/promises';
 import type { PoolClient } from 'pg';
-import { pool } from '../db/pool.js';
-import type { EventApiModel } from '../modules/event/types/event.type.js';
-import type { User } from '../modules/user/types/user.type.js';
-import type { Venue } from '../modules/venue/types/venue.type.js';
-import { resolvePath } from '../shared/libs/resolve-path.js';
+import { pool } from '@/db/pool';
+import type { EventApiModel } from '@/modules/event/types/event.type';
+import type { User } from '@/modules/user/types/user.type';
+import type { Venue } from '@/modules/venue/types/venue.type';
+import { resolvePath } from '@/shared/libs/resolve-path';
 
 async function loadJson<T>(relativePath: string): Promise<T[]> {
   const content = await readFile(resolvePath(relativePath), 'utf-8');

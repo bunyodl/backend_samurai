@@ -1,6 +1,6 @@
-import type { Pagination } from '../../../shared/types/pagination.type.js';
-import type { SortBy, Sorting } from '../../../shared/types/sort.type.js';
-import type { EventApiModel } from '../types/event.type.js';
+import type { Pagination } from '@/shared/types/pagination.type';
+import type { SortBy, Sorting } from '@/shared/types/sort.type';
+import type { EventApiModel } from '@/modules/event/types/event.type';
 
 export type SortEventsBy = SortBy<
   EventApiModel,

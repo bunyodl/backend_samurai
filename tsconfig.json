@@ -4,16 +4,15 @@
   "compilerOptions": {
     // Project Structure
     "rootDir": "./src",
-    "outDir": "./dist",
+    "outDir": "dist",
 
     // Runtime & Module System
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
 
     // Modern Node target
     "target": "ES2022",
     "lib": ["ES2022"],
-
 
     // Path Aliases
     "baseUrl": ".",
@@ -21,7 +20,6 @@
       "~/*": ["./*"],
       "@/*": ["./src/*"]
     },
-
 
     // Type Checking
     "strict": true,
@@ -74,11 +72,15 @@
     // Faster builds
     "skipLibCheck": true,
 
-
     // Node Environment
     "types": ["node"]
   },
 
   "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["node_modules", "dist"],
+  "tsc-alias": {
+    "resolveFullPaths": true,
+    "resolveFullExtension": ".js",
+    "verbose": false
+  }
 }

@@ -1,12 +1,12 @@
-import type { ApiResponse } from '../../shared/types/api-response.type.js';
+import type { ApiResponse } from '@/shared/types/api-response.type';
 import type {
   GetUsersQueryParams,
   GetUsersResponse,
-} from './contracts/get-users.contract.js';
+} from '@/modules/user/contracts/get-users.contract';
 
 import type { Request, Response } from 'express-serve-static-core';
-import { HTTP_STATUS_CODES } from '../../shared/constants/http-codes.js';
-import { userService } from './user.service.js';
+import { HTTP_STATUS_CODES } from '@/shared/constants/http-codes';
+import { userService } from '@/modules/user/user.service';
 
 export class UserController {
   async getUsers(

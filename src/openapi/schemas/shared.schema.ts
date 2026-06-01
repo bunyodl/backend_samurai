@@ -1,4 +1,4 @@
-import { z } from '../zod-openapi.js';
+import { z } from '@/openapi/zod-openapi';
 
 export function apiResponseSchema<T extends z.ZodTypeAny>(
   dataSchema: T,

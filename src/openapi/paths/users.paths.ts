@@ -1,9 +1,9 @@
-import { registry } from '../registry-instance.js';
-import { apiResponseSchema } from '../schemas/shared.schema.js';
+import { registry } from '@/openapi/registry-instance';
+import { apiResponseSchema } from '@/openapi/schemas/shared.schema';
 import {
   GetUsersResponseSchema,
   getUsersQuerySchema,
-} from '../schemas/user.schema.js';
+} from '@/openapi/schemas/user.schema';
 
 const getUsersApiResponseSchema = apiResponseSchema(
   GetUsersResponseSchema,

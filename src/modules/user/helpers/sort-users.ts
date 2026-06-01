@@ -1,6 +1,6 @@
-import type { SortOrder } from '../../../shared/types/sort.type.js';
-import type { SortUsersBy } from '../contracts/get-users.contract.js';
-import type { User } from '../types/user.type.js';
+import type { SortOrder } from '@/shared/types/sort.type';
+import type { SortUsersBy } from '@/modules/user/contracts/get-users.contract';
+import type { User } from '@/modules/user/types/user.type';
 
 export function sortUsers(
   users: Array<User>,

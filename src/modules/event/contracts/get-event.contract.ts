@@ -1,4 +1,4 @@
-import type { EventApiModel } from '../types/event.type.js';
+import type { EventApiModel } from '@/modules/event/types/event.type';
 
 export interface GetEventParams {
   eventId: string;
