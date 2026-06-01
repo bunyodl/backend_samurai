@@ -1,5 +1,5 @@
 import { readFile } from 'node:fs/promises';
-import { resolvePath } from './resolve-path';
+import { resolvePath } from './resolve-path.js';
 
 export const readSqlQuery = async (
   queryPath: string,

@@ -8,18 +8,22 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch --inspect ./src/index.ts",
-    "build": "tsc",
+    "prebuild": "npm run typecheck",
+    "build": "tsup && tsc-alias && npm run copy:sql",
+    "postbuild": "echo 'build successful'",
     "start": "node ./dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "copy:sql": "copyfiles -u 1 \"src/**/*.sql\" dist",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write \"**/*.(js,ts,html,css,md,json)\"",
     "seed": "tsx ./src/scripts/seed.ts"
   },
   "dependencies": {
+    "@asteasolutions/zod-to-openapi": "^8.5.0",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "pg": "^8.20.0",
-    "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1",
     "zod": "^4.3.6"
   },
@@ -28,15 +32,21 @@
     "@types/express": "^5.0.3",
     "@types/node": "^24.0.3",
     "@types/pg": "^8.20.0",
-    "@types/swagger-jsdoc": "^6.0.4",
     "@types/swagger-ui-express": "^4.1.8",
+    "copyfiles": "^2.4.1",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^16.5.0",
     "nodemon": "^3.1.10",
     "prettier": "^3.7.4",
+    "tsc-alias": "^1.8.17",
+    "tsup": "^8.5.1",
     "tsx": "^4.20.4",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.51.0"
+  },
+  "tsc-alias": {
+    "resolveFullPaths": true,
+    "verbose": false
   }
 }

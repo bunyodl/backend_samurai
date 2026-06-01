@@ -1,43 +1,84 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
+
   "compilerOptions": {
+    // Project Structure
     "rootDir": "./src",
     "outDir": "./dist",
-    "types": ["node"],
-    "moduleResolution": "node",
-    "noEmitOnError": false,
-    "declaration": true,
-    "allowJs": true,
-    "skipLibCheck": true,
+
+    // Runtime & Module System
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+
+    // Modern Node target
+    "target": "ES2022",
+    "lib": ["ES2022"],
+
+
+    // Path Aliases
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./src/*"]
+    },
+
+
+    // Type Checking
+    "strict": true,
+
+    "strictNullChecks": true,
+    "strictPropertyInitialization": false,
+
+    "noImplicitAny": false,
     "noImplicitReturns": true,
+
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+
+    "noFallthroughCasesInSwitch": true,
+
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    "forceConsistentCasingInFileNames": true,
+
+    // Module / Import Behavior
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    // Preserves import/export syntax exactly as written
+    "verbatimModuleSyntax": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+
+    // Source Maps & DX
     "sourceMap": true,
     "inlineSources": true,
     "sourceRoot": "/",
-    "module": "ESNext",
-    "target": "ES2020",
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strictNullChecks": true,
-    "forceConsistentCasingInFileNames": true,
-    "strictPropertyInitialization": false,
-    "noFallthroughCasesInSwitch": true,
-    "resolveJsonModule": true,
-    "isolatedModules": false,
     "pretty": true,
-    "noImplicitAny": false,
-    "lib": ["es2022"],
-    // don't create tsconfig.tsbuildinfo file
+    "removeComments": false,
+
+    // JSON / Assets
+    "resolveJsonModule": true,
+
+    // TypeScript Build Behavior
+
+    // tsup handles emitting/building
+    "noEmit": true,
+
+    // Don't generate tsbuildinfo
     "incremental": false,
 
-    // Linting
-    "noUncheckedSideEffectImports": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "strict": true
-    // "paths": {
-    //   "~/*": ["./*"],
-    //   "@/*": ["./src/*"]
-    // }
+    // Usually unnecessary with bundlers
+    "isolatedModules": true,
+
+    // Faster builds
+    "skipLibCheck": true,
+
+
+    // Node Environment
+    "types": ["node"]
   },
-  "include": ["src/**/*.ts"],
+
+  "include": ["src"],
   "exclude": ["node_modules", "dist"]
 }
