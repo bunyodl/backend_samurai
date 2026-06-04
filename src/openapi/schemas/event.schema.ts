@@ -9,10 +9,7 @@ export const EventSchema = z
       .openapi({ example: 'A fantastic outdoor music festival' }),
     venueId: z.number().openapi({ example: 1 }),
     organizerId: z.number().openapi({ example: 1 }),
-    date: z
-      .string()
-      .datetime()
-      .openapi({ example: '2024-07-15T18:00:00Z' }),
+    date: z.iso.datetime().openapi({ example: '2024-07-15T18:00:00Z' }),
     tags: z
       .array(z.string())
       .openapi({ example: ['music', 'outdoor', 'festival'] }),
@@ -41,10 +38,7 @@ export const CreateEventRequestSchema = z
       .openapi({ example: 'A fantastic outdoor music festival' }),
     venueId: z.number().openapi({ example: 1 }),
     organizerId: z.number().openapi({ example: 1 }),
-    date: z
-      .string()
-      .datetime()
-      .openapi({ example: '2024-07-15T18:00:00Z' }),
+    date: z.iso.datetime().openapi({ example: '2024-07-15T18:00:00Z' }),
     tags: z
       .array(z.string())
       .optional()
@@ -67,13 +61,9 @@ export const getEventsQuerySchema = z
       .min(1)
       .optional()
       .openapi({ example: 10, description: 'Number of items per page' }),
-    search: z
-      .string()
-      .optional()
-      .openapi({
-        example: 'music festival',
-        description: 'Search term to filter events by title or description',
-      }),
+    search: z.string().optional().openapi({
+      description: 'Search term to filter events by title or description',
+    }),
     sort: z
       .enum(['asc', 'desc'])
       .optional()

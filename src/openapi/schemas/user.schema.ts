@@ -4,13 +4,8 @@ export const UserSchema = z
   .object({
     id: z.number().openapi({ example: 1 }),
     name: z.string().openapi({ example: 'John Doe' }),
-    email: z
-      .string()
-      .email()
-      .openapi({ example: 'john.doe@example.com' }),
-    role: z
-      .enum(['organizer', 'attendee'])
-      .openapi({ example: 'organizer' }),
+    email: z.email().openapi({ example: 'john.doe@example.com' }),
+    role: z.enum(['organizer', 'attendee']).openapi({ example: 'organizer' }),
   })
   .openapi('User');
 
@@ -35,13 +30,9 @@ export const getUsersQuerySchema = z
       .min(1)
       .optional()
       .openapi({ example: 10, description: 'Number of items per page' }),
-    search: z
-      .string()
-      .optional()
-      .openapi({
-        example: 'john',
-        description: 'Search term to filter users by name or email',
-      }),
+    search: z.string().optional().openapi({
+      description: 'Search term to filter users by name or email',
+    }),
     sort: z
       .enum(['asc', 'desc'])
       .optional()
