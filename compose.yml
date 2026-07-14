@@ -1,0 +1,33 @@
+services:
+  db:
+    image: postgres:18.4
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+      PGDATA: ${DB_DATA_DIR}
+    ports:
+      - '5432:5432'
+    volumes:
+      - db_data:${DB_DATA_DIR}
+      - ./src/db/migrations/001-init.sql:/docker-entrypoint-initdb.d/001-init.sql:ro
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB']
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build: ./
+    ports:
+      - '3000:3000'
+    environment:
+      DB_HOST: db
+    env_file:
+      - .env
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  db_data:

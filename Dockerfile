@@ -1,6 +1,6 @@
 # Stage 1: Build the Application
-# We use node:18 as the base for building and installing dependencies.
-FROM node:18 AS build
+# We use node:24.3 as the base for building and installing dependencies.
+FROM node:24.3 AS build
 
 # Set the working directory inside the container
 WORKDIR /usr/src/app
@@ -21,8 +21,8 @@ COPY . .
 RUN npm run build || npx tsc
 
 # Stage 2: Create the Final Production Image
-# We use node:18-slim as a minimal runtime image.
-FROM node:18-slim
+# We use node:24.3-slim as a minimal runtime image.
+FROM node:24.3-slim
 
 # Set the working directory
 WORKDIR /usr/src/app
