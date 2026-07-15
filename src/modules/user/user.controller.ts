@@ -1,16 +1,15 @@
-import type { ApiResponse } from '@/shared/types/api-response.type';
 import type {
-  GetUsersQueryParams,
+  GetUsersQuery,
   GetUsersResponse,
-} from '@/modules/user/contracts/get-users.contract';
-
-import type { Request, Response } from 'express-serve-static-core';
-import { HTTP_STATUS_CODES } from '@/shared/constants/http-codes';
+} from '@/modules/user/schemas/endpoints/get-users.schema';
 import { userService } from '@/modules/user/user.service';
+import { HTTP_STATUS_CODES } from '@/shared/constants/http-codes';
+import type { ApiResponse } from '@/shared/types/api-response.type';
+import type { Request, Response } from 'express-serve-static-core';
 
 export class UserController {
   async getUsers(
-    req: Request<{}, {}, {}, GetUsersQueryParams>,
+    req: Request<{}, {}, {}, GetUsersQuery>,
     res: Response<ApiResponse<GetUsersResponse>>,
   ) {
     const responseData = await userService.getUsers(req.query);

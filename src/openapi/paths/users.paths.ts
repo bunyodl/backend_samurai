@@ -1,12 +1,12 @@
+import {
+  getUsersQuerySchema,
+  getUsersResponseSchema,
+} from '@/modules/user/schemas/endpoints/get-users.schema';
 import { registry } from '@/openapi/registry-instance';
 import { apiResponseSchema } from '@/openapi/schemas/shared.schema';
-import {
-  GetUsersResponseSchema,
-  getUsersQuerySchema,
-} from '@/openapi/schemas/user.schema';
 
 const getUsersApiResponseSchema = apiResponseSchema(
-  GetUsersResponseSchema,
+  getUsersResponseSchema,
   'GetUsersApiResponse',
 );
 
@@ -32,10 +32,14 @@ registry.registerPath({
             data: {
               users: [
                 {
-                  id: 1,
-                  name: 'John Doe',
+                  id: '00000000-0000-4000-8000-000000000001',
+                  firstName: 'John',
+                  lastName: 'Doe',
                   email: 'john.doe@example.com',
-                  role: 'organizer',
+                  imageUrl: null,
+                  role: 'user',
+                  createdAt: '2024-07-01T12:00:00.000Z',
+                  updatedAt: null,
                 },
               ],
               usersCount: 15,

@@ -1,15 +1,15 @@
-import type { Venue } from '@/modules/venue/types/venue.type';
+import type { VenueDto } from '@/modules/venue/schemas/resources/venue.schema';
 
 const fieldSelectors = [
-  (v: Venue) => v.location.city,
-  (v: Venue) => v.location.country,
-  (v: Venue) => v.name,
+  (v: VenueDto) => v.location,
+  (v: VenueDto) => v.name,
+  (v: VenueDto) => v.timezone,
 ];
 
 export function searchVenues(
-  venues: Array<Venue>,
+  venues: Array<VenueDto>,
   search?: string,
-): Array<Venue> {
+): Array<VenueDto> {
   if (!search) return venues;
 
   return venues.filter((venue) => {

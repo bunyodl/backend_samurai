@@ -1,123 +1,202 @@
 [
   {
-    "id": 1,
-    "name": "Alice",
+    "id": "00000000-0000-4000-8000-000000000001",
+    "firstName": "Alice",
+    "lastName": "User",
     "email": "alice@example.com",
-    "role": "organizer"
+    "imageUrl": null,
+    "role": "admin",
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   },
   {
-    "id": 2,
-    "name": "Bob",
+    "id": "00000000-0000-4000-8000-000000000002",
+    "firstName": "Bob",
+    "lastName": "User",
     "email": "bob@example.com",
-    "role": "organizer"
+    "imageUrl": null,
+    "role": "admin",
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   },
   {
-    "id": 3,
-    "name": "Carlos",
+    "id": "00000000-0000-4000-8000-000000000003",
+    "firstName": "Carlos",
+    "lastName": "User",
     "email": "carlos@example.com",
-    "role": "organizer"
+    "imageUrl": null,
+    "role": "admin",
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   },
   {
-    "id": 4,
-    "name": "Diana",
+    "id": "00000000-0000-4000-8000-000000000004",
+    "firstName": "Diana",
+    "lastName": "User",
     "email": "diana@example.com",
-    "role": "organizer"
+    "imageUrl": null,
+    "role": "admin",
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   },
   {
-    "id": 5,
-    "name": "Ethan",
+    "id": "00000000-0000-4000-8000-000000000005",
+    "firstName": "Ethan",
+    "lastName": "User",
     "email": "ethan@example.com",
-    "role": "organizer"
+    "imageUrl": null,
+    "role": "admin",
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   },
   {
-    "id": 6,
-    "name": "Fatima",
+    "id": "00000000-0000-4000-8000-000000000006",
+    "firstName": "Fatima",
+    "lastName": "User",
     "email": "fatima@example.com",
-    "role": "organizer"
+    "imageUrl": null,
+    "role": "admin",
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   },
   {
-    "id": 7,
-    "name": "George",
+    "id": "00000000-0000-4000-8000-000000000007",
+    "firstName": "George",
+    "lastName": "User",
     "email": "george@example.com",
-    "role": "organizer"
+    "imageUrl": null,
+    "role": "admin",
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   },
   {
-    "id": 8,
-    "name": "Hiro",
+    "id": "00000000-0000-4000-8000-000000000008",
+    "firstName": "Hiro",
+    "lastName": "User",
     "email": "hiro@example.com",
-    "role": "organizer"
+    "imageUrl": null,
+    "role": "admin",
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   },
   {
-    "id": 9,
-    "name": "Isabella",
+    "id": "00000000-0000-4000-8000-000000000009",
+    "firstName": "Isabella",
+    "lastName": "User",
     "email": "isabella@example.com",
-    "role": "organizer"
+    "imageUrl": null,
+    "role": "admin",
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   },
   {
-    "id": 10,
-    "name": "Jack",
+    "id": "00000000-0000-4000-8000-000000000010",
+    "firstName": "Jack",
+    "lastName": "User",
     "email": "jack@example.com",
-    "role": "organizer"
+    "imageUrl": null,
+    "role": "admin",
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   },
-
   {
-    "id": 11,
-    "name": "Liam",
+    "id": "00000000-0000-4000-8000-000000000011",
+    "firstName": "Liam",
+    "lastName": "User",
     "email": "liam@example.com",
-    "role": "attendee"
+    "imageUrl": null,
+    "role": "user",
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   },
   {
-    "id": 12,
-    "name": "Mia",
+    "id": "00000000-0000-4000-8000-000000000012",
+    "firstName": "Mia",
+    "lastName": "User",
     "email": "mia@example.com",
-    "role": "attendee"
+    "imageUrl": null,
+    "role": "user",
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   },
   {
-    "id": 13,
-    "name": "Noah",
+    "id": "00000000-0000-4000-8000-000000000013",
+    "firstName": "Noah",
+    "lastName": "User",
     "email": "noah@example.com",
-    "role": "attendee"
+    "imageUrl": null,
+    "role": "user",
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   },
   {
-    "id": 14,
-    "name": "Olivia",
+    "id": "00000000-0000-4000-8000-000000000014",
+    "firstName": "Olivia",
+    "lastName": "User",
     "email": "olivia@example.com",
-    "role": "attendee"
+    "imageUrl": null,
+    "role": "user",
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   },
   {
-    "id": 15,
-    "name": "Paul",
+    "id": "00000000-0000-4000-8000-000000000015",
+    "firstName": "Paul",
+    "lastName": "User",
     "email": "paul@example.com",
-    "role": "attendee"
+    "imageUrl": null,
+    "role": "user",
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   },
   {
-    "id": 16,
-    "name": "Quinn",
+    "id": "00000000-0000-4000-8000-000000000016",
+    "firstName": "Quinn",
+    "lastName": "User",
     "email": "quinn@example.com",
-    "role": "attendee"
+    "imageUrl": null,
+    "role": "user",
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   },
   {
-    "id": 17,
-    "name": "Rita",
+    "id": "00000000-0000-4000-8000-000000000017",
+    "firstName": "Rita",
+    "lastName": "User",
     "email": "rita@example.com",
-    "role": "attendee"
+    "imageUrl": null,
+    "role": "user",
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   },
   {
-    "id": 18,
-    "name": "Sam",
+    "id": "00000000-0000-4000-8000-000000000018",
+    "firstName": "Sam",
+    "lastName": "User",
     "email": "sam@example.com",
-    "role": "attendee"
+    "imageUrl": null,
+    "role": "user",
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   },
   {
-    "id": 19,
-    "name": "Tina",
+    "id": "00000000-0000-4000-8000-000000000019",
+    "firstName": "Tina",
+    "lastName": "User",
     "email": "tina@example.com",
-    "role": "attendee"
+    "imageUrl": null,
+    "role": "user",
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   },
   {
-    "id": 20,
-    "name": "Uma",
+    "id": "00000000-0000-4000-8000-000000000020",
+    "firstName": "Uma",
+    "lastName": "User",
     "email": "uma@example.com",
-    "role": "attendee"
+    "imageUrl": null,
+    "role": "user",
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   }
 ]

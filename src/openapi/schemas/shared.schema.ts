@@ -13,3 +13,18 @@ export function apiResponseSchema<T extends z.ZodTypeAny>(
     })
     .openapi(refId);
 }
+
+export const apiErrorDataSchema = z
+  .object({
+    name: z.string().openapi({ example: 'ZodError' }),
+    code: z.number().openapi({ example: 400 }),
+    message: z.string().openapi({
+      example: 'Invalid input: expected string, received number at "title"',
+    }),
+  })
+  .openapi('ApiErrorData');
+
+export const apiErrorResponseSchema = apiResponseSchema(
+  apiErrorDataSchema.nullable(),
+  'ApiErrorResponse',
+);

@@ -1,22 +1,39 @@
+import { createEventRequestSchema } from '@/modules/event/schemas/endpoints/create-event.schema';
+import {
+  getEventParamsSchema,
+  getEventResponseSchema,
+} from '@/modules/event/schemas/endpoints/get-event.schema';
+import {
+  getEventsQuerySchema,
+  getEventsResponseSchema,
+} from '@/modules/event/schemas/endpoints/get-events.schema';
 import { registry } from '@/openapi/registry-instance';
 import { apiResponseSchema } from '@/openapi/schemas/shared.schema';
-import {
-  CreateEventRequestSchema,
-  GetEventResponseSchema,
-  GetEventsResponseSchema,
-  getEventsQuerySchema,
-} from '@/openapi/schemas/event.schema';
 import { z } from '@/openapi/zod-openapi';
 
 const getEventsApiResponseSchema = apiResponseSchema(
-  GetEventsResponseSchema,
+  getEventsResponseSchema,
   'GetEventsApiResponse',
 );
 
 const getEventApiResponseSchema = apiResponseSchema(
-  GetEventResponseSchema,
+  getEventResponseSchema,
   'GetEventApiResponse',
 );
+
+const eventExample = {
+  id: '00000000-0000-4000-8000-000000000001',
+  title: 'Summer Music Festival',
+  description: 'A fantastic outdoor music festival',
+  type: 'in-person',
+  status: 'published',
+  venueId: '00000000-0000-4000-8000-000000000001',
+  organizerId: '00000000-0000-4000-8000-000000000001',
+  date: '2024-07-15T18:00:00.000Z',
+  tags: ['music', 'outdoor', 'festival'],
+  createdAt: '2024-07-01T12:00:00.000Z',
+  updatedAt: null,
+};
 
 registry.registerPath({
   method: 'get',
@@ -38,18 +55,7 @@ registry.registerPath({
             code: 200,
             message: 'Events fetched successfully',
             data: {
-              events: [
-                {
-                  id: 1,
-                  title: 'Summer Music Festival',
-                  description: 'A fantastic outdoor music festival',
-                  venueId: 1,
-                  organizerId: 1,
-                  date: '2024-07-15T18:00:00Z',
-                  tags: ['music', 'outdoor', 'festival'],
-                  price: 50,
-                },
-              ],
+              events: [eventExample],
               eventsCount: 25,
             },
             timestamp: 1_704_067_200_000,
@@ -67,16 +73,7 @@ registry.registerPath({
   description: 'Get detailed information about a specific event',
   tags: ['events'],
   request: {
-    params: z.object({
-      eventId: z.coerce
-        .number()
-        .int()
-        .openapi({
-          param: { name: 'eventId', in: 'path' },
-          example: 1,
-          description: 'Unique identifier of the event',
-        }),
-    }),
+    params: getEventParamsSchema,
   },
   responses: {
     200: {
@@ -88,16 +85,7 @@ registry.registerPath({
             code: 200,
             message: 'Event fetched successfully',
             data: {
-              event: {
-                id: 1,
-                title: 'Summer Music Festival',
-                description: 'A fantastic outdoor music festival',
-                venueId: 1,
-                organizerId: 1,
-                date: '2024-07-15T18:00:00Z',
-                tags: ['music', 'outdoor', 'festival'],
-                price: 50,
-              },
+              event: eventExample,
             },
             timestamp: 1_704_067_200_000,
           },
@@ -117,15 +105,16 @@ registry.registerPath({
     body: {
       content: {
         'application/json': {
-          schema: CreateEventRequestSchema,
+          schema: createEventRequestSchema,
           example: {
             title: 'Summer Music Festival',
             description: 'A fantastic outdoor music festival',
-            venueId: 1,
-            organizerId: 1,
-            date: '2024-07-15T18:00:00Z',
+            type: 'in-person',
+            status: 'draft',
+            venueId: '00000000-0000-4000-8000-000000000001',
+            organizerId: '00000000-0000-4000-8000-000000000001',
+            date: '2024-07-15T18:00:00.000Z',
             tags: ['music', 'outdoor', 'festival'],
-            price: 50,
           },
         },
       },

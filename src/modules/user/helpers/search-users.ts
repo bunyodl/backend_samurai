@@ -1,8 +1,15 @@
-import type { User } from '@/modules/user/types/user.type';
+import type { UserDto } from '@/modules/user/schemas/resources/user.schema';
 
-const fieldSelectors = [(u: User) => u.name, (u: User) => u.email];
+const fieldSelectors = [
+  (u: UserDto) => u.firstName,
+  (u: UserDto) => u.lastName,
+  (u: UserDto) => u.email,
+];
 
-export function searchUsers(users: Array<User>, search?: string): Array<User> {
+export function searchUsers(
+  users: Array<UserDto>,
+  search?: string,
+): Array<UserDto> {
   if (!search) return users;
 
   return users.filter((user) => {

@@ -1,18 +1,22 @@
+import type { GetVenuesQuery } from '@/modules/venue/schemas/endpoints/get-venues.schema';
+import type { VenueDto } from '@/modules/venue/schemas/resources/venue.schema';
 import type { SortOrder } from '@/shared/types/sort.type';
-import type { SortVenuesBy } from '@/modules/venue/contracts/get-venues.contract';
-import type { Venue } from '@/modules/venue/types/venue.type';
 
 export function sortVenues(
-  venues: Array<Venue>,
-  sortBy?: SortVenuesBy,
+  venues: Array<VenueDto>,
+  sortBy?: GetVenuesQuery['sortBy'],
   sort?: SortOrder,
-): Array<Venue> {
+): Array<VenueDto> {
   if (!sortBy || !sort) return venues;
 
-  return venues.sort((a, b) => {
-    if (sort === 'asc') {
-      return a[sortBy].localeCompare(b[sortBy]);
-    }
-    return b[sortBy].localeCompare(a[sortBy]);
+  return [...venues].sort((a, b) => {
+    const aValue = a[sortBy];
+    const bValue = b[sortBy];
+
+    const cmp =
+      typeof aValue === 'number' && typeof bValue === 'number'
+        ? aValue - bValue
+        : String(aValue).localeCompare(String(bValue));
+    return sort === 'asc' ? cmp : -cmp;
   });
 }

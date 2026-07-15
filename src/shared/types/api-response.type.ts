@@ -4,3 +4,8 @@ export interface ApiResponse<T> {
   data: T;
   timestamp: number;
 }
+export interface ApiErrorData {
+  name: string;
+  code: number;
+  message: string;
+}

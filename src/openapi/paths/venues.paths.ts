@@ -1,12 +1,12 @@
+import {
+  getVenuesQuerySchema,
+  getVenuesResponseSchema,
+} from '@/modules/venue/schemas/endpoints/get-venues.schema';
 import { registry } from '@/openapi/registry-instance';
 import { apiResponseSchema } from '@/openapi/schemas/shared.schema';
-import {
-  GetVenuesResponseSchema,
-  getVenuesQuerySchema,
-} from '@/openapi/schemas/venue.schema';
 
 const getVenuesApiResponseSchema = apiResponseSchema(
-  GetVenuesResponseSchema,
+  getVenuesResponseSchema,
   'GetVenuesApiResponse',
 );
 
@@ -32,13 +32,13 @@ registry.registerPath({
             data: {
               venues: [
                 {
-                  id: 1,
+                  id: '00000000-0000-4000-8000-000000000001',
                   name: 'Grand Convention Center',
-                  location: {
-                    city: 'New York',
-                    country: 'USA',
-                  },
+                  location: 'New York, USA',
+                  timezone: 'America/New_York',
                   capacity: 5000,
+                  createdAt: '2024-07-01T12:00:00.000Z',
+                  updatedAt: null,
                 },
               ],
               venuesCount: 10,

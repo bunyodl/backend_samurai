@@ -1,12 +1,12 @@
-import type { GetEventResponse } from '@/modules/event/contracts/get-event.contract';
+import type { GetEventResponse } from '@/modules/event/schemas/endpoints/get-event.schema';
 import type {
-  GetEventsQueryParams,
+  GetEventsQuery,
   GetEventsResponse,
-} from '@/modules/event/contracts/get-events.contract';
+} from '@/modules/event/schemas/endpoints/get-events.schema';
 import { eventsRepository } from '@/modules/event/event.repository';
 
 class EventService {
-  async getEvents(params: GetEventsQueryParams): Promise<GetEventsResponse> {
+  async getEvents(params: GetEventsQuery): Promise<GetEventsResponse> {
     const [events, eventsCount] = await Promise.all([
       eventsRepository.getEvents(params),
       eventsRepository.getEventsCount(params.search),
@@ -15,7 +15,7 @@ class EventService {
     return { events, eventsCount };
   }
 
-  async getEvent(eventId: number): Promise<GetEventResponse> {
+  async getEvent(eventId: string): Promise<GetEventResponse> {
     const event = await eventsRepository.findEventById(eventId);
     return { event };
   }

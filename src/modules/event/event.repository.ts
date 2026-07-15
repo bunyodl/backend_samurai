@@ -1,10 +1,23 @@
+import { mapEventRowToDto } from '@/modules/event/helpers/map-event-row';
+import type { EventDto } from '@/modules/event/schemas/resources/event.schema';
+import type { GetEventsQuery } from '@/modules/event/schemas/endpoints/get-events.schema';
+import type { EventRow } from '@/modules/event/types/event-row.type';
 import { fetchFromDb } from '@/shared/libs/fetch-from-db';
 import { readSqlQuery } from '@/shared/libs/read-sql-query';
-import type { GetEventsQueryParams } from '@/modules/event/contracts/get-events.contract';
-import type { EventApiModel } from '@/modules/event/types/event.type';
+
+const EVENT_SORT_COLUMNS = {
+  title: 'title',
+  description: 'description',
+  date: 'date',
+  createdAt: 'created_at',
+} as const;
 
 class EventsRepository {
-  async getEvents(params: GetEventsQueryParams): Promise<Array<EventApiModel>> {
+  async getEvents(params: GetEventsQuery): Promise<Array<EventDto>> {
+    const sortColumn =
+      EVENT_SORT_COLUMNS[params.sortBy ?? 'date'] ?? EVENT_SORT_COLUMNS.date;
+    const sortOrder = params.sort?.toUpperCase() === 'DESC' ? 'DESC' : 'ASC';
+
     let query: string;
 
     if (params.search) {
@@ -17,13 +30,13 @@ class EventsRepository {
           FROM unnest(tags) AS tag
           WHERE tag ILIKE $1
         )
-        ORDER BY ${params.sortBy ?? 'id'} ${params.sort?.toUpperCase() ?? 'ASC'}
+        ORDER BY ${sortColumn} ${sortOrder}
         LIMIT $2 OFFSET $3
         `;
     } else {
       query = `
         SELECT * FROM events
-        ORDER BY ${params.sortBy ?? 'id'} ${params.sort?.toUpperCase() ?? 'ASC'}
+        ORDER BY ${sortColumn} ${sortOrder}
         LIMIT $1 OFFSET $2
         `;
     }
@@ -36,7 +49,8 @@ class EventsRepository {
         ]
       : [params.limit ?? 10, ((params.page ?? 1) - 1) * (params.limit ?? 10)];
 
-    return await fetchFromDb<Array<EventApiModel>>(query, queryParams);
+    const rows = await fetchFromDb<Array<EventRow>>(query, queryParams);
+    return rows.map(mapEventRowToDto);
   }
 
   async getEventsCount(search?: string): Promise<number> {
@@ -53,16 +67,16 @@ class EventsRepository {
       );
     }
 
-    const result = await fetchFromDb(
+    const result = await fetchFromDb<Array<{ count: string }>>(
       query,
       search ? [`%${search}%`] : undefined,
     );
 
-    return Number(result?.[0].count);
+    return Number(result[0]?.count ?? 0);
   }
 
-  async findEventById(eventId: number): Promise<EventApiModel | null> {
-    const result = await fetchFromDb<EventApiModel | null>(
+  async findEventById(eventId: string): Promise<EventDto | null> {
+    const rows = await fetchFromDb<Array<EventRow>>(
       `
         SELECT * FROM events
         WHERE id = $1
@@ -70,7 +84,8 @@ class EventsRepository {
       [eventId],
     );
 
-    return result ?? null;
+    const row = rows[0];
+    return row ? mapEventRowToDto(row) : null;
   }
 }
 

@@ -1,16 +1,15 @@
-import type { ApiResponse } from '@/shared/types/api-response.type';
 import type {
-  GetVenuesQueryParams,
+  GetVenuesQuery,
   GetVenuesResponse,
-} from '@/modules/venue/contracts/get-venues.contract';
-
-import type { Request, Response } from 'express-serve-static-core';
-import { HTTP_STATUS_CODES } from '@/shared/constants/http-codes';
+} from '@/modules/venue/schemas/endpoints/get-venues.schema';
 import { venueService } from '@/modules/venue/venue.service';
+import { HTTP_STATUS_CODES } from '@/shared/constants/http-codes';
+import type { ApiResponse } from '@/shared/types/api-response.type';
+import type { Request, Response } from 'express-serve-static-core';
 
 export class VenueController {
   async getVenues(
-    req: Request<{}, {}, {}, GetVenuesQueryParams>,
+    req: Request<{}, {}, {}, GetVenuesQuery>,
     res: Response<ApiResponse<GetVenuesResponse>>,
   ) {
     const responseData = await venueService.getVenues(req.query);

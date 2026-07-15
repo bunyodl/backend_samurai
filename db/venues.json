@@ -1,62 +1,92 @@
 [
   {
-    "id": 1,
+    "id": "00000000-0000-4000-8000-000000000001",
     "name": "Main Hall SF",
-    "location": { "city": "San Francisco", "country": "USA" },
-    "capacity": 300
+    "location": "San Francisco, USA",
+    "timezone": "America/Los_Angeles",
+    "capacity": 300,
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   },
   {
-    "id": 2,
+    "id": "00000000-0000-4000-8000-000000000002",
     "name": "Berlin Tech Arena",
-    "location": { "city": "Berlin", "country": "Germany" },
-    "capacity": 500
+    "location": "Berlin, Germany",
+    "timezone": "Europe/Berlin",
+    "capacity": 500,
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   },
   {
-    "id": 3,
+    "id": "00000000-0000-4000-8000-000000000003",
     "name": "Online - Zoom",
-    "location": { "city": "Virtual", "country": "Global" },
-    "capacity": 1000
+    "location": "Virtual, Global",
+    "timezone": "UTC",
+    "capacity": 1000,
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   },
   {
-    "id": 4,
+    "id": "00000000-0000-4000-8000-000000000004",
     "name": "Tokyo Dev Hub",
-    "location": { "city": "Tokyo", "country": "Japan" },
-    "capacity": 250
+    "location": "Tokyo, Japan",
+    "timezone": "Asia/Tokyo",
+    "capacity": 250,
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   },
   {
-    "id": 5,
+    "id": "00000000-0000-4000-8000-000000000005",
     "name": "Frunze Stadium",
-    "location": { "city": "Dushanbe", "country": "Tajikistan" },
-    "capacity": 400
+    "location": "Dushanbe, Tajikistan",
+    "timezone": "Asia/Dushanbe",
+    "capacity": 400,
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   },
   {
-    "id": 6,
+    "id": "00000000-0000-4000-8000-000000000006",
     "name": "Paris Startup Studio",
-    "location": { "city": "Paris", "country": "France" },
-    "capacity": 150
+    "location": "Paris, France",
+    "timezone": "Europe/Paris",
+    "capacity": 150,
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   },
   {
-    "id": 7,
+    "id": "00000000-0000-4000-8000-000000000007",
     "name": "London CodeBase",
-    "location": { "city": "London", "country": "UK" },
-    "capacity": 350
+    "location": "London, UK",
+    "timezone": "Europe/London",
+    "capacity": 350,
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   },
   {
-    "id": 8,
+    "id": "00000000-0000-4000-8000-000000000008",
     "name": "Dubai Tech Center",
-    "location": { "city": "Dubai", "country": "UAE" },
-    "capacity": 200
+    "location": "Dubai, UAE",
+    "timezone": "UTC",
+    "capacity": 200,
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   },
   {
-    "id": 9,
+    "id": "00000000-0000-4000-8000-000000000009",
     "name": "São Paulo Campus",
-    "location": { "city": "São Paulo", "country": "Brazil" },
-    "capacity": 300
+    "location": "São Paulo, Brazil",
+    "timezone": "America/Sao_Paulo",
+    "capacity": 300,
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   },
   {
-    "id": 10,
+    "id": "00000000-0000-4000-8000-000000000010",
     "name": "Melbourne Digital Arena",
-    "location": { "city": "Melbourne", "country": "Australia" },
-    "capacity": 250
+    "location": "Melbourne, Australia",
+    "timezone": "Australia/Sydney",
+    "capacity": 250,
+    "createdAt": "2024-07-01T12:00:00.000Z",
+    "updatedAt": null
   }
 ]
