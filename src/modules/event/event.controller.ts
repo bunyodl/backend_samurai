@@ -12,7 +12,7 @@ import type { ApiResponse } from '@/shared/types/api-response.type';
 import type { Request, Response } from 'express';
 
 export class EventController {
-  async getEvents(
+  async getAll(
     req: Request<{}, {}, {}, GetEventsQuery>,
     res: Response<ApiResponse<GetEventsResponse>>,
   ) {
@@ -26,7 +26,7 @@ export class EventController {
     });
   }
 
-  async getEvent(
+  async getById(
     req: Request<GetEventParams>,
     res: Response<ApiResponse<GetEventResponse>>,
   ) {

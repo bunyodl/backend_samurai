@@ -34,11 +34,8 @@ export default defineConfig([
           patterns: [
             {
               group: ['../*', '../**'],
-              message: 'Use @/ path aliases instead of relative parent imports.',
-            },
-            {
-              group: ['./*', './**', '!@/**'],
-              message: 'Use @/ path aliases instead of relative sibling imports.',
+              message:
+                'Use @/ path aliases instead of relative parent imports.',
             },
           ],
         },
