@@ -1,6 +1,7 @@
-export type UserRole = 'admin' | 'user';
+import type { UserRole } from '@/modules/user/constants/user.constants';
+import type { RowTimestamps } from '@/db/types/row-timestamps.type';
 
-export interface UserRow {
+export interface UserRow extends RowTimestamps {
   id: string;
   first_name: string;
   last_name: string;
@@ -8,6 +9,4 @@ export interface UserRow {
   image_url: string | null;
   role: UserRole;
   password_hash: string;
-  created_at: Date;
-  updated_at: Date | null;
 }

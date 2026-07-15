@@ -1,6 +1,6 @@
 [
   {
-    "id": "00000000-0000-4000-8000-000000000001",
+    "id": "0190f5a3-0000-7000-8000-000000000001",
     "name": "Main Hall SF",
     "location": "San Francisco, USA",
     "timezone": "America/Los_Angeles",
@@ -9,7 +9,7 @@
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000002",
+    "id": "0190f5a3-0000-7000-8000-000000000002",
     "name": "Berlin Tech Arena",
     "location": "Berlin, Germany",
     "timezone": "Europe/Berlin",
@@ -18,7 +18,7 @@
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000003",
+    "id": "0190f5a3-0000-7000-8000-000000000003",
     "name": "Online - Zoom",
     "location": "Virtual, Global",
     "timezone": "UTC",
@@ -27,7 +27,7 @@
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000004",
+    "id": "0190f5a3-0000-7000-8000-000000000004",
     "name": "Tokyo Dev Hub",
     "location": "Tokyo, Japan",
     "timezone": "Asia/Tokyo",
@@ -36,7 +36,7 @@
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000005",
+    "id": "0190f5a3-0000-7000-8000-000000000005",
     "name": "Frunze Stadium",
     "location": "Dushanbe, Tajikistan",
     "timezone": "Asia/Dushanbe",
@@ -45,7 +45,7 @@
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000006",
+    "id": "0190f5a3-0000-7000-8000-000000000006",
     "name": "Paris Startup Studio",
     "location": "Paris, France",
     "timezone": "Europe/Paris",
@@ -54,7 +54,7 @@
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000007",
+    "id": "0190f5a3-0000-7000-8000-000000000007",
     "name": "London CodeBase",
     "location": "London, UK",
     "timezone": "Europe/London",
@@ -63,7 +63,7 @@
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000008",
+    "id": "0190f5a3-0000-7000-8000-000000000008",
     "name": "Dubai Tech Center",
     "location": "Dubai, UAE",
     "timezone": "UTC",
@@ -72,7 +72,7 @@
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000009",
+    "id": "0190f5a3-0000-7000-8000-000000000009",
     "name": "São Paulo Campus",
     "location": "São Paulo, Brazil",
     "timezone": "America/Sao_Paulo",
@@ -81,7 +81,7 @@
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000010",
+    "id": "0190f5a3-0000-7000-8000-000000000010",
     "name": "Melbourne Digital Arena",
     "location": "Melbourne, Australia",
     "timezone": "Australia/Sydney",

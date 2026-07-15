@@ -22,13 +22,13 @@ const getEventApiResponseSchema = apiResponseSchema(
 );
 
 const eventExample = {
-  id: '00000000-0000-4000-8000-000000000001',
+  id: '0190f5a3-0000-7000-8000-000000000001',
   title: 'Summer Music Festival',
   description: 'A fantastic outdoor music festival',
   type: 'in-person',
   status: 'published',
-  venueId: '00000000-0000-4000-8000-000000000001',
-  organizerId: '00000000-0000-4000-8000-000000000001',
+  venueId: '0190f5a3-0000-7000-8000-000000000001',
+  organizerId: '0190f5a3-0000-7000-8000-000000000001',
   date: '2024-07-15T18:00:00.000Z',
   tags: ['music', 'outdoor', 'festival'],
   createdAt: '2024-07-01T12:00:00.000Z',
@@ -111,8 +111,8 @@ registry.registerPath({
             description: 'A fantastic outdoor music festival',
             type: 'in-person',
             status: 'draft',
-            venueId: '00000000-0000-4000-8000-000000000001',
-            organizerId: '00000000-0000-4000-8000-000000000001',
+            venueId: '0190f5a3-0000-7000-8000-000000000001',
+            organizerId: '0190f5a3-0000-7000-8000-000000000001',
             date: '2024-07-15T18:00:00.000Z',
             tags: ['music', 'outdoor', 'festival'],
           },

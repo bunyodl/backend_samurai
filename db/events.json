@@ -1,651 +1,806 @@
 [
   {
-    "id": "00000000-0000-4000-8000-000000000001",
+    "id": "0190f5a3-0000-7000-8000-000000000001",
     "title": "React Meetup 2025",
     "description": "A session on react meetup with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000002",
-    "organizerId": "00000000-0000-4000-8000-000000000002",
+    "venueId": "0190f5a3-0000-7000-8000-000000000002",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000002",
     "date": "2025-09-03T00:00:00.000Z",
-    "tags": ["react", "frontend"],
+    "tags": [
+      "react",
+      "frontend"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000002",
+    "id": "0190f5a3-0000-7000-8000-000000000002",
     "title": "Vue.js Europe 2025",
     "description": "A session on vue.js europe with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000003",
-    "organizerId": "00000000-0000-4000-8000-000000000003",
+    "venueId": "0190f5a3-0000-7000-8000-000000000003",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000003",
     "date": "2025-09-05T00:00:00.000Z",
-    "tags": ["vue", "frontend"],
+    "tags": [
+      "vue",
+      "frontend"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000003",
+    "id": "0190f5a3-0000-7000-8000-000000000003",
     "title": "Docker Deep Dive 2025",
     "description": "A session on docker deep dive with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000004",
-    "organizerId": "00000000-0000-4000-8000-000000000004",
+    "venueId": "0190f5a3-0000-7000-8000-000000000004",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000004",
     "date": "2025-09-07T00:00:00.000Z",
-    "tags": ["docker", "devops"],
+    "tags": [
+      "docker",
+      "devops"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000004",
+    "id": "0190f5a3-0000-7000-8000-000000000004",
     "title": "Python for Data Science 2025",
     "description": "A session on python for data science with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000005",
-    "organizerId": "00000000-0000-4000-8000-000000000005",
+    "venueId": "0190f5a3-0000-7000-8000-000000000005",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000005",
     "date": "2025-09-09T00:00:00.000Z",
-    "tags": ["python", "data"],
+    "tags": [
+      "python",
+      "data"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000005",
+    "id": "0190f5a3-0000-7000-8000-000000000005",
     "title": "Next.js SEO Workshop 2025",
     "description": "A session on next.js seo workshop with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000006",
-    "organizerId": "00000000-0000-4000-8000-000000000006",
+    "venueId": "0190f5a3-0000-7000-8000-000000000006",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000006",
     "date": "2025-09-11T00:00:00.000Z",
-    "tags": ["nextjs", "seo"],
+    "tags": [
+      "nextjs",
+      "seo"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000006",
+    "id": "0190f5a3-0000-7000-8000-000000000006",
     "title": "AI Startups Demo Day 2025",
     "description": "A session on ai startups demo day with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000007",
-    "organizerId": "00000000-0000-4000-8000-000000000007",
+    "venueId": "0190f5a3-0000-7000-8000-000000000007",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000007",
     "date": "2025-09-13T00:00:00.000Z",
-    "tags": ["ai", "startups"],
+    "tags": [
+      "ai",
+      "startups"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000007",
+    "id": "0190f5a3-0000-7000-8000-000000000007",
     "title": "Security Best Practices 2025",
     "description": "A session on security best practices with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000008",
-    "organizerId": "00000000-0000-4000-8000-000000000008",
+    "venueId": "0190f5a3-0000-7000-8000-000000000008",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000008",
     "date": "2025-09-15T00:00:00.000Z",
-    "tags": ["security", "web"],
+    "tags": [
+      "security",
+      "web"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000008",
+    "id": "0190f5a3-0000-7000-8000-000000000008",
     "title": "Cloudflare & Edge Computing 2025",
     "description": "A session on cloudflare & edge computing with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000009",
-    "organizerId": "00000000-0000-4000-8000-000000000009",
+    "venueId": "0190f5a3-0000-7000-8000-000000000009",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000009",
     "date": "2025-09-17T00:00:00.000Z",
-    "tags": ["cloudflare", "edge"],
+    "tags": [
+      "cloudflare",
+      "edge"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000009",
+    "id": "0190f5a3-0000-7000-8000-000000000009",
     "title": "GraphQL vs REST 2025",
     "description": "A session on graphql vs rest with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000010",
-    "organizerId": "00000000-0000-4000-8000-000000000010",
+    "venueId": "0190f5a3-0000-7000-8000-000000000010",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000010",
     "date": "2025-09-19T00:00:00.000Z",
-    "tags": ["graphql", "rest", "api"],
+    "tags": [
+      "graphql",
+      "rest",
+      "api"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000010",
+    "id": "0190f5a3-0000-7000-8000-000000000010",
     "title": "Kubernetes Crash Course 2025",
     "description": "A session on kubernetes crash course with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000001",
-    "organizerId": "00000000-0000-4000-8000-000000000001",
+    "venueId": "0190f5a3-0000-7000-8000-000000000001",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000001",
     "date": "2025-09-21T00:00:00.000Z",
-    "tags": ["kubernetes", "devops"],
+    "tags": [
+      "kubernetes",
+      "devops"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000011",
+    "id": "0190f5a3-0000-7000-8000-000000000011",
     "title": "Rust Game Dev 2025",
     "description": "A session on rust game dev with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000002",
-    "organizerId": "00000000-0000-4000-8000-000000000002",
+    "venueId": "0190f5a3-0000-7000-8000-000000000002",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000002",
     "date": "2025-09-23T00:00:00.000Z",
-    "tags": ["rust", "game"],
+    "tags": [
+      "rust",
+      "game"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000012",
+    "id": "0190f5a3-0000-7000-8000-000000000012",
     "title": "Firebase & Firestore 2025",
     "description": "A session on firebase & firestore with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000003",
-    "organizerId": "00000000-0000-4000-8000-000000000003",
+    "venueId": "0190f5a3-0000-7000-8000-000000000003",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000003",
     "date": "2025-09-25T00:00:00.000Z",
-    "tags": ["firebase", "backend"],
+    "tags": [
+      "firebase",
+      "backend"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000013",
+    "id": "0190f5a3-0000-7000-8000-000000000013",
     "title": "SvelteConf 2025",
     "description": "A session on svelteconf with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000004",
-    "organizerId": "00000000-0000-4000-8000-000000000004",
+    "venueId": "0190f5a3-0000-7000-8000-000000000004",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000004",
     "date": "2025-09-27T00:00:00.000Z",
-    "tags": ["svelte", "frontend"],
+    "tags": [
+      "svelte",
+      "frontend"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000014",
+    "id": "0190f5a3-0000-7000-8000-000000000014",
     "title": "Web3 Summit 2025",
     "description": "A session on web3 summit with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000005",
-    "organizerId": "00000000-0000-4000-8000-000000000005",
+    "venueId": "0190f5a3-0000-7000-8000-000000000005",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000005",
     "date": "2025-09-29T00:00:00.000Z",
-    "tags": ["web3", "blockchain"],
+    "tags": [
+      "web3",
+      "blockchain"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000015",
+    "id": "0190f5a3-0000-7000-8000-000000000015",
     "title": "PostgreSQL Performance 2025",
     "description": "A session on postgresql performance with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000006",
-    "organizerId": "00000000-0000-4000-8000-000000000006",
+    "venueId": "0190f5a3-0000-7000-8000-000000000006",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000006",
     "date": "2025-10-01T00:00:00.000Z",
-    "tags": ["postgresql", "database"],
+    "tags": [
+      "postgresql",
+      "database"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000016",
+    "id": "0190f5a3-0000-7000-8000-000000000016",
     "title": "Deno for Beginners 2025",
     "description": "A session on deno for beginners with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000007",
-    "organizerId": "00000000-0000-4000-8000-000000000007",
+    "venueId": "0190f5a3-0000-7000-8000-000000000007",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000007",
     "date": "2025-10-03T00:00:00.000Z",
-    "tags": ["deno", "javascript"],
+    "tags": [
+      "deno",
+      "javascript"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000017",
+    "id": "0190f5a3-0000-7000-8000-000000000017",
     "title": "Machine Learning Bootcamp 2025",
     "description": "A session on machine learning bootcamp with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000008",
-    "organizerId": "00000000-0000-4000-8000-000000000008",
+    "venueId": "0190f5a3-0000-7000-8000-000000000008",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000008",
     "date": "2025-10-05T00:00:00.000Z",
-    "tags": ["ml", "ai"],
+    "tags": [
+      "ml",
+      "ai"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000018",
+    "id": "0190f5a3-0000-7000-8000-000000000018",
     "title": "Flutter Mobile Fest 2025",
     "description": "A session on flutter mobile fest with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000009",
-    "organizerId": "00000000-0000-4000-8000-000000000009",
+    "venueId": "0190f5a3-0000-7000-8000-000000000009",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000009",
     "date": "2025-10-07T00:00:00.000Z",
-    "tags": ["flutter", "mobile"],
+    "tags": [
+      "flutter",
+      "mobile"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000019",
+    "id": "0190f5a3-0000-7000-8000-000000000019",
     "title": "TypeScript Advanced 2025",
     "description": "A session on typescript advanced with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000010",
-    "organizerId": "00000000-0000-4000-8000-000000000010",
+    "venueId": "0190f5a3-0000-7000-8000-000000000010",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000010",
     "date": "2025-10-09T00:00:00.000Z",
-    "tags": ["typescript", "advanced"],
+    "tags": [
+      "typescript",
+      "advanced"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000020",
+    "id": "0190f5a3-0000-7000-8000-000000000020",
     "title": "CI/CD Pipelines Workshop 2026",
     "description": "A session on ci/cd pipelines workshop with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000001",
-    "organizerId": "00000000-0000-4000-8000-000000000001",
+    "venueId": "0190f5a3-0000-7000-8000-000000000001",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000001",
     "date": "2025-10-11T00:00:00.000Z",
-    "tags": ["ci", "cd", "devops"],
+    "tags": [
+      "ci",
+      "cd",
+      "devops"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000021",
+    "id": "0190f5a3-0000-7000-8000-000000000021",
     "title": "React Meetup 2026",
     "description": "A session on react meetup with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000002",
-    "organizerId": "00000000-0000-4000-8000-000000000002",
+    "venueId": "0190f5a3-0000-7000-8000-000000000002",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000002",
     "date": "2025-10-13T00:00:00.000Z",
-    "tags": ["react", "frontend"],
+    "tags": [
+      "react",
+      "frontend"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000022",
+    "id": "0190f5a3-0000-7000-8000-000000000022",
     "title": "Vue.js Europe 2026",
     "description": "A session on vue.js europe with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000003",
-    "organizerId": "00000000-0000-4000-8000-000000000003",
+    "venueId": "0190f5a3-0000-7000-8000-000000000003",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000003",
     "date": "2025-10-15T00:00:00.000Z",
-    "tags": ["vue", "frontend"],
+    "tags": [
+      "vue",
+      "frontend"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000023",
+    "id": "0190f5a3-0000-7000-8000-000000000023",
     "title": "Docker Deep Dive 2026",
     "description": "A session on docker deep dive with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000004",
-    "organizerId": "00000000-0000-4000-8000-000000000004",
+    "venueId": "0190f5a3-0000-7000-8000-000000000004",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000004",
     "date": "2025-10-17T00:00:00.000Z",
-    "tags": ["docker", "devops"],
+    "tags": [
+      "docker",
+      "devops"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000024",
+    "id": "0190f5a3-0000-7000-8000-000000000024",
     "title": "Python for Data Science 2026",
     "description": "A session on python for data science with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000005",
-    "organizerId": "00000000-0000-4000-8000-000000000005",
+    "venueId": "0190f5a3-0000-7000-8000-000000000005",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000005",
     "date": "2025-10-19T00:00:00.000Z",
-    "tags": ["python", "data"],
+    "tags": [
+      "python",
+      "data"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000025",
+    "id": "0190f5a3-0000-7000-8000-000000000025",
     "title": "Next.js SEO Workshop 2026",
     "description": "A session on next.js seo workshop with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000006",
-    "organizerId": "00000000-0000-4000-8000-000000000006",
+    "venueId": "0190f5a3-0000-7000-8000-000000000006",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000006",
     "date": "2025-10-21T00:00:00.000Z",
-    "tags": ["nextjs", "seo"],
+    "tags": [
+      "nextjs",
+      "seo"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000026",
+    "id": "0190f5a3-0000-7000-8000-000000000026",
     "title": "AI Startups Demo Day 2026",
     "description": "A session on ai startups demo day with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000007",
-    "organizerId": "00000000-0000-4000-8000-000000000007",
+    "venueId": "0190f5a3-0000-7000-8000-000000000007",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000007",
     "date": "2025-10-23T00:00:00.000Z",
-    "tags": ["ai", "startups"],
+    "tags": [
+      "ai",
+      "startups"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000027",
+    "id": "0190f5a3-0000-7000-8000-000000000027",
     "title": "Security Best Practices 2026",
     "description": "A session on security best practices with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000008",
-    "organizerId": "00000000-0000-4000-8000-000000000008",
+    "venueId": "0190f5a3-0000-7000-8000-000000000008",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000008",
     "date": "2025-10-25T00:00:00.000Z",
-    "tags": ["security", "web"],
+    "tags": [
+      "security",
+      "web"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000028",
+    "id": "0190f5a3-0000-7000-8000-000000000028",
     "title": "Cloudflare & Edge Computing 2026",
     "description": "A session on cloudflare & edge computing with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000009",
-    "organizerId": "00000000-0000-4000-8000-000000000009",
+    "venueId": "0190f5a3-0000-7000-8000-000000000009",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000009",
     "date": "2025-10-27T00:00:00.000Z",
-    "tags": ["cloudflare", "edge"],
+    "tags": [
+      "cloudflare",
+      "edge"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000029",
+    "id": "0190f5a3-0000-7000-8000-000000000029",
     "title": "GraphQL vs REST 2026",
     "description": "A session on graphql vs rest with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000010",
-    "organizerId": "00000000-0000-4000-8000-000000000010",
+    "venueId": "0190f5a3-0000-7000-8000-000000000010",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000010",
     "date": "2025-10-29T00:00:00.000Z",
-    "tags": ["graphql", "rest", "api"],
+    "tags": [
+      "graphql",
+      "rest",
+      "api"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000030",
+    "id": "0190f5a3-0000-7000-8000-000000000030",
     "title": "Kubernetes Crash Course 2026",
     "description": "A session on kubernetes crash course with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000001",
-    "organizerId": "00000000-0000-4000-8000-000000000001",
+    "venueId": "0190f5a3-0000-7000-8000-000000000001",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000001",
     "date": "2025-10-31T00:00:00.000Z",
-    "tags": ["kubernetes", "devops"],
+    "tags": [
+      "kubernetes",
+      "devops"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000031",
+    "id": "0190f5a3-0000-7000-8000-000000000031",
     "title": "Rust Game Dev 2026",
     "description": "A session on rust game dev with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000002",
-    "organizerId": "00000000-0000-4000-8000-000000000002",
+    "venueId": "0190f5a3-0000-7000-8000-000000000002",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000002",
     "date": "2025-11-02T00:00:00.000Z",
-    "tags": ["rust", "game"],
+    "tags": [
+      "rust",
+      "game"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000032",
+    "id": "0190f5a3-0000-7000-8000-000000000032",
     "title": "Firebase & Firestore 2026",
     "description": "A session on firebase & firestore with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000003",
-    "organizerId": "00000000-0000-4000-8000-000000000003",
+    "venueId": "0190f5a3-0000-7000-8000-000000000003",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000003",
     "date": "2025-11-04T00:00:00.000Z",
-    "tags": ["firebase", "backend"],
+    "tags": [
+      "firebase",
+      "backend"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000033",
+    "id": "0190f5a3-0000-7000-8000-000000000033",
     "title": "SvelteConf 2026",
     "description": "A session on svelteconf with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000004",
-    "organizerId": "00000000-0000-4000-8000-000000000004",
+    "venueId": "0190f5a3-0000-7000-8000-000000000004",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000004",
     "date": "2025-11-06T00:00:00.000Z",
-    "tags": ["svelte", "frontend"],
+    "tags": [
+      "svelte",
+      "frontend"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000034",
+    "id": "0190f5a3-0000-7000-8000-000000000034",
     "title": "Web3 Summit 2026",
     "description": "A session on web3 summit with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000005",
-    "organizerId": "00000000-0000-4000-8000-000000000005",
+    "venueId": "0190f5a3-0000-7000-8000-000000000005",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000005",
     "date": "2025-11-08T00:00:00.000Z",
-    "tags": ["web3", "blockchain"],
+    "tags": [
+      "web3",
+      "blockchain"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000035",
+    "id": "0190f5a3-0000-7000-8000-000000000035",
     "title": "PostgreSQL Performance 2026",
     "description": "A session on postgresql performance with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000006",
-    "organizerId": "00000000-0000-4000-8000-000000000006",
+    "venueId": "0190f5a3-0000-7000-8000-000000000006",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000006",
     "date": "2025-11-10T00:00:00.000Z",
-    "tags": ["postgresql", "database"],
+    "tags": [
+      "postgresql",
+      "database"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000036",
+    "id": "0190f5a3-0000-7000-8000-000000000036",
     "title": "Deno for Beginners 2026",
     "description": "A session on deno for beginners with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000007",
-    "organizerId": "00000000-0000-4000-8000-000000000007",
+    "venueId": "0190f5a3-0000-7000-8000-000000000007",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000007",
     "date": "2025-11-12T00:00:00.000Z",
-    "tags": ["deno", "javascript"],
+    "tags": [
+      "deno",
+      "javascript"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000037",
+    "id": "0190f5a3-0000-7000-8000-000000000037",
     "title": "Machine Learning Bootcamp 2026",
     "description": "A session on machine learning bootcamp with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000008",
-    "organizerId": "00000000-0000-4000-8000-000000000008",
+    "venueId": "0190f5a3-0000-7000-8000-000000000008",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000008",
     "date": "2025-11-14T00:00:00.000Z",
-    "tags": ["ml", "ai"],
+    "tags": [
+      "ml",
+      "ai"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000038",
+    "id": "0190f5a3-0000-7000-8000-000000000038",
     "title": "Flutter Mobile Fest 2026",
     "description": "A session on flutter mobile fest with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000009",
-    "organizerId": "00000000-0000-4000-8000-000000000009",
+    "venueId": "0190f5a3-0000-7000-8000-000000000009",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000009",
     "date": "2025-11-16T00:00:00.000Z",
-    "tags": ["flutter", "mobile"],
+    "tags": [
+      "flutter",
+      "mobile"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000039",
+    "id": "0190f5a3-0000-7000-8000-000000000039",
     "title": "TypeScript Advanced 2026",
     "description": "A session on typescript advanced with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000010",
-    "organizerId": "00000000-0000-4000-8000-000000000010",
+    "venueId": "0190f5a3-0000-7000-8000-000000000010",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000010",
     "date": "2025-11-18T00:00:00.000Z",
-    "tags": ["typescript", "advanced"],
+    "tags": [
+      "typescript",
+      "advanced"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000040",
+    "id": "0190f5a3-0000-7000-8000-000000000040",
     "title": "CI/CD Pipelines Workshop 2027",
     "description": "A session on ci/cd pipelines workshop with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000001",
-    "organizerId": "00000000-0000-4000-8000-000000000001",
+    "venueId": "0190f5a3-0000-7000-8000-000000000001",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000001",
     "date": "2025-11-20T00:00:00.000Z",
-    "tags": ["ci", "cd", "devops"],
+    "tags": [
+      "ci",
+      "cd",
+      "devops"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000041",
+    "id": "0190f5a3-0000-7000-8000-000000000041",
     "title": "React Meetup 2027",
     "description": "A session on react meetup with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000002",
-    "organizerId": "00000000-0000-4000-8000-000000000002",
+    "venueId": "0190f5a3-0000-7000-8000-000000000002",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000002",
     "date": "2025-11-22T00:00:00.000Z",
-    "tags": ["react", "frontend"],
+    "tags": [
+      "react",
+      "frontend"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000042",
+    "id": "0190f5a3-0000-7000-8000-000000000042",
     "title": "Vue.js Europe 2027",
     "description": "A session on vue.js europe with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000003",
-    "organizerId": "00000000-0000-4000-8000-000000000003",
+    "venueId": "0190f5a3-0000-7000-8000-000000000003",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000003",
     "date": "2025-11-24T00:00:00.000Z",
-    "tags": ["vue", "frontend"],
+    "tags": [
+      "vue",
+      "frontend"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000043",
+    "id": "0190f5a3-0000-7000-8000-000000000043",
     "title": "Docker Deep Dive 2027",
     "description": "A session on docker deep dive with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000004",
-    "organizerId": "00000000-0000-4000-8000-000000000004",
+    "venueId": "0190f5a3-0000-7000-8000-000000000004",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000004",
     "date": "2025-11-26T00:00:00.000Z",
-    "tags": ["docker", "devops"],
+    "tags": [
+      "docker",
+      "devops"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000044",
+    "id": "0190f5a3-0000-7000-8000-000000000044",
     "title": "Python for Data Science 2027",
     "description": "A session on python for data science with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000005",
-    "organizerId": "00000000-0000-4000-8000-000000000005",
+    "venueId": "0190f5a3-0000-7000-8000-000000000005",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000005",
     "date": "2025-11-28T00:00:00.000Z",
-    "tags": ["python", "data"],
+    "tags": [
+      "python",
+      "data"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000045",
+    "id": "0190f5a3-0000-7000-8000-000000000045",
     "title": "Next.js SEO Workshop 2027",
     "description": "A session on next.js seo workshop with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000006",
-    "organizerId": "00000000-0000-4000-8000-000000000006",
+    "venueId": "0190f5a3-0000-7000-8000-000000000006",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000006",
     "date": "2025-11-30T00:00:00.000Z",
-    "tags": ["nextjs", "seo"],
+    "tags": [
+      "nextjs",
+      "seo"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000046",
+    "id": "0190f5a3-0000-7000-8000-000000000046",
     "title": "AI Startups Demo Day 2027",
     "description": "A session on ai startups demo day with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000007",
-    "organizerId": "00000000-0000-4000-8000-000000000007",
+    "venueId": "0190f5a3-0000-7000-8000-000000000007",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000007",
     "date": "2025-12-02T00:00:00.000Z",
-    "tags": ["ai", "startups"],
+    "tags": [
+      "ai",
+      "startups"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000047",
+    "id": "0190f5a3-0000-7000-8000-000000000047",
     "title": "Security Best Practices 2027",
     "description": "A session on security best practices with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000008",
-    "organizerId": "00000000-0000-4000-8000-000000000008",
+    "venueId": "0190f5a3-0000-7000-8000-000000000008",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000008",
     "date": "2025-12-04T00:00:00.000Z",
-    "tags": ["security", "web"],
+    "tags": [
+      "security",
+      "web"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000048",
+    "id": "0190f5a3-0000-7000-8000-000000000048",
     "title": "Cloudflare & Edge Computing 2027",
     "description": "A session on cloudflare & edge computing with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000009",
-    "organizerId": "00000000-0000-4000-8000-000000000009",
+    "venueId": "0190f5a3-0000-7000-8000-000000000009",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000009",
     "date": "2025-12-06T00:00:00.000Z",
-    "tags": ["cloudflare", "edge"],
+    "tags": [
+      "cloudflare",
+      "edge"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000049",
+    "id": "0190f5a3-0000-7000-8000-000000000049",
     "title": "GraphQL vs REST 2027",
     "description": "A session on graphql vs rest with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000010",
-    "organizerId": "00000000-0000-4000-8000-000000000010",
+    "venueId": "0190f5a3-0000-7000-8000-000000000010",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000010",
     "date": "2025-12-08T00:00:00.000Z",
-    "tags": ["graphql", "rest", "api"],
+    "tags": [
+      "graphql",
+      "rest",
+      "api"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   },
   {
-    "id": "00000000-0000-4000-8000-000000000050",
+    "id": "0190f5a3-0000-7000-8000-000000000050",
     "title": "Kubernetes Crash Course 2027",
     "description": "A session on kubernetes crash course with expert speakers.",
     "type": "in-person",
     "status": "published",
-    "venueId": "00000000-0000-4000-8000-000000000001",
-    "organizerId": "00000000-0000-4000-8000-000000000001",
+    "venueId": "0190f5a3-0000-7000-8000-000000000001",
+    "organizerId": "0190f5a3-0000-7000-8000-000000000001",
     "date": "2025-12-10T00:00:00.000Z",
-    "tags": ["kubernetes", "devops"],
+    "tags": [
+      "kubernetes",
+      "devops"
+    ],
     "createdAt": "2024-07-01T12:00:00.000Z",
     "updatedAt": null
   }

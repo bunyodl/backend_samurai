@@ -1,10 +1,10 @@
 import { eventSchema } from '@/modules/event/schemas/resources/event.schema';
+import { uuidV7Schema } from '@/openapi/schemas/uuid.schema';
 import { z } from '@/openapi/zod-openapi';
 
 export const getEventParamsSchema = z.object({
-  eventId: z.uuid().openapi({
+  eventId: uuidV7Schema.openapi({
     param: { name: 'eventId', in: 'path' },
-    example: '00000000-0000-4000-8000-000000000001',
     description: 'Unique identifier of the event',
   }),
 });

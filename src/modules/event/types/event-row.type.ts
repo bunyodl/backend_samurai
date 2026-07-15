@@ -1,7 +1,10 @@
-export type EventType = 'in-person' | 'online';
-export type EventStatus = 'draft' | 'published' | 'cancelled';
+import type {
+  EventStatus,
+  EventType,
+} from '@/modules/event/constants/event.constants';
+import type { RowTimestamps } from '@/db/types/row-timestamps.type';
 
-export interface EventRow {
+export interface EventRow extends RowTimestamps {
   id: string;
   title: string;
   description: string | null;
@@ -11,6 +14,4 @@ export interface EventRow {
   organizer_id: string;
   date: Date;
   tags: string[] | null;
-  created_at: Date;
-  updated_at: Date | null;
 }
