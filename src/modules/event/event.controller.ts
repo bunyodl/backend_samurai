@@ -1,3 +1,6 @@
+import type { Request, Response } from 'express';
+
+import { eventService } from '@/modules/event/event.service';
 import type {
   GetEventParams,
   GetEventResponse,
@@ -6,10 +9,9 @@ import type {
   GetEventsQuery,
   GetEventsResponse,
 } from '@/modules/event/schemas/endpoints/get-events.schema';
-import { eventService } from '@/modules/event/event.service';
+
 import { HTTP_STATUS_CODES } from '@/shared/constants/http-codes';
 import type { ApiResponse } from '@/shared/types/api-response.type';
-import type { Request, Response } from 'express';
 
 export class EventController {
   async getAll(

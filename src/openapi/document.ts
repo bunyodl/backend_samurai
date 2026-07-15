@@ -1,7 +1,9 @@
 import { OpenApiGeneratorV3 } from '@asteasolutions/zod-to-openapi';
-import { env } from '@/config/env';
+
 import '@/openapi/register-paths';
 import { registry } from '@/openapi/registry-instance';
+
+import { env } from '@/config/env';
 
 const generator = new OpenApiGeneratorV3(registry.definitions);
 

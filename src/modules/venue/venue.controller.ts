@@ -1,11 +1,13 @@
+import type { Request, Response } from 'express-serve-static-core';
+
 import type {
   GetVenuesQuery,
   GetVenuesResponse,
 } from '@/modules/venue/schemas/endpoints/get-venues.schema';
 import { venueService } from '@/modules/venue/venue.service';
+
 import { HTTP_STATUS_CODES } from '@/shared/constants/http-codes';
 import type { ApiResponse } from '@/shared/types/api-response.type';
-import type { Request, Response } from 'express-serve-static-core';
 
 export class VenueController {
   async getVenues(

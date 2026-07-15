@@ -1,7 +1,8 @@
 import { Router } from 'express';
+
 import { eventsRouter } from '@/modules/event/event.route';
-import { venuesRouter } from '@/modules/venue/venue.route';
 import { usersRouter } from '@/modules/user/user.route';
+import { venuesRouter } from '@/modules/venue/venue.route';
 
 const apiRouter = Router();
 

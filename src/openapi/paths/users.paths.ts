@@ -2,6 +2,7 @@ import {
   getUsersQuerySchema,
   getUsersResponseSchema,
 } from '@/modules/user/schemas/endpoints/get-users.schema';
+
 import { registry } from '@/openapi/registry-instance';
 import { apiResponseSchema } from '@/openapi/schemas/shared.schema';
 

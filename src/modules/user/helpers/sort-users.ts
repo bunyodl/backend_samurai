@@ -1,5 +1,6 @@
 import type { GetUsersQuery } from '@/modules/user/schemas/endpoints/get-users.schema';
 import type { UserDto } from '@/modules/user/schemas/resources/user.schema';
+
 import type { SortOrder } from '@/shared/types/sort.type';
 
 export function sortUsers(

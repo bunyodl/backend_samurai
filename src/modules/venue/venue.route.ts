@@ -1,4 +1,5 @@
 import express from 'express';
+
 import { venueController } from '@/modules/venue/venue.controller';
 
 export const venuesRouter = express.Router();

@@ -1,4 +1,5 @@
 import type { UserRole } from '@/modules/user/constants/user.constants';
+
 import type { RowTimestamps } from '@/db/types/row-timestamps.type';
 
 export interface UserRow extends RowTimestamps {

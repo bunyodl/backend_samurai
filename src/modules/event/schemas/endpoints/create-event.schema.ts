@@ -2,6 +2,7 @@ import {
   eventStatusSchema,
   eventTypeSchema,
 } from '@/modules/event/schemas/resources/event.schema';
+
 import { uuidV7Schema } from '@/openapi/schemas/uuid.schema';
 import { z } from '@/openapi/zod-openapi';
 

@@ -1,9 +1,9 @@
+import { eventsRepository } from '@/modules/event/event.repository';
 import type { GetEventResponse } from '@/modules/event/schemas/endpoints/get-event.schema';
 import type {
   GetEventsQuery,
   GetEventsResponse,
 } from '@/modules/event/schemas/endpoints/get-events.schema';
-import { eventsRepository } from '@/modules/event/event.repository';
 
 class EventService {
   async getEvents(params: GetEventsQuery): Promise<GetEventsResponse> {

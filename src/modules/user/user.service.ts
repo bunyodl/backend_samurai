@@ -6,6 +6,7 @@ import type {
   GetUsersResponse,
 } from '@/modules/user/schemas/endpoints/get-users.schema';
 import type { UserDto } from '@/modules/user/schemas/resources/user.schema';
+
 import { mockFetch } from '@/shared/libs/mock-fetch';
 
 class UserService {

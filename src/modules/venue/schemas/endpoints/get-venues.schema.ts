@@ -1,4 +1,5 @@
 import { venueSchema } from '@/modules/venue/schemas/resources/venue.schema';
+
 import { z } from '@/openapi/zod-openapi';
 
 export const getVenuesQuerySchema = z

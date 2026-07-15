@@ -1,4 +1,5 @@
 import { eventSchema } from '@/modules/event/schemas/resources/event.schema';
+
 import { z } from '@/openapi/zod-openapi';
 
 export const getEventsQuerySchema = z

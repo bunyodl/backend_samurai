@@ -1,6 +1,7 @@
-import { app } from '@/app';
 import { env } from '@/config/env';
 import { swaggerDocs } from '@/config/swagger';
+
+import { app } from '@/app';
 
 const PORT = env.PORT;
 

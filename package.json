@@ -16,7 +16,7 @@
     "copy:sql": "copyfiles -u 1 \"src/**/*.sql\" dist",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "format": "prettier --write \"**/*.(js,ts,html,css,md,json)\"",
+    "format": "prettier --write .",
     "seed": "tsx ./src/scripts/seed.ts"
   },
   "dependencies": {
@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",
+    "@trivago/prettier-plugin-sort-imports": "^6.0.2",
     "@types/express": "^5.0.3",
     "@types/node": "^24.0.3",
     "@types/pg": "^8.20.0",

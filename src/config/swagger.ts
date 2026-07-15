@@ -1,5 +1,6 @@
-import swaggerUi from 'swagger-ui-express';
 import { type Express, type Request, type Response } from 'express';
+import swaggerUi from 'swagger-ui-express';
+
 import { openApiDocument } from '@/openapi/document';
 
 export function swaggerDocs(app: Express) {

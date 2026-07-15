@@ -4,6 +4,7 @@ import {
   EVENT_TYPES,
   EVENT_TYPE_VALUES,
 } from '@/modules/event/constants/event.constants';
+
 import { timestampsSchema } from '@/openapi/schemas/timestamps.schema';
 import { uuidV7Schema } from '@/openapi/schemas/uuid.schema';
 import { z } from '@/openapi/zod-openapi';

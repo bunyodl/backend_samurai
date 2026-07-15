@@ -1,7 +1,4 @@
-import type {
-  NonEmptyArray,
-  ValueOf,
-} from '@/shared/types/utility-types.type';
+import type { NonEmptyArray, ValueOf } from '@/shared/types/utility-types.type';
 
 export const USER_ROLES = {
   ADMIN: 'admin',

@@ -1,12 +1,15 @@
+import { type Request, Router } from 'express';
+
 import { eventController } from '@/modules/event/event.controller';
+
 import { validate } from '@/shared/middlewares/validate.middleware';
-import { Router, type Request } from 'express';
-import { getEventsQuerySchema } from './schemas/endpoints/get-events.schema';
-import {
-  getEventParamsSchema,
-  type GetEventParams,
-} from './schemas/endpoints/get-event.schema';
+
 import { createEventRequestSchema } from './schemas/endpoints/create-event.schema';
+import {
+  type GetEventParams,
+  getEventParamsSchema,
+} from './schemas/endpoints/get-event.schema';
+import { getEventsQuerySchema } from './schemas/endpoints/get-events.schema';
 
 export const eventsRouter = Router();
 

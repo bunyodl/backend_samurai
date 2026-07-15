@@ -1,10 +1,12 @@
 import 'dotenv/config';
-
 import { readFile } from 'node:fs/promises';
-import { pool } from '@/db/pool';
+
 import type { EventDto } from '@/modules/event/schemas/resources/event.schema';
 import type { UserDto } from '@/modules/user/schemas/resources/user.schema';
 import type { VenueDto } from '@/modules/venue/schemas/resources/venue.schema';
+
+import { pool } from '@/db/pool';
+
 import { resolvePath } from '@/shared/libs/resolve-path';
 
 /** Placeholder hash for local seed data only. */
@@ -27,7 +29,9 @@ async function seed(): Promise<void> {
 
   try {
     await client.query('BEGIN');
-    await client.query('TRUNCATE event_attendees, events, venues, users CASCADE');
+    await client.query(
+      'TRUNCATE event_attendees, events, venues, users CASCADE',
+    );
 
     for (const user of users) {
       await client.query(

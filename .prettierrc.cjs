@@ -10,4 +10,18 @@ module.exports = {
   jsxSingleQuote: true,
   trailingComma: 'all',
   endOfLine: 'lf',
+  plugins: ['@trivago/prettier-plugin-sort-imports'],
+  importOrder: [
+    '<THIRD_PARTY_MODULES>',
+    '^@/modules/(.*)$',
+    '^@/openapi/(.*)$',
+    '^@/db/(.*)$',
+    '^@/config/(.*)$',
+    '^@/scripts/(.*)$',
+    '^@/shared/(.*)$',
+    '^@/(.*)$',
+    '^[./]',
+  ],
+  importOrderSeparation: true,
+  importOrderSortSpecifiers: true,
 };

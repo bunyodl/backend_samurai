@@ -7,6 +7,7 @@ import {
   getEventsQuerySchema,
   getEventsResponseSchema,
 } from '@/modules/event/schemas/endpoints/get-events.schema';
+
 import { registry } from '@/openapi/registry-instance';
 import { apiResponseSchema } from '@/openapi/schemas/shared.schema';
 import { z } from '@/openapi/zod-openapi';

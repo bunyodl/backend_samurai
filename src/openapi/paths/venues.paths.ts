@@ -2,6 +2,7 @@ import {
   getVenuesQuerySchema,
   getVenuesResponseSchema,
 } from '@/modules/venue/schemas/endpoints/get-venues.schema';
+
 import { registry } from '@/openapi/registry-instance';
 import { apiResponseSchema } from '@/openapi/schemas/shared.schema';
 

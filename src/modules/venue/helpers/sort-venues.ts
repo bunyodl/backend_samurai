@@ -1,5 +1,6 @@
 import type { GetVenuesQuery } from '@/modules/venue/schemas/endpoints/get-venues.schema';
 import type { VenueDto } from '@/modules/venue/schemas/resources/venue.schema';
+
 import type { SortOrder } from '@/shared/types/sort.type';
 
 export function sortVenues(
