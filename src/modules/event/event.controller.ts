@@ -14,11 +14,11 @@ import { HTTP_STATUS_CODES } from '@/shared/constants/http-codes';
 import type { ApiResponse } from '@/shared/types/api-response.type';
 
 export class EventController {
-  async getAll(
+  async getMany(
     req: Request<{}, {}, {}, GetEventsQuery>,
     res: Response<ApiResponse<GetEventsResponse>>,
   ) {
-    const responseData = await eventService.getEvents(req.query);
+    const responseData = await eventService.getMany(req.query);
 
     return res.status(HTTP_STATUS_CODES.OK).json({
       code: HTTP_STATUS_CODES.OK,
@@ -32,7 +32,7 @@ export class EventController {
     req: Request<GetEventParams>,
     res: Response<ApiResponse<GetEventResponse>>,
   ) {
-    const responseData = await eventService.getEvent(req.params.eventId);
+    const responseData = await eventService.getById(req.params.eventId);
 
     return res.status(HTTP_STATUS_CODES.OK).json({
       code: HTTP_STATUS_CODES.OK,

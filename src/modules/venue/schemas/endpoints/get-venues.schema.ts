@@ -25,7 +25,7 @@ export const getVenuesQuerySchema = z
       .optional()
       .openapi({ example: 'asc', description: 'Sort order' }),
     sortBy: z
-      .enum(['name', 'capacity', 'location', 'timezone'])
+      .enum(['name', 'capacity', 'location', 'createdAt'])
       .optional()
       .openapi({ example: 'capacity', description: 'Field to sort by' }),
   })

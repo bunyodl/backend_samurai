@@ -1,9 +1,7 @@
 import type { EventDto } from '@/modules/event/schemas/resources/event.schema';
 import type { EventRow } from '@/modules/event/types/event-row.type';
 
-function toIsoString(value: Date | string): string {
-  return value instanceof Date ? value.toISOString() : value;
-}
+import { toIsoString } from '@/shared/libs/to-iso-string';
 
 export function mapEventRowToDto(row: EventRow): EventDto {
   return {

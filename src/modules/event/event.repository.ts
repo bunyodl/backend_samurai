@@ -11,10 +11,10 @@ const EVENT_SORT_COLUMNS = {
   description: 'description',
   date: 'date',
   createdAt: 'created_at',
-} as const;
+} satisfies Record<NonNullable<GetEventsQuery['sortBy']>, keyof EventRow>;
 
-class EventsRepository {
-  async getEvents(params: GetEventsQuery): Promise<Array<EventDto>> {
+class EventRepository {
+  async getMany(params: GetEventsQuery): Promise<Array<EventDto>> {
     const sortColumn =
       EVENT_SORT_COLUMNS[params.sortBy ?? 'date'] ?? EVENT_SORT_COLUMNS.date;
     const sortOrder = params.sort?.toUpperCase() === 'DESC' ? 'DESC' : 'ASC';
@@ -54,7 +54,7 @@ class EventsRepository {
     return rows.map(mapEventRowToDto);
   }
 
-  async getEventsCount(search?: string): Promise<number> {
+  async getTotalCount(search?: string): Promise<number> {
     let query: string;
 
     if (!search) {
@@ -76,7 +76,7 @@ class EventsRepository {
     return Number(result[0]?.count ?? 0);
   }
 
-  async findEventById(eventId: string): Promise<EventDto | null> {
+  async getById(eventId: string): Promise<EventDto | null> {
     const rows = await fetchFromDb<Array<EventRow>>(
       `
         SELECT * FROM events
@@ -90,4 +90,4 @@ class EventsRepository {
   }
 }
 
-export const eventsRepository = new EventsRepository();
+export const eventRepository = new EventRepository();

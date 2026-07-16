@@ -10,11 +10,11 @@ import { HTTP_STATUS_CODES } from '@/shared/constants/http-codes';
 import type { ApiResponse } from '@/shared/types/api-response.type';
 
 export class VenueController {
-  async getVenues(
+  async getMany(
     req: Request<{}, {}, {}, GetVenuesQuery>,
     res: Response<ApiResponse<GetVenuesResponse>>,
   ) {
-    const responseData = await venueService.getVenues(req.query);
+    const responseData = await venueService.getMany(req.query);
 
     return res.status(HTTP_STATUS_CODES.OK).json({
       code: HTTP_STATUS_CODES.OK,

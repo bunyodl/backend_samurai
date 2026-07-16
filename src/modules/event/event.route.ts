@@ -17,7 +17,7 @@ eventsRouter.get(
   '/',
   validate({ query: getEventsQuerySchema }),
   async (req, res) => {
-    await eventController.getAll(req, res);
+    await eventController.getMany(req, res);
   },
 );
 

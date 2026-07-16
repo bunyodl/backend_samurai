@@ -1,30 +1,14 @@
 import 'dotenv/config';
-import { readFile } from 'node:fs/promises';
-
-import type { EventDto } from '@/modules/event/schemas/resources/event.schema';
-import type { UserDto } from '@/modules/user/schemas/resources/user.schema';
-import type { VenueDto } from '@/modules/venue/schemas/resources/venue.schema';
 
 import { pool } from '@/db/pool';
 
-import { resolvePath } from '@/shared/libs/resolve-path';
+import { events, users, venues } from '@/scripts/seed.fixtures';
 
 /** Placeholder hash for local seed data only. */
 const SEED_PASSWORD_HASH =
   '$2b$10$seededplaceholderhashnotforproductionuse1234567890';
 
-async function loadJson<T>(relativePath: string): Promise<T[]> {
-  const content = await readFile(resolvePath(relativePath), 'utf-8');
-  return JSON.parse(content) as T[];
-}
-
 async function seed(): Promise<void> {
-  const [users, venues, events] = await Promise.all([
-    loadJson<UserDto>('./db/users.json'),
-    loadJson<VenueDto>('./db/venues.json'),
-    loadJson<EventDto>('./db/events.json'),
-  ]);
-
   const client = await pool.connect();
 
   try {

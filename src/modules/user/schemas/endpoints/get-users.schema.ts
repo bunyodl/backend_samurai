@@ -25,7 +25,7 @@ export const getUsersQuerySchema = z
       .optional()
       .openapi({ example: 'asc', description: 'Sort order' }),
     sortBy: z
-      .enum(['firstName', 'lastName', 'email'])
+      .enum(['firstName', 'lastName', 'email', 'role', 'createdAt'])
       .optional()
       .openapi({ example: 'firstName', description: 'Field to sort by' }),
   })

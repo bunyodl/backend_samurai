@@ -34,9 +34,6 @@ RUN npm install --only=production
 # Copy the built application files from the 'build' stage
 COPY --from=build /usr/src/app/dist ./dist
 
-# Copy mock db
-COPY --from=build /usr/src/app/db ./db
-
 # Expose the port your app runs on
 ENV PORT=3000
 EXPOSE $PORT

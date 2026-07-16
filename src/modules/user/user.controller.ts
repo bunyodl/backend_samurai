@@ -10,11 +10,11 @@ import { HTTP_STATUS_CODES } from '@/shared/constants/http-codes';
 import type { ApiResponse } from '@/shared/types/api-response.type';
 
 export class UserController {
-  async getUsers(
+  async getMany(
     req: Request<{}, {}, {}, GetUsersQuery>,
     res: Response<ApiResponse<GetUsersResponse>>,
   ) {
-    const responseData = await userService.getUsers(req.query);
+    const responseData = await userService.getMany(req.query);
 
     return res.status(HTTP_STATUS_CODES.OK).json({
       code: HTTP_STATUS_CODES.OK,
