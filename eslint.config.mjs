@@ -47,7 +47,14 @@ export default defineConfig([
       'prefer-const': ['error', { ignoreReadBeforeAssign: false }],
       'no-console': ['warn', { allow: ['warn', 'error'] }],
       'no-var': 'error',
-      'no-unused-vars': 'warn',
+      'no-unused-vars': [
+        'warn',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
+        },
+      ],
       'no-unreachable': 'error',
     },
   },

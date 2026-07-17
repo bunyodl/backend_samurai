@@ -1,5 +1,5 @@
-import { fetchFromDb } from '~/src/common/libs/fetch-from-db';
-import { readSqlQuery } from '~/src/common/libs/read-sql-query';
+import { fetchFromDb } from '@/common/libs/fetch-from-db';
+import { readSqlQuery } from '@/common/libs/read-sql-query';
 
 import { mapEventRowToDto } from '@/modules/event/helpers/map-event-row';
 import type { GetEventsQuery } from '@/modules/event/schemas/endpoints/get-events.schema';

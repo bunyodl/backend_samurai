@@ -1,10 +1,7 @@
 import type { NextFunction, Request, Response } from 'express';
 import type { ZodError, ZodType } from 'zod';
-import { HTTP_STATUS } from '~/src/common/constants/http-codes';
-import type {
-  ApiErrorData,
-  ApiResponse,
-} from '~/src/common/types/api-response.type';
+
+import { BadRequestException } from '@/common/exceptions';
 
 function formatZodIssues(error: ZodError): string {
   return error.issues
@@ -15,42 +12,20 @@ function formatZodIssues(error: ZodError): string {
     .join('; ');
 }
 
-function validationError(
-  res: Response<ApiResponse<ApiErrorData | null>>,
-  message: string,
-  error: ZodError,
-) {
-  const code = HTTP_STATUS.BAD_REQUEST;
-
-  res.status(code).json({
-    code,
-    message,
-    data: {
-      name: 'ZodError',
-      code,
-      message: formatZodIssues(error),
-    },
-    timestamp: Date.now(),
-  });
-}
-
 export function validate(schema: {
   body?: ZodType;
   params?: ZodType;
   query?: ZodType;
 }) {
-  return (
-    req: Request,
-    res: Response<ApiResponse<ApiErrorData | null>>,
-    next: NextFunction,
-  ) => {
+  return (req: Request, _res: Response, next: NextFunction) => {
     const { body, params, query } = schema;
 
     if (body) {
       const result = body.safeParse(req.body);
       if (!result.success) {
-        validationError(res, 'Invalid body', result.error);
-        return;
+        throw new BadRequestException(
+          `Invalid body: ${formatZodIssues(result.error)}`,
+        );
       }
       req.body = result.data;
     }
@@ -58,8 +33,9 @@ export function validate(schema: {
     if (params) {
       const result = params.safeParse(req.params);
       if (!result.success) {
-        validationError(res, 'Invalid params', result.error);
-        return;
+        throw new BadRequestException(
+          `Invalid params: ${formatZodIssues(result.error)}`,
+        );
       }
       req.params = result.data as typeof req.params;
     }
@@ -67,8 +43,9 @@ export function validate(schema: {
     if (query) {
       const result = query.safeParse(req.query);
       if (!result.success) {
-        validationError(res, 'Invalid query', result.error);
-        return;
+        throw new BadRequestException(
+          `Invalid query: ${formatZodIssues(result.error)}`,
+        );
       }
       req.query = result.data as typeof req.query;
     }

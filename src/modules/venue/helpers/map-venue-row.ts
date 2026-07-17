@@ -1,4 +1,4 @@
-import { toIsoString } from '~/src/common/libs/to-iso-string';
+import { toIsoString } from '@/common/libs/to-iso-string';
 
 import type { VenueDto } from '@/modules/venue/schemas/resources/venue.schema';
 import type { VenueRow } from '@/modules/venue/types/venue-row.type';

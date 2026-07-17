@@ -1,5 +1,5 @@
-import { fetchFromDb } from '~/src/common/libs/fetch-from-db';
-import { readSqlQuery } from '~/src/common/libs/read-sql-query';
+import { fetchFromDb } from '@/common/libs/fetch-from-db';
+import { readSqlQuery } from '@/common/libs/read-sql-query';
 
 import { mapUserRowToDto } from './helpers/map-user-row';
 import type { GetUsersQuery } from './schemas/endpoints/get-users.schema';

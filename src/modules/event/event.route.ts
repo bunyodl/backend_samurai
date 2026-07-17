@@ -1,5 +1,5 @@
 import { type Request, Router } from 'express';
-import { validate } from '~/src/common/middlewares/validate.middleware';
+import { validate } from '@/common/middlewares/validate.middleware';
 
 import { eventController } from '@/modules/event/event.controller';
 

@@ -1,4 +1,4 @@
-import { toIsoString } from '~/src/common/libs/to-iso-string';
+import { toIsoString } from '@/common/libs/to-iso-string';
 
 import type { UserDto } from '@/modules/user/schemas/resources/user.schema';
 import type { UserRow } from '@/modules/user/types/user-row.type';

@@ -1,5 +1,5 @@
 import express from 'express';
-import { validate } from '~/src/common/middlewares/validate.middleware';
+import { validate } from '@/common/middlewares/validate.middleware';
 
 import { venueController } from '@/modules/venue/venue.controller';
 

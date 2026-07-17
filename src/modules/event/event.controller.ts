@@ -1,6 +1,7 @@
 import type { Request, Response } from 'express';
-import { HTTP_STATUS } from '~/src/common/constants/http-codes';
-import type { ApiResponse } from '~/src/common/types/api-response.type';
+import { NotFoundException } from '@/common/exceptions';
+import { sendSuccess } from '@/common/libs/send-success';
+import type { ApiResponse } from '@/common/types/api-response.type';
 
 import { eventService } from '@/modules/event/event.service';
 import type {
@@ -17,28 +18,21 @@ export class EventController {
     req: Request<{}, {}, {}, GetEventsQuery>,
     res: Response<ApiResponse<GetEventsResponse>>,
   ) {
-    const responseData = await eventService.getMany(req.query);
-
-    return res.status(HTTP_STATUS.OK).json({
-      code: HTTP_STATUS.OK,
-      message: 'Events fetched successfully',
-      data: responseData,
-      timestamp: Date.now(),
-    });
+    const data = await eventService.getMany(req.query);
+    return sendSuccess(res, { data });
   }
 
   async getById(
     req: Request<GetEventParams>,
     res: Response<ApiResponse<GetEventResponse>>,
   ) {
-    const responseData = await eventService.getById(req.params.eventId);
+    const data = await eventService.getById(req.params.eventId);
 
-    return res.status(HTTP_STATUS.OK).json({
-      code: HTTP_STATUS.OK,
-      message: 'Event fetched successfully',
-      data: responseData,
-      timestamp: Date.now(),
-    });
+    if (!data.event) {
+      throw new NotFoundException('Event not found');
+    }
+
+    return sendSuccess(res, { data });
   }
 }
 

@@ -1,4 +1,4 @@
-import { toIsoString } from '~/src/common/libs/to-iso-string';
+import { toIsoString } from '@/common/libs/to-iso-string';
 
 import type { EventDto } from '@/modules/event/schemas/resources/event.schema';
 import type { EventRow } from '@/modules/event/types/event-row.type';
