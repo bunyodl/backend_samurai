@@ -6,7 +6,7 @@ import type {
 } from '@/modules/venue/schemas/endpoints/get-venues.schema';
 import { venueService } from '@/modules/venue/venue.service';
 
-import { HTTP_STATUS_CODES } from '@/shared/constants/http-codes';
+import { HTTP_STATUS } from '@/shared/constants/http-codes';
 import type { ApiResponse } from '@/shared/types/api-response.type';
 
 export class VenueController {
@@ -16,8 +16,8 @@ export class VenueController {
   ) {
     const responseData = await venueService.getMany(req.query);
 
-    return res.status(HTTP_STATUS_CODES.OK).json({
-      code: HTTP_STATUS_CODES.OK,
+    return res.status(HTTP_STATUS.OK).json({
+      code: HTTP_STATUS.OK,
       message: 'Venues fetched successfully',
       data: responseData,
       timestamp: Date.now(),

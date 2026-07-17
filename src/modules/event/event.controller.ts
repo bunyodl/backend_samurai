@@ -10,7 +10,7 @@ import type {
   GetEventsResponse,
 } from '@/modules/event/schemas/endpoints/get-events.schema';
 
-import { HTTP_STATUS_CODES } from '@/shared/constants/http-codes';
+import { HTTP_STATUS } from '@/shared/constants/http-codes';
 import type { ApiResponse } from '@/shared/types/api-response.type';
 
 export class EventController {
@@ -20,8 +20,8 @@ export class EventController {
   ) {
     const responseData = await eventService.getMany(req.query);
 
-    return res.status(HTTP_STATUS_CODES.OK).json({
-      code: HTTP_STATUS_CODES.OK,
+    return res.status(HTTP_STATUS.OK).json({
+      code: HTTP_STATUS.OK,
       message: 'Events fetched successfully',
       data: responseData,
       timestamp: Date.now(),
@@ -34,8 +34,8 @@ export class EventController {
   ) {
     const responseData = await eventService.getById(req.params.eventId);
 
-    return res.status(HTTP_STATUS_CODES.OK).json({
-      code: HTTP_STATUS_CODES.OK,
+    return res.status(HTTP_STATUS.OK).json({
+      code: HTTP_STATUS.OK,
       message: 'Event fetched successfully',
       data: responseData,
       timestamp: Date.now(),

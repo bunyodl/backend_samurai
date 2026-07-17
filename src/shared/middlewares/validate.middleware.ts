@@ -1,7 +1,7 @@
 import type { NextFunction, Request, Response } from 'express';
 import type { ZodError, ZodType } from 'zod';
 
-import { HTTP_STATUS_CODES } from '@/shared/constants/http-codes';
+import { HTTP_STATUS } from '@/shared/constants/http-codes';
 import type {
   ApiErrorData,
   ApiResponse,
@@ -21,7 +21,7 @@ function validationError(
   message: string,
   error: ZodError,
 ) {
-  const code = HTTP_STATUS_CODES.BAD_REQUEST;
+  const code = HTTP_STATUS.BAD_REQUEST;
 
   res.status(code).json({
     code,

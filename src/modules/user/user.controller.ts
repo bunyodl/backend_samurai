@@ -6,7 +6,7 @@ import type {
 } from '@/modules/user/schemas/endpoints/get-users.schema';
 import { userService } from '@/modules/user/user.service';
 
-import { HTTP_STATUS_CODES } from '@/shared/constants/http-codes';
+import { HTTP_STATUS } from '@/shared/constants/http-codes';
 import type { ApiResponse } from '@/shared/types/api-response.type';
 
 export class UserController {
@@ -16,8 +16,8 @@ export class UserController {
   ) {
     const responseData = await userService.getMany(req.query);
 
-    return res.status(HTTP_STATUS_CODES.OK).json({
-      code: HTTP_STATUS_CODES.OK,
+    return res.status(HTTP_STATUS.OK).json({
+      code: HTTP_STATUS.OK,
       message: 'Users fetched successfully',
       data: responseData,
       timestamp: Date.now(),
