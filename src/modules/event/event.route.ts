@@ -1,8 +1,7 @@
 import { type Request, Router } from 'express';
+import { validate } from '~/src/common/middlewares/validate.middleware';
 
 import { eventController } from '@/modules/event/event.controller';
-
-import { validate } from '@/shared/middlewares/validate.middleware';
 
 import { createEventRequestSchema } from './schemas/endpoints/create-event.schema';
 import {

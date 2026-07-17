@@ -1,7 +1,7 @@
+import { toIsoString } from '~/src/common/libs/to-iso-string';
+
 import type { VenueDto } from '@/modules/venue/schemas/resources/venue.schema';
 import type { VenueRow } from '@/modules/venue/types/venue-row.type';
-
-import { toIsoString } from '@/shared/libs/to-iso-string';
 
 export function mapVenueRowToDto(row: VenueRow): VenueDto {
   return {

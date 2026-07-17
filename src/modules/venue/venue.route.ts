@@ -1,8 +1,7 @@
 import express from 'express';
+import { validate } from '~/src/common/middlewares/validate.middleware';
 
 import { venueController } from '@/modules/venue/venue.controller';
-
-import { validate } from '@/shared/middlewares/validate.middleware';
 
 import { getVenuesQuerySchema } from './schemas/endpoints/get-venues.schema';
 

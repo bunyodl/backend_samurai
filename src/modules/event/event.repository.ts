@@ -1,10 +1,10 @@
+import { fetchFromDb } from '~/src/common/libs/fetch-from-db';
+import { readSqlQuery } from '~/src/common/libs/read-sql-query';
+
 import { mapEventRowToDto } from '@/modules/event/helpers/map-event-row';
 import type { GetEventsQuery } from '@/modules/event/schemas/endpoints/get-events.schema';
 import type { EventDto } from '@/modules/event/schemas/resources/event.schema';
 import type { EventRow } from '@/modules/event/types/event-row.type';
-
-import { fetchFromDb } from '@/shared/libs/fetch-from-db';
-import { readSqlQuery } from '@/shared/libs/read-sql-query';
 
 const EVENT_SORT_COLUMNS = {
   title: 'title',

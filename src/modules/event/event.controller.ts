@@ -1,4 +1,6 @@
 import type { Request, Response } from 'express';
+import { HTTP_STATUS } from '~/src/common/constants/http-codes';
+import type { ApiResponse } from '~/src/common/types/api-response.type';
 
 import { eventService } from '@/modules/event/event.service';
 import type {
@@ -9,9 +11,6 @@ import type {
   GetEventsQuery,
   GetEventsResponse,
 } from '@/modules/event/schemas/endpoints/get-events.schema';
-
-import { HTTP_STATUS } from '@/shared/constants/http-codes';
-import type { ApiResponse } from '@/shared/types/api-response.type';
 
 export class EventController {
   async getMany(

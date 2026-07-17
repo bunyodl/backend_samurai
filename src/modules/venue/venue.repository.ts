@@ -1,5 +1,5 @@
-import { fetchFromDb } from '@/shared/libs/fetch-from-db';
-import { readSqlQuery } from '@/shared/libs/read-sql-query';
+import { fetchFromDb } from '~/src/common/libs/fetch-from-db';
+import { readSqlQuery } from '~/src/common/libs/read-sql-query';
 
 import { mapVenueRowToDto } from './helpers/map-venue-row';
 import type { GetVenuesQuery } from './schemas/endpoints/get-venues.schema';

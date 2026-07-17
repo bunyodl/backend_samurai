@@ -1,4 +1,7 @@
-import type { NonEmptyArray, ValueOf } from '@/shared/types/utility-types.type';
+import type {
+  NonEmptyArray,
+  ValueOf,
+} from '~/src/common/types/utility-types.type';
 
 export const EVENT_TYPES = {
   IN_PERSON: 'in-person',

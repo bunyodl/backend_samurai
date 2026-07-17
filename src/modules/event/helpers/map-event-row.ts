@@ -1,7 +1,7 @@
+import { toIsoString } from '~/src/common/libs/to-iso-string';
+
 import type { EventDto } from '@/modules/event/schemas/resources/event.schema';
 import type { EventRow } from '@/modules/event/types/event-row.type';
-
-import { toIsoString } from '@/shared/libs/to-iso-string';
 
 export function mapEventRowToDto(row: EventRow): EventDto {
   return {

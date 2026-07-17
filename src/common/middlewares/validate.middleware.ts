@@ -1,11 +1,10 @@
 import type { NextFunction, Request, Response } from 'express';
 import type { ZodError, ZodType } from 'zod';
-
-import { HTTP_STATUS } from '@/shared/constants/http-codes';
+import { HTTP_STATUS } from '~/src/common/constants/http-codes';
 import type {
   ApiErrorData,
   ApiResponse,
-} from '@/shared/types/api-response.type';
+} from '~/src/common/types/api-response.type';
 
 function formatZodIssues(error: ZodError): string {
   return error.issues

@@ -1,13 +1,12 @@
 import type { Request, Response } from 'express-serve-static-core';
+import { HTTP_STATUS } from '~/src/common/constants/http-codes';
+import type { ApiResponse } from '~/src/common/types/api-response.type';
 
 import type {
   GetUsersQuery,
   GetUsersResponse,
 } from '@/modules/user/schemas/endpoints/get-users.schema';
 import { userService } from '@/modules/user/user.service';
-
-import { HTTP_STATUS } from '@/shared/constants/http-codes';
-import type { ApiResponse } from '@/shared/types/api-response.type';
 
 export class UserController {
   async getMany(

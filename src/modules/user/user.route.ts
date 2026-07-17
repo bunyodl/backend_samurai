@@ -1,8 +1,7 @@
 import express from 'express';
+import { validate } from '~/src/common/middlewares/validate.middleware';
 
 import { userController } from '@/modules/user/user.controller';
-
-import { validate } from '@/shared/middlewares/validate.middleware';
 
 import { getUsersQuerySchema } from './schemas/endpoints/get-users.schema';
 
