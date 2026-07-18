@@ -1,10 +1,11 @@
+import type { CreateEventRequestBody } from '@/modules/event/schemas/endpoints/create-event.schema';
+import type { GetEventsQuery } from '@/modules/event/schemas/endpoints/get-events.schema';
+import type { PatchEventRequestBody } from '@/modules/event/schemas/endpoints/patch-event.schema';
+import type { EventRow } from '@/modules/event/types/event-row.type';
+
+import { NotImplementedException } from '@/common/exceptions/not-implemented.exception';
 import { fetchFromDb } from '@/common/libs/fetch-from-db';
 import { readSqlQuery } from '@/common/libs/read-sql-query';
-
-import { mapEventRowToDto } from '@/modules/event/helpers/map-event-row';
-import type { GetEventsQuery } from '@/modules/event/schemas/endpoints/get-events.schema';
-import type { EventDto } from '@/modules/event/schemas/resources/event.schema';
-import type { EventRow } from '@/modules/event/types/event-row.type';
 
 const EVENT_SORT_COLUMNS = {
   title: 'title',
@@ -14,7 +15,7 @@ const EVENT_SORT_COLUMNS = {
 } satisfies Record<NonNullable<GetEventsQuery['sortBy']>, keyof EventRow>;
 
 class EventRepository {
-  async getMany(params: GetEventsQuery): Promise<Array<EventDto>> {
+  async getMany(params: GetEventsQuery): Promise<Array<EventRow>> {
     const sortColumn =
       EVENT_SORT_COLUMNS[params.sortBy ?? 'date'] ?? EVENT_SORT_COLUMNS.date;
     const sortOrder = params.sort?.toUpperCase() === 'DESC' ? 'DESC' : 'ASC';
@@ -50,8 +51,7 @@ class EventRepository {
         ]
       : [params.limit ?? 10, ((params.page ?? 1) - 1) * (params.limit ?? 10)];
 
-    const rows = await fetchFromDb<Array<EventRow>>(query, queryParams);
-    return rows.map(mapEventRowToDto);
+    return fetchFromDb<Array<EventRow>>(query, queryParams);
   }
 
   async getTotalCount(search?: string): Promise<number> {
@@ -76,7 +76,7 @@ class EventRepository {
     return Number(result[0]?.count ?? 0);
   }
 
-  async getById(eventId: string): Promise<EventDto | null> {
+  async getById(eventId: string): Promise<EventRow | null> {
     const rows = await fetchFromDb<Array<EventRow>>(
       `
         SELECT * FROM events
@@ -85,8 +85,31 @@ class EventRepository {
       [eventId],
     );
 
-    const row = rows[0];
-    return row ? mapEventRowToDto(row) : null;
+    return rows[0] ?? null;
+  }
+
+  async create(_body: CreateEventRequestBody): Promise<EventRow> {
+    // TODO(you): implement
+    throw new NotImplementedException(
+      'EventRepository.create is not implemented',
+    );
+  }
+
+  async patch(
+    _eventId: string,
+    _body: PatchEventRequestBody,
+  ): Promise<EventRow> {
+    // TODO(you): implement
+    throw new NotImplementedException(
+      'EventRepository.patch is not implemented',
+    );
+  }
+
+  async delete(_eventId: string): Promise<EventRow> {
+    // TODO(you): implement
+    throw new NotImplementedException(
+      'EventRepository.delete is not implemented',
+    );
   }
 }
 

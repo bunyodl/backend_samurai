@@ -1,4 +1,5 @@
-import { createEventRequestSchema } from '@/modules/event/schemas/endpoints/create-event.schema';
+import { createEventRequestBodySchema } from '@/modules/event/schemas/endpoints/create-event.schema';
+import { deleteEventResponseSchema } from '@/modules/event/schemas/endpoints/delete-event.schema';
 import {
   getEventParamsSchema,
   getEventResponseSchema,
@@ -7,10 +8,14 @@ import {
   getEventsQuerySchema,
   getEventsResponseSchema,
 } from '@/modules/event/schemas/endpoints/get-events.schema';
+import {
+  patchEventParamsSchema,
+  patchEventRequestBodySchema,
+  patchEventResponseSchema,
+} from '@/modules/event/schemas/endpoints/patch-event.schema';
 
 import { registry } from '@/openapi/registry-instance';
 import { apiResponseSchema } from '@/openapi/schemas/shared.schema';
-import { z } from '@/openapi/zod-openapi';
 
 const getEventsApiResponseSchema = apiResponseSchema(
   getEventsResponseSchema,
@@ -20,6 +25,16 @@ const getEventsApiResponseSchema = apiResponseSchema(
 const getEventApiResponseSchema = apiResponseSchema(
   getEventResponseSchema,
   'GetEventApiResponse',
+);
+
+const patchEventApiResponseSchema = apiResponseSchema(
+  patchEventResponseSchema,
+  'PatchEventApiResponse',
+);
+
+const deleteEventApiResponseSchema = apiResponseSchema(
+  deleteEventResponseSchema,
+  'DeleteEventApiResponse',
 );
 
 const eventExample = {
@@ -34,6 +49,17 @@ const eventExample = {
   tags: ['music', 'outdoor', 'festival'],
   createdAt: '2024-07-01T12:00:00.000Z',
   updatedAt: null,
+};
+
+const createEventBodyExample = {
+  title: 'Summer Music Festival',
+  description: 'A fantastic outdoor music festival',
+  type: 'in-person',
+  status: 'draft',
+  venueId: '0190f5a3-0000-7000-8000-000000000001',
+  organizerId: '0190f5a3-0000-7000-8000-000000000001',
+  date: '2024-07-15T18:00:00.000Z',
+  tags: ['music', 'outdoor', 'festival'],
 };
 
 registry.registerPath({
@@ -106,16 +132,47 @@ registry.registerPath({
     body: {
       content: {
         'application/json': {
-          schema: createEventRequestSchema,
+          schema: createEventRequestBodySchema,
+          example: createEventBodyExample,
+        },
+      },
+    },
+  },
+  responses: {
+    201: {
+      description: 'Event created successfully',
+      content: {
+        'application/json': {
+          schema: getEventApiResponseSchema,
           example: {
-            title: 'Summer Music Festival',
-            description: 'A fantastic outdoor music festival',
-            type: 'in-person',
-            status: 'draft',
-            venueId: '0190f5a3-0000-7000-8000-000000000001',
-            organizerId: '0190f5a3-0000-7000-8000-000000000001',
-            date: '2024-07-15T18:00:00.000Z',
-            tags: ['music', 'outdoor', 'festival'],
+            code: 201,
+            message: 'Success.',
+            data: {
+              event: eventExample,
+            },
+            timestamp: 1_704_067_200_000,
+          },
+        },
+      },
+    },
+  },
+});
+
+registry.registerPath({
+  method: 'patch',
+  path: '/api/v1/events/{eventId}',
+  summary: 'Patch an event',
+  description: 'Partially update an existing event with the provided fields',
+  tags: ['events'],
+  request: {
+    params: patchEventParamsSchema,
+    body: {
+      content: {
+        'application/json': {
+          schema: patchEventRequestBodySchema,
+          example: {
+            title: 'Updated Summer Music Festival',
+            status: 'published',
           },
         },
       },
@@ -123,11 +180,47 @@ registry.registerPath({
   },
   responses: {
     200: {
-      description: 'Event created successfully',
+      description: 'Event patched successfully',
       content: {
-        'text/plain': {
-          schema: z.string().openapi({ example: 'The event has been created' }),
-          example: 'The event has been created',
+        'application/json': {
+          schema: patchEventApiResponseSchema,
+          example: {
+            code: 200,
+            message: 'Success.',
+            data: {
+              updatedEvent: eventExample,
+            },
+            timestamp: 1_704_067_200_000,
+          },
+        },
+      },
+    },
+  },
+});
+
+registry.registerPath({
+  method: 'delete',
+  path: '/api/v1/events/{eventId}',
+  summary: 'Delete an event',
+  description: 'Delete an existing event by ID',
+  tags: ['events'],
+  request: {
+    params: getEventParamsSchema,
+  },
+  responses: {
+    200: {
+      description: 'Event deleted successfully',
+      content: {
+        'application/json': {
+          schema: deleteEventApiResponseSchema,
+          example: {
+            code: 200,
+            message: 'Success.',
+            data: {
+              deletedEvent: eventExample,
+            },
+            timestamp: 1_704_067_200_000,
+          },
         },
       },
     },

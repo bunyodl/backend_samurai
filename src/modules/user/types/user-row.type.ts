@@ -11,3 +11,5 @@ export interface UserRow extends RowTimestamps {
   role: UserRole;
   password_hash: string;
 }
+
+export type PublicUserRow = Omit<UserRow, 'password_hash'>;

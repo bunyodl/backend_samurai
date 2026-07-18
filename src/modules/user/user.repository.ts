@@ -1,10 +1,10 @@
+import { NotImplementedException } from '@/common/exceptions/not-implemented.exception';
 import { fetchFromDb } from '@/common/libs/fetch-from-db';
 import { readSqlQuery } from '@/common/libs/read-sql-query';
 
-import { mapUserRowToDto } from './helpers/map-user-row';
+import type { CreateUserRequestBody } from './schemas/endpoints/create-user.schema';
 import type { GetUsersQuery } from './schemas/endpoints/get-users.schema';
-import type { UserDto } from './schemas/resources/user.schema';
-import type { UserRow } from './types/user-row.type';
+import type { PublicUserRow, UserRow } from './types/user-row.type';
 
 const USER_COLUMNS = `
   id, first_name, last_name, email, image_url, role, created_at, updated_at
@@ -18,10 +18,8 @@ const USER_SORT_COLUMNS = {
   createdAt: 'created_at',
 } satisfies Record<NonNullable<GetUsersQuery['sortBy']>, keyof UserRow>;
 
-type PublicUserRow = Omit<UserRow, 'password_hash'>;
-
 class UserRepository {
-  async getMany(params: GetUsersQuery): Promise<Array<UserDto>> {
+  async getMany(params: GetUsersQuery): Promise<Array<PublicUserRow>> {
     const sortColumn =
       USER_SORT_COLUMNS[params.sortBy ?? 'createdAt'] ??
       USER_SORT_COLUMNS.createdAt;
@@ -54,8 +52,7 @@ class UserRepository {
         ]
       : [params.limit ?? 10, ((params.page ?? 1) - 1) * (params.limit ?? 10)];
 
-    const rows = await fetchFromDb<Array<PublicUserRow>>(query, queryParams);
-    return rows.map(mapUserRowToDto);
+    return fetchFromDb<Array<PublicUserRow>>(query, queryParams);
   }
 
   async getTotalCount(search?: string): Promise<number> {
@@ -80,7 +77,7 @@ class UserRepository {
     return Number(result[0]?.count ?? 0);
   }
 
-  async getById(userId: string): Promise<UserDto | null> {
+  async getById(userId: string): Promise<PublicUserRow | null> {
     const rows = await fetchFromDb<Array<PublicUserRow>>(
       `
         SELECT ${USER_COLUMNS} FROM users
@@ -89,8 +86,21 @@ class UserRepository {
       [userId],
     );
 
-    const row = rows[0];
-    return row ? mapUserRowToDto(row) : null;
+    return rows[0] ?? null;
+  }
+
+  async create(_body: CreateUserRequestBody): Promise<PublicUserRow> {
+    // TODO(you): implement
+    throw new NotImplementedException(
+      'UserRepository.create is not implemented',
+    );
+  }
+
+  async delete(_userId: string): Promise<PublicUserRow> {
+    // TODO(you): implement
+    throw new NotImplementedException(
+      'UserRepository.delete is not implemented',
+    );
   }
 }
 

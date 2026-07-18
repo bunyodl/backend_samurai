@@ -14,7 +14,7 @@ export type GetEventParams = z.infer<typeof getEventParamsSchema>;
 
 export const getEventResponseSchema = z
   .object({
-    event: eventSchema.nullable(),
+    event: eventSchema,
   })
   .openapi('GetEventResponse');
 

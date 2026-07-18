@@ -6,7 +6,7 @@ import {
 import { uuidV7Schema } from '@/openapi/schemas/uuid.schema';
 import { z } from '@/openapi/zod-openapi';
 
-export const createEventRequestSchema = z
+export const createEventRequestBodySchema = z
   .object({
     title: z.string().openapi({ example: 'Summer Music Festival' }),
     description: z
@@ -25,6 +25,8 @@ export const createEventRequestSchema = z
       .optional()
       .openapi({ example: ['music', 'outdoor', 'festival'] }),
   })
-  .openapi('CreateEventRequest');
+  .openapi('CreateEventRequestBody');
 
-export type CreateEventRequest = z.infer<typeof createEventRequestSchema>;
+export type CreateEventRequestBody = z.infer<
+  typeof createEventRequestBodySchema
+>;

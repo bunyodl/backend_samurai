@@ -1,9 +1,9 @@
 import { toIsoString } from '@/common/libs/to-iso-string';
 
 import type { UserDto } from '@/modules/user/schemas/resources/user.schema';
-import type { UserRow } from '@/modules/user/types/user-row.type';
+import type { PublicUserRow } from '@/modules/user/types/user-row.type';
 
-export function mapUserRowToDto(row: Omit<UserRow, 'password_hash'>): UserDto {
+export function mapUserRowToDto(row: PublicUserRow): UserDto {
   return {
     id: row.id,
     firstName: row.first_name,

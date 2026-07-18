@@ -1,9 +1,10 @@
+import { NotImplementedException } from '@/common/exceptions/not-implemented.exception';
 import { fetchFromDb } from '@/common/libs/fetch-from-db';
 import { readSqlQuery } from '@/common/libs/read-sql-query';
 
-import { mapVenueRowToDto } from './helpers/map-venue-row';
+import type { CreateVenueRequestBody } from './schemas/endpoints/create-venue.schema';
 import type { GetVenuesQuery } from './schemas/endpoints/get-venues.schema';
-import type { VenueDto } from './schemas/resources/venue.schema';
+import type { PatchVenueRequestBody } from './schemas/endpoints/patch-venue.schema';
 import type { VenueRow } from './types/venue-row.type';
 
 const VENUE_SORT_COLUMNS = {
@@ -14,7 +15,7 @@ const VENUE_SORT_COLUMNS = {
 } satisfies Record<NonNullable<GetVenuesQuery['sortBy']>, keyof VenueRow>;
 
 class VenueRepository {
-  async getMany(params: GetVenuesQuery): Promise<Array<VenueDto>> {
+  async getMany(params: GetVenuesQuery): Promise<Array<VenueRow>> {
     const sortColumn =
       VENUE_SORT_COLUMNS[params.sortBy ?? 'createdAt'] ??
       VENUE_SORT_COLUMNS.createdAt;
@@ -46,8 +47,7 @@ class VenueRepository {
         ]
       : [params.limit ?? 10, ((params.page ?? 1) - 1) * (params.limit ?? 10)];
 
-    const rows = await fetchFromDb<Array<VenueRow>>(query, queryParams);
-    return rows.map(mapVenueRowToDto);
+    return fetchFromDb<Array<VenueRow>>(query, queryParams);
   }
 
   async getTotalCount(search?: string): Promise<number> {
@@ -72,7 +72,7 @@ class VenueRepository {
     return Number(result[0]?.count ?? 0);
   }
 
-  async getById(venueId: string): Promise<VenueDto | null> {
+  async getById(venueId: string): Promise<VenueRow | null> {
     const rows = await fetchFromDb<Array<VenueRow>>(
       `
         SELECT * FROM venues
@@ -81,8 +81,31 @@ class VenueRepository {
       [venueId],
     );
 
-    const row = rows[0];
-    return row ? mapVenueRowToDto(row) : null;
+    return rows[0] ?? null;
+  }
+
+  async create(_body: CreateVenueRequestBody): Promise<VenueRow> {
+    // TODO(you): implement
+    throw new NotImplementedException(
+      'VenueRepository.create is not implemented',
+    );
+  }
+
+  async patch(
+    _venueId: string,
+    _body: PatchVenueRequestBody,
+  ): Promise<VenueRow> {
+    // TODO(you): implement
+    throw new NotImplementedException(
+      'VenueRepository.patch is not implemented',
+    );
+  }
+
+  async delete(_venueId: string): Promise<VenueRow> {
+    // TODO(you): implement
+    throw new NotImplementedException(
+      'VenueRepository.delete is not implemented',
+    );
   }
 }
 
