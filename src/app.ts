@@ -6,6 +6,7 @@ import { errorMiddleware } from '@/common/middlewares/error.middleware';
 
 const app = express();
 
+app.use(express.json()); // parse JSON body
 app.use('/api/v1', apiV1Router);
 
 app.get('/', (_req, res) => {
