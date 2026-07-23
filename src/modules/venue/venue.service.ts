@@ -7,8 +7,7 @@ import type {
 import type { PatchVenueRequestBody } from '@/modules/venue/schemas/endpoints/patch-venue.schema';
 import type { VenueDto } from '@/modules/venue/schemas/resources/venue.schema';
 
-import { NotFoundException } from '@/common/exceptions';
-import { NotImplementedException } from '@/common/exceptions/not-implemented.exception';
+import { ConflictException, NotFoundException } from '@/common/exceptions';
 
 import { mapVenueRowToDto } from './helpers/map-venue-row';
 import { venueRepository } from './venue.repository';
@@ -34,22 +33,36 @@ class VenueService {
     return { venue: mapVenueRowToDto(venueRow) };
   }
 
-  async create(_body: CreateVenueRequestBody): Promise<VenueDto> {
-    // TODO(you): implement
-    throw new NotImplementedException('VenueService.create is not implemented');
+  async create(body: CreateVenueRequestBody): Promise<VenueDto> {
+    const venueRow = await venueRepository.create(body);
+    return mapVenueRowToDto(venueRow);
   }
 
   async patch(
-    _venueId: string,
-    _body: PatchVenueRequestBody,
+    venueId: string,
+    body: PatchVenueRequestBody,
   ): Promise<VenueDto> {
-    // TODO(you): implement
-    throw new NotImplementedException('VenueService.patch is not implemented');
+    const venueRow = await venueRepository.patch(venueId, body);
+
+    if (!venueRow) {
+      throw new NotFoundException('Venue not found');
+    }
+
+    return mapVenueRowToDto(venueRow);
   }
 
-  async delete(_venueId: string): Promise<VenueDto> {
-    // TODO(you): implement
-    throw new NotImplementedException('VenueService.delete is not implemented');
+  async delete(venueId: string): Promise<VenueDto> {
+    if (await venueRepository.existsEventsForVenue(venueId)) {
+      throw new ConflictException('Cannot delete venue with existing events');
+    }
+
+    const venueRow = await venueRepository.delete(venueId);
+
+    if (!venueRow) {
+      throw new NotFoundException('Venue not found');
+    }
+
+    return mapVenueRowToDto(venueRow);
   }
 }
 

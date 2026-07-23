@@ -1,0 +1,3 @@
+DELETE FROM venues
+WHERE id = $1
+RETURNING *;

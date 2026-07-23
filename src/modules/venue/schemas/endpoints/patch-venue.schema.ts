@@ -12,6 +12,9 @@ export type PatchVenueParams = GetVenueParams;
 
 export const patchVenueRequestBodySchema = createVenueRequestBodySchema
   .partial()
+  .refine((body) => Object.keys(body).length > 0, {
+    message: 'At least one field must be provided',
+  })
   .openapi('PatchVenueRequestBody');
 
 export type PatchVenueRequestBody = z.infer<

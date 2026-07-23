@@ -1,4 +1,3 @@
-import { NotImplementedException } from '@/common/exceptions/not-implemented.exception';
 import { fetchFromDb } from '@/common/libs/fetch-from-db';
 import { readSqlQuery } from '@/common/libs/read-sql-query';
 
@@ -84,28 +83,64 @@ class VenueRepository {
     return rows[0] ?? null;
   }
 
-  async create(_body: CreateVenueRequestBody): Promise<VenueRow> {
-    // TODO(you): implement
-    throw new NotImplementedException(
-      'VenueRepository.create is not implemented',
+  async create(body: CreateVenueRequestBody): Promise<VenueRow> {
+    const query = await readSqlQuery(
+      './queries/create-venue.sql',
+      import.meta.url,
     );
+
+    const rows = await fetchFromDb<Array<VenueRow>>(query, [
+      body.name,
+      body.location,
+      body.timezone,
+      body.capacity,
+    ]);
+
+    return rows[0]!;
   }
 
   async patch(
-    _venueId: string,
-    _body: PatchVenueRequestBody,
-  ): Promise<VenueRow> {
-    // TODO(you): implement
-    throw new NotImplementedException(
-      'VenueRepository.patch is not implemented',
+    venueId: string,
+    body: PatchVenueRequestBody,
+  ): Promise<VenueRow | null> {
+    const query = await readSqlQuery(
+      './queries/patch-venue.sql',
+      import.meta.url,
     );
+
+    const rows = await fetchFromDb<Array<VenueRow>>(query, [
+      venueId,
+      body.name ?? null,
+      body.location ?? null,
+      body.timezone ?? null,
+      body.capacity ?? null,
+    ]);
+
+    return rows[0] ?? null;
   }
 
-  async delete(_venueId: string): Promise<VenueRow> {
-    // TODO(you): implement
-    throw new NotImplementedException(
-      'VenueRepository.delete is not implemented',
+  async delete(venueId: string): Promise<VenueRow | null> {
+    const query = await readSqlQuery(
+      './queries/delete-venue.sql',
+      import.meta.url,
     );
+
+    const rows = await fetchFromDb<Array<VenueRow>>(query, [venueId]);
+
+    return rows[0] ?? null;
+  }
+
+  async existsEventsForVenue(venueId: string): Promise<boolean> {
+    const query = await readSqlQuery(
+      './queries/exists-events-for-venue.sql',
+      import.meta.url,
+    );
+
+    const rows = await fetchFromDb<Array<{ exists: boolean }>>(query, [
+      venueId,
+    ]);
+
+    return rows[0]?.exists ?? false;
   }
 }
 
