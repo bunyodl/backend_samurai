@@ -9,7 +9,6 @@ import type { PatchEventRequestBody } from '@/modules/event/schemas/endpoints/pa
 import type { EventDto } from '@/modules/event/schemas/resources/event.schema';
 
 import { NotFoundException } from '@/common/exceptions';
-import { NotImplementedException } from '@/common/exceptions/not-implemented.exception';
 import { mapEventRowToDto } from './helpers/map-event-row';
 
 class EventService {
@@ -39,16 +38,26 @@ class EventService {
   }
 
   async patch(
-    _eventId: string,
-    _body: PatchEventRequestBody,
+    eventId: string,
+    body: PatchEventRequestBody,
   ): Promise<EventDto> {
-    // TODO(you): implement
-    throw new NotImplementedException('EventService.patch is not implemented');
+    const eventRow = await eventRepository.patch(eventId, body);
+
+    if (!eventRow) {
+      throw new NotFoundException('Event not found');
+    }
+
+    return mapEventRowToDto(eventRow);
   }
 
-  async delete(_eventId: string): Promise<EventDto> {
-    // TODO(you): implement
-    throw new NotImplementedException('EventService.delete is not implemented');
+  async delete(eventId: string): Promise<EventDto> {
+    const eventRow = await eventRepository.delete(eventId);
+
+    if (!eventRow) {
+      throw new NotFoundException('Event not found');
+    }
+
+    return mapEventRowToDto(eventRow);
   }
 }
 

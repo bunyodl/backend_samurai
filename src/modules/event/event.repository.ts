@@ -3,7 +3,6 @@ import type { GetEventsQuery } from '@/modules/event/schemas/endpoints/get-event
 import type { PatchEventRequestBody } from '@/modules/event/schemas/endpoints/patch-event.schema';
 import type { EventRow } from '@/modules/event/types/event-row.type';
 
-import { NotImplementedException } from '@/common/exceptions/not-implemented.exception';
 import { fetchFromDb } from '@/common/libs/fetch-from-db';
 import { readSqlQuery } from '@/common/libs/read-sql-query';
 
@@ -88,29 +87,56 @@ class EventRepository {
     return rows[0] ?? null;
   }
 
-  async create(_body: CreateEventRequestBody): Promise<EventRow> {
-    // TODO(you): implement
-    throw new NotImplementedException(
-      'EventRepository.create is not implemented',
+  async create(body: CreateEventRequestBody): Promise<EventRow> {
+    const query = await readSqlQuery(
+      './queries/create-event.sql',
+      import.meta.url,
     );
+
+    const rows = await fetchFromDb<Array<EventRow>>(query, [
+      body.title,
+      body.description,
+      body.type,
+      body.status,
+      body.venueId,
+      body.organizerId,
+      body.date,
+      body.tags,
+    ]);
+
+    return rows[0]!;
   }
 
   async patch(
-    _eventId: string,
-    _body: PatchEventRequestBody,
-  ): Promise<EventRow> {
-    // TODO(you): implement
-    throw new NotImplementedException(
-      'EventRepository.patch is not implemented',
+    eventId: string,
+    body: PatchEventRequestBody,
+  ): Promise<EventRow | null> {
+    const query = await readSqlQuery(
+      './queries/patch-event.sql',
+      import.meta.url,
     );
+    const rows = await fetchFromDb<Array<EventRow>>(query, [
+      eventId,
+      body.title,
+      body.description,
+      body.type,
+      body.status,
+      body.venueId,
+      body.date,
+      body.tags,
+    ]);
+
+    return rows[0] ?? null;
   }
 
-  async delete(_eventId: string): Promise<EventRow> {
-    // TODO(you): implement
-    throw new NotImplementedException(
-      'EventRepository.delete is not implemented',
+  async delete(eventId: string): Promise<EventRow | null> {
+    const query = await readSqlQuery(
+      './queries/delete-event.sql',
+      import.meta.url,
     );
+    const rows = await fetchFromDb<Array<EventRow>>(query, [eventId]);
+
+    return rows[0] ?? null;
   }
 }
-
 export const eventRepository = new EventRepository();
