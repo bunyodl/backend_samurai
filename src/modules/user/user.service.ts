@@ -1,3 +1,4 @@
+import { authService } from '@/modules/auth/auth.service';
 import type { CreateUserRequestBody } from '@/modules/user/schemas/endpoints/create-user.schema';
 import type { GetUserResponse } from '@/modules/user/schemas/endpoints/get-user.schema';
 import type {
@@ -6,8 +7,7 @@ import type {
 } from '@/modules/user/schemas/endpoints/get-users.schema';
 import type { UserDto } from '@/modules/user/schemas/resources/user.schema';
 
-import { NotFoundException } from '@/common/exceptions';
-import { NotImplementedException } from '@/common/exceptions/not-implemented.exception';
+import { ConflictException, NotFoundException } from '@/common/exceptions';
 
 import { mapUserRowToDto } from './helpers/map-user-row';
 import { userRepository } from './user.repository';
@@ -33,14 +33,26 @@ class UserService {
     return { user: mapUserRowToDto(userRow) };
   }
 
-  async create(_body: CreateUserRequestBody): Promise<UserDto> {
-    // TODO(you): implement
-    throw new NotImplementedException('UserService.create is not implemented');
+  async create(body: CreateUserRequestBody): Promise<UserDto> {
+    const existingUser = await userRepository.getByEmail(body.email);
+
+    if (existingUser) {
+      throw new ConflictException('User with this email already exists');
+    }
+
+    const hashedPassword = await authService.hash(body.password);
+    const userRow = await userRepository.create(body, hashedPassword);
+    return mapUserRowToDto(userRow);
   }
 
-  async delete(_userId: string): Promise<UserDto> {
-    // TODO(you): implement
-    throw new NotImplementedException('UserService.delete is not implemented');
+  async delete(userId: string): Promise<UserDto> {
+    const userRow = await userRepository.delete(userId);
+
+    if (!userRow) {
+      throw new NotFoundException('User not found');
+    }
+
+    return mapUserRowToDto(userRow);
   }
 }
 

@@ -1,4 +1,3 @@
-import { NotImplementedException } from '@/common/exceptions/not-implemented.exception';
 import { fetchFromDb } from '@/common/libs/fetch-from-db';
 import { readSqlQuery } from '@/common/libs/read-sql-query';
 
@@ -89,18 +88,44 @@ class UserRepository {
     return rows[0] ?? null;
   }
 
-  async create(_body: CreateUserRequestBody): Promise<PublicUserRow> {
-    // TODO(you): implement
-    throw new NotImplementedException(
-      'UserRepository.create is not implemented',
+  async getByEmail(email: string): Promise<PublicUserRow | null> {
+    const query = await readSqlQuery(
+      './queries/get-user-by-email.sql',
+      import.meta.url,
     );
+    const rows = await fetchFromDb<Array<PublicUserRow>>(query, [email]);
+    return rows[0] ?? null;
   }
 
-  async delete(_userId: string): Promise<PublicUserRow> {
-    // TODO(you): implement
-    throw new NotImplementedException(
-      'UserRepository.delete is not implemented',
+  async create(
+    body: CreateUserRequestBody,
+    hashedPassword: string,
+  ): Promise<PublicUserRow> {
+    const query = await readSqlQuery(
+      './queries/create-user.sql',
+      import.meta.url,
     );
+
+    const rows = await fetchFromDb<Array<PublicUserRow>>(query, [
+      body.firstName,
+      body.lastName,
+      body.email,
+      body.imageUrl,
+      body.role,
+      hashedPassword,
+    ]);
+
+    return rows[0]!;
+  }
+
+  async delete(userId: string): Promise<PublicUserRow | null> {
+    const query = await readSqlQuery(
+      './queries/delete-user.sql',
+      import.meta.url,
+    );
+
+    const rows = await fetchFromDb<Array<PublicUserRow>>(query, [userId]);
+    return rows[0] ?? null;
   }
 }
 
