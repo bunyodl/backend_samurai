@@ -47,7 +47,13 @@ export function validate(schema: {
           `Invalid query: ${formatZodIssues(result.error)}`,
         );
       }
-      req.query = result.data as typeof req.query;
+      // Express 5: req.query is getter-only, so assign via defineProperty
+      Object.defineProperty(req, 'query', {
+        value: result.data,
+        writable: true,
+        configurable: true,
+        enumerable: true,
+      });
     }
 
     next();
