@@ -1,4 +1,4 @@
-name: Deploy backend-samurai API
+name: Deploy goingspot API
 
 on:
   push:

@@ -10,9 +10,9 @@ const generator = new OpenApiGeneratorV3(registry.definitions);
 export const openApiDocument = generator.generateDocument({
   openapi: '3.0.0',
   info: {
-    title: 'Samurai API',
+    title: 'GoingSpot API',
     version: '1.0.0',
-    description: 'API documentation',
+    description: 'Local event discovery and coordination API',
   },
   servers: [
     {

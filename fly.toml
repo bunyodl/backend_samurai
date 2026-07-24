@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for backend-samurai on 2025-12-28T21:08:48Z
+# fly.toml app configuration file generated for goingspot on 2025-12-28T21:08:48Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'backend-samurai'
+app = 'goingspot'
 primary_region = 'arn'
 
 [build]

@@ -1,8 +1,8 @@
 {
-  "name": "where-at",
+  "name": "goingspot",
   "version": "1.0.1",
   "main": "index.js",
-  "repository": "https://github.com/BunyodL/backend_samurai.git",
+  "repository": "https://github.com/bunyodl/goingspot.git",
   "author": "BunyodL <bunyodcode@gmail.com>",
   "license": "UNLICENSED",
   "type": "module",
