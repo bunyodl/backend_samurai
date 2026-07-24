@@ -1,5 +1,1 @@
-SELECT COUNT(*)
-FROM users
-WHERE first_name ILIKE $1
-OR last_name ILIKE $1
-OR email ILIKE $1;
+SELECT COUNT(*) FROM users;

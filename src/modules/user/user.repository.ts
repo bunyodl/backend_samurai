@@ -17,6 +17,10 @@ const USER_SORT_COLUMNS = {
   createdAt: 'created_at',
 } satisfies Record<NonNullable<GetUsersQuery['sortBy']>, keyof UserRow>;
 
+async function readSql(path: string) {
+  return await readSqlQuery(path, import.meta.url);
+}
+
 class UserRepository {
   async getMany(params: GetUsersQuery): Promise<Array<PublicUserRow>> {
     const sortColumn =
@@ -55,18 +59,9 @@ class UserRepository {
   }
 
   async getTotalCount(search?: string): Promise<number> {
-    let query: string;
-
-    if (!search) {
-      query = `
-      SELECT COUNT(*) FROM users
-      `;
-    } else {
-      query = await readSqlQuery(
-        './queries/get-users-count.sql',
-        import.meta.url,
-      );
-    }
+    const query = search
+      ? await readSql('./queries/get-users-count-by-search.sql')
+      : await readSql('./queries/get-users-count.sql');
 
     const result = await fetchFromDb<Array<{ count: string }>>(
       query,
@@ -77,22 +72,14 @@ class UserRepository {
   }
 
   async getById(userId: string): Promise<PublicUserRow | null> {
-    const rows = await fetchFromDb<Array<PublicUserRow>>(
-      `
-        SELECT ${USER_COLUMNS} FROM users
-        WHERE id = $1
-        `,
-      [userId],
-    );
+    const query = await readSql('./queries/get-user-by-id.sql');
+    const rows = await fetchFromDb<Array<PublicUserRow>>(query, [userId]);
 
     return rows[0] ?? null;
   }
 
   async getByEmail(email: string): Promise<PublicUserRow | null> {
-    const query = await readSqlQuery(
-      './queries/get-user-by-email.sql',
-      import.meta.url,
-    );
+    const query = await readSql('./queries/get-user-by-email.sql');
     const rows = await fetchFromDb<Array<PublicUserRow>>(query, [email]);
     return rows[0] ?? null;
   }
@@ -101,10 +88,7 @@ class UserRepository {
     body: CreateUserRequestBody,
     hashedPassword: string,
   ): Promise<PublicUserRow> {
-    const query = await readSqlQuery(
-      './queries/create-user.sql',
-      import.meta.url,
-    );
+    const query = await readSql('./queries/create-user.sql');
 
     const rows = await fetchFromDb<Array<PublicUserRow>>(query, [
       body.firstName,
@@ -119,10 +103,7 @@ class UserRepository {
   }
 
   async delete(userId: string): Promise<PublicUserRow | null> {
-    const query = await readSqlQuery(
-      './queries/delete-user.sql',
-      import.meta.url,
-    );
+    const query = await readSql('./queries/delete-user.sql');
 
     const rows = await fetchFromDb<Array<PublicUserRow>>(query, [userId]);
     return rows[0] ?? null;

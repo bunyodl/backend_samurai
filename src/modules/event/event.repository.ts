@@ -13,6 +13,10 @@ const EVENT_SORT_COLUMNS = {
   createdAt: 'created_at',
 } satisfies Record<NonNullable<GetEventsQuery['sortBy']>, keyof EventRow>;
 
+async function readSql(path: string) {
+  return await readSqlQuery(path, import.meta.url);
+}
+
 class EventRepository {
   async getMany(params: GetEventsQuery): Promise<Array<EventRow>> {
     const sortColumn =
@@ -54,18 +58,9 @@ class EventRepository {
   }
 
   async getTotalCount(search?: string): Promise<number> {
-    let query: string;
-
-    if (!search) {
-      query = `
-      SELECT COUNT(*) FROM events
-      `;
-    } else {
-      query = await readSqlQuery(
-        './queries/get-events-count.sql',
-        import.meta.url,
-      );
-    }
+    const query = search
+      ? await readSql('./queries/get-events-count-by-search.sql')
+      : await readSql('./queries/get-events-count.sql');
 
     const result = await fetchFromDb<Array<{ count: string }>>(
       query,
@@ -76,22 +71,14 @@ class EventRepository {
   }
 
   async getById(eventId: string): Promise<EventRow | null> {
-    const rows = await fetchFromDb<Array<EventRow>>(
-      `
-        SELECT * FROM events
-        WHERE id = $1
-        `,
-      [eventId],
-    );
+    const query = await readSql('./queries/get-event-by-id.sql');
+    const rows = await fetchFromDb<Array<EventRow>>(query, [eventId]);
 
     return rows[0] ?? null;
   }
 
   async create(body: CreateEventRequestBody): Promise<EventRow> {
-    const query = await readSqlQuery(
-      './queries/create-event.sql',
-      import.meta.url,
-    );
+    const query = await readSql('./queries/create-event.sql');
 
     const rows = await fetchFromDb<Array<EventRow>>(query, [
       body.title,
@@ -111,10 +98,7 @@ class EventRepository {
     eventId: string,
     body: PatchEventRequestBody,
   ): Promise<EventRow | null> {
-    const query = await readSqlQuery(
-      './queries/patch-event.sql',
-      import.meta.url,
-    );
+    const query = await readSql('./queries/patch-event.sql');
     const rows = await fetchFromDb<Array<EventRow>>(query, [
       eventId,
       body.title,
@@ -130,10 +114,7 @@ class EventRepository {
   }
 
   async delete(eventId: string): Promise<EventRow | null> {
-    const query = await readSqlQuery(
-      './queries/delete-event.sql',
-      import.meta.url,
-    );
+    const query = await readSql('./queries/delete-event.sql');
     const rows = await fetchFromDb<Array<EventRow>>(query, [eventId]);
 
     return rows[0] ?? null;

@@ -13,6 +13,10 @@ const VENUE_SORT_COLUMNS = {
   createdAt: 'created_at',
 } satisfies Record<NonNullable<GetVenuesQuery['sortBy']>, keyof VenueRow>;
 
+async function readSql(path: string) {
+  return await readSqlQuery(path, import.meta.url);
+}
+
 class VenueRepository {
   async getMany(params: GetVenuesQuery): Promise<Array<VenueRow>> {
     const sortColumn =
@@ -50,18 +54,9 @@ class VenueRepository {
   }
 
   async getTotalCount(search?: string): Promise<number> {
-    let query: string;
-
-    if (!search) {
-      query = `
-      SELECT COUNT(*) FROM venues
-      `;
-    } else {
-      query = await readSqlQuery(
-        './queries/get-venues-count.sql',
-        import.meta.url,
-      );
-    }
+    const query = search
+      ? await readSql('./queries/get-venues-count-by-search.sql')
+      : await readSql('./queries/get-venues-count.sql');
 
     const result = await fetchFromDb<Array<{ count: string }>>(
       query,
@@ -72,22 +67,14 @@ class VenueRepository {
   }
 
   async getById(venueId: string): Promise<VenueRow | null> {
-    const rows = await fetchFromDb<Array<VenueRow>>(
-      `
-        SELECT * FROM venues
-        WHERE id = $1
-        `,
-      [venueId],
-    );
+    const query = await readSql('./queries/get-venue-by-id.sql');
+    const rows = await fetchFromDb<Array<VenueRow>>(query, [venueId]);
 
     return rows[0] ?? null;
   }
 
   async create(body: CreateVenueRequestBody): Promise<VenueRow> {
-    const query = await readSqlQuery(
-      './queries/create-venue.sql',
-      import.meta.url,
-    );
+    const query = await readSql('./queries/create-venue.sql');
 
     const rows = await fetchFromDb<Array<VenueRow>>(query, [
       body.name,
@@ -103,10 +90,7 @@ class VenueRepository {
     venueId: string,
     body: PatchVenueRequestBody,
   ): Promise<VenueRow | null> {
-    const query = await readSqlQuery(
-      './queries/patch-venue.sql',
-      import.meta.url,
-    );
+    const query = await readSql('./queries/patch-venue.sql');
 
     const rows = await fetchFromDb<Array<VenueRow>>(query, [
       venueId,
@@ -120,10 +104,7 @@ class VenueRepository {
   }
 
   async delete(venueId: string): Promise<VenueRow | null> {
-    const query = await readSqlQuery(
-      './queries/delete-venue.sql',
-      import.meta.url,
-    );
+    const query = await readSql('./queries/delete-venue.sql');
 
     const rows = await fetchFromDb<Array<VenueRow>>(query, [venueId]);
 
@@ -131,10 +112,7 @@ class VenueRepository {
   }
 
   async existsEventsForVenue(venueId: string): Promise<boolean> {
-    const query = await readSqlQuery(
-      './queries/exists-events-for-venue.sql',
-      import.meta.url,
-    );
+    const query = await readSql('./queries/exists-events-for-venue.sql');
 
     const rows = await fetchFromDb<Array<{ exists: boolean }>>(query, [
       venueId,
